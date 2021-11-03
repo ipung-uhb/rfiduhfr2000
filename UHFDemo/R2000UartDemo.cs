@@ -5759,6 +5759,7 @@ namespace UHFDemo
             inventory_times++;
         }
 
+        // koneksi ke database
         private void db_connection()
         {
             try
@@ -5773,7 +5774,7 @@ namespace UHFDemo
             }
         }
 
-        //create cekEPC boolean
+        //create cekEPC boolean apakah epc sudah ada di tabel database
         private bool validate_epc(string epc)
         {
             db_connection();
@@ -5794,10 +5795,13 @@ namespace UHFDemo
             }
         }
 
+        // mengambil data timestamp
         public static String GetTimestamp(DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");
         }
+
+        //proses deteksi tag RFID
 
         private void parseInvTag(bool readPhase, byte[] data, byte cmd)
         {
@@ -5837,8 +5841,10 @@ namespace UHFDemo
                     //string conn;
                     // MySqlConnection connect;
 
+                    //cek true or false
                     bool r = validate_epc(tag.EPC);
 
+                    //jika true maka update
                     if (r)
                     {
                         System.Diagnostics.Debug.WriteLine("UPDATE DATA");
@@ -5859,6 +5865,7 @@ namespace UHFDemo
 
                         }
                     }
+                    //jika false maka insert data baru
                     else
                     {
                         System.Diagnostics.Debug.WriteLine("INSERT DATA");
