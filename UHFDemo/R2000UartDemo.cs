@@ -1,26 +1,32 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Reader;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
-using System.Net;
-using System.Threading;
+using System.Globalization;
 using System.IO;
 using System.IO.Ports;
-using Reader;
-using System.Net.Sockets;
-using System.Diagnostics;
 using System.Management;
-using System.Windows.Threading;
+using System.Net;
+using System.Net.Sockets;
 using System.Resources;
+using System.Text;
 using System.Text.RegularExpressions;
-using System.Globalization;
+using System.Threading;
+using System.Windows.Forms;
+using System.Windows.Threading;
+
 
 namespace UHFDemo
 {
     public partial class R2000UartDemo : Form
     {
+
+        private string conn;
+        private MySqlConnection connect;
+
         private ReaderMethod reader;
 
         private ReaderSetting m_curSetting = new ReaderSetting();
@@ -81,12 +87,12 @@ namespace UHFDemo
 
         DispatcherTimer dispatcherTimer = null;
         DispatcherTimer readratePerSecond = null;
-        
+
         // Record the inventory start time
         DateTime startInventoryTime;
         DateTime beforeCmdExecTime;
         // The time elapsed between the beginning of the inventory and this moment
-        public double elapsedTime = 0.0; 
+        public double elapsedTime = 0.0;
 
         List<string> antLists = null;
 
@@ -126,14 +132,14 @@ namespace UHFDemo
 
             DoubleBuffered = true;
 
-            fast_inv_ants = new CheckBox[] { 
+            fast_inv_ants = new CheckBox[] {
                 chckbx_fast_inv_ant_1, chckbx_fast_inv_ant_2, chckbx_fast_inv_ant_3, chckbx_fast_inv_ant_4,
                 chckbx_fast_inv_ant_5, chckbx_fast_inv_ant_6, chckbx_fast_inv_ant_7, chckbx_fast_inv_ant_8,
                 chckbx_fast_inv_ant_9, chckbx_fast_inv_ant_10, chckbx_fast_inv_ant_11, chckbx_fast_inv_ant_12,
                 chckbx_fast_inv_ant_13, chckbx_fast_inv_ant_14, chckbx_fast_inv_ant_15, chckbx_fast_inv_ant_16
             };
 
-            fast_inv_stays = new TextBox[] { 
+            fast_inv_stays = new TextBox[] {
                 txt_fast_inv_Stay_1, txt_fast_inv_Stay_2, txt_fast_inv_Stay_3, txt_fast_inv_Stay_4,
                 txt_fast_inv_Stay_5, txt_fast_inv_Stay_6, txt_fast_inv_Stay_7, txt_fast_inv_Stay_8,
                 txt_fast_inv_Stay_9, txt_fast_inv_Stay_10, txt_fast_inv_Stay_11, txt_fast_inv_Stay_12,
@@ -157,7 +163,7 @@ namespace UHFDemo
 
             initRealInvAnts();
             radio_btn_realtime_inv.Checked = true;
-            
+
             dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Interval = TimeSpan.FromMilliseconds(50);
             dispatcherTimer.Tick += new EventHandler(dispatcherTimer_Tick);
@@ -216,10 +222,15 @@ namespace UHFDemo
 
             GenerateColmnsDataGridForInv();
             tagdb = new TagDB();
+            // System.Diagnostics.Debug.WriteLine("Tag List");
+            //System.Diagnostics.Debug.WriteLine(tagdb.TagList);
             dgv_fast_inv_tags.DataSource = tagdb.TagList;
+
             GenerateColmnsDataGridForTagOp();
             tagOpDb = new TagDB();
             dgvTagOp.DataSource = tagOpDb.TagList;
+            // System.Diagnostics.Debug.WriteLine(tagOpDb.TagList);
+
 
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(cb_tagFocus, FindResource("tipTagFocus"));
@@ -254,7 +265,7 @@ namespace UHFDemo
 
         private void dispatcherTimer_Tick(object sender, EventArgs e)
         {
-            lock(tagdb)
+            lock (tagdb)
             {
                 tagdb.Repaint();
             }
@@ -281,7 +292,7 @@ namespace UHFDemo
             // elapsed time + previous cached async read time
             double totalseconds = elapsedTime + elapsed.TotalSeconds;
             label_totaltime.Text = string.Format("{0} {1}", Math.Round(totalseconds, 2), FindResource("Sec"));
-            if(doingBufferInv)
+            if (doingBufferInv)
             {
                 ledFast_total_execute_time.Text = FormatLongToTimeStr((long)totalseconds);
             }
@@ -305,6 +316,12 @@ namespace UHFDemo
             {
                 totalReads = tagdb.TotalReadCounts;
                 tags = tagdb.TotalTagCounts;
+                System.Diagnostics.Debug.WriteLine("Total RFID Reads:");
+                System.Diagnostics.Debug.WriteLine(totalReads);
+
+                System.Diagnostics.Debug.WriteLine("Total RFID Count:");
+                System.Diagnostics.Debug.WriteLine(tags);
+
             }
             label_totalread_count.Text = string.Format("{0} {1}", totalReads, FindResource("Times"));
             label_totaltag_count.Text = string.Format("{0} {1}", tags, FindResource("Tags"));
@@ -360,7 +377,7 @@ namespace UHFDemo
         {
             if (m_bDisplayLog)
             {
-                string strLog = e.Tx ? "Send: ":"Recv: " + ReaderUtils.ToHex(e.Data, "", " ");
+                string strLog = e.Tx ? "Send: " : "Recv: " + ReaderUtils.ToHex(e.Data, "", " ");
                 //Console.WriteLine("<--  {0}", strLog);
                 WriteLog(lrtxtDataTran, strLog, e.Tx ? 0 : 1);
             }
@@ -572,7 +589,8 @@ namespace UHFDemo
         {
             if (this == null)
                 return;
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 if (nType == 0)
                 {
                     logRichTxt.AppendTextEx(strLog, Color.Indigo);
@@ -597,7 +615,8 @@ namespace UHFDemo
 
         private void RefreshReadSetting(CMD btCmd)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 htxtReadId.Text = string.Format("{0:X2}", m_curSetting.btReadId);
                 switch (btCmd)
                 {
@@ -642,7 +661,7 @@ namespace UHFDemo
                             }
                             else
                             {
-                                if(!antType16.Checked && (m_curSetting.btWorkAntenna > 4 && !antType8.Checked))
+                                if (!antType16.Checked && (m_curSetting.btWorkAntenna > 4 && !antType8.Checked))
                                 {
                                     antType8.Checked = true;
                                 }
@@ -894,13 +913,17 @@ namespace UHFDemo
 
         private void RunLoopInventroy()
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 if (doingRealInv)
                 {
+                    // System.Diagnostics.Debug.WriteLine("doing real Inv Send");
                     cmdRealInventorySend();
+
                 }
                 else if (doingBufferInv)
                 {
+                    // System.Diagnostics.Debug.WriteLine("cmd cached Inv Send");
                     cmdCachedInventorySend();
                 }
                 else
@@ -931,19 +954,25 @@ namespace UHFDemo
 
         private void cmdRealInventorySend()
         {
+            //System.Diagnostics.Debug.WriteLine("cmd real inv send");
             RefreshInventoryInfo();
             beforeCmdExecTime = DateTime.Now;
             int writeIndex = 0;
             byte[] data = new byte[256];
+            // System.Diagnostics.Debug.WriteLine(data);
             data[writeIndex++] = 0xA0;
             data[writeIndex++] = 0x03;
             data[writeIndex++] = m_curSetting.btReadId;
-            if(cb_customized_session_target.Checked)
+
+            if (cb_customized_session_target.Checked)
             {
+                // System.Diagnostics.Debug.WriteLine("session target checked");
                 data[writeIndex++] = 0x8B; // cmd
                 data[writeIndex++] = getParamSession(); // session
+
                 if (ReverseTarget)
                 {
+                    //System.Diagnostics.Debug.WriteLine("Reverse Target");
                     if (invTargetB && stayBTimes > 1)
                     {
                         stayBTimes--;
@@ -951,6 +980,7 @@ namespace UHFDemo
                     }
                     else
                     {
+                        //System.Diagnostics.Debug.WriteLine("Not Reverse Target");
                         stayBTimes = Convert.ToInt32(tb_fast_inv_staytargetB_times.Text);
                         data[writeIndex++] = (byte)(invTargetB == false ? 0x00 : 0x01); // Target
                         invTargetB = !invTargetB;
@@ -958,14 +988,18 @@ namespace UHFDemo
                 }
                 else
                 {
+                    //System.Diagnostics.Debug.WriteLine("get Param target");
                     data[writeIndex++] = getParamTarget(); // Target
+                                                           // System.Diagnostics.Debug.WriteLine(data[writeIndex++]);
                 }
 
                 if (cb_use_selectFlags_tempPows.Checked)
                 {
+                    // System.Diagnostics.Debug.WriteLine("get Param Select Flags");
                     data[writeIndex++] = getParamSelectFlag(); // SL
                 }
-                if(cb_use_Phase.Checked)
+                if (cb_use_Phase.Checked)
+
                     data[writeIndex++] = cb_use_Phase.Checked ? (byte)0x01 : (byte)0x00; // Phase
                 if (cb_use_powerSave.Checked)
                 {
@@ -983,6 +1017,8 @@ namespace UHFDemo
             data[writeIndex] = ReaderUtils.CheckSum(data, 0, msgLen - 1); // check
             Array.Resize(ref data, msgLen);
             reader.SendMessage(data);
+
+            //System.Diagnostics.Debug.WriteLine(data);
         }
 
         private void cmdFastInventorySend(bool antG1)
@@ -992,16 +1028,17 @@ namespace UHFDemo
             // Head Len Address Cmd ABCDEFGH Interval Reserve5    Session Target Optimize Ongoing [Target Quantity]Phase Repeat Check
             // Head Len Address Cmd ABCDEFGH Interval Reserve4 SL Session Target Phase Pow12345678                       Repeat Check
             beforeCmdExecTime = DateTime.Now;
-            BeginInvoke(new ThreadStart(delegate () {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 int writeIndex = 0;
                 byte[] rawData = new byte[256];
                 rawData[writeIndex++] = 0xA0; // hdr
                 rawData[writeIndex++] = 0x03; // len minLen = 3
                 rawData[writeIndex++] = m_curSetting.btReadId; // addr
                 rawData[writeIndex++] = 0x8A; // cmd
-                
+
                 //antenna/stay
-                if(antType1.Checked)
+                if (antType1.Checked)
                 {
                     int antCount = 4;
                     if (cb_customized_session_target.Checked)
@@ -1053,7 +1090,7 @@ namespace UHFDemo
                             rawData[writeIndex++] = Convert.ToByte(fast_inv_stays[i].Text);
                         }
                     }
-                    
+
                     //Console.WriteLine("antType8/16 end [G{0}]", useAntG1 ? "1" : "2");
                 }
 
@@ -1142,7 +1179,8 @@ namespace UHFDemo
 
         public void FastInventory()
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 //Console.WriteLine("-----------------RunLoopFastSwitch");
                 if (antType16.Checked)
                 {
@@ -1238,7 +1276,8 @@ namespace UHFDemo
 
         private void RefreshISO18000(byte btCmd)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 switch (btCmd)
                 {
                     case 0xb0:
@@ -1321,7 +1360,8 @@ namespace UHFDemo
 
         private void RunLoopISO18000(int nLength)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 if (nLength == m_nBytes)
                 {
                     m_nLoopedTimes++;
@@ -1390,7 +1430,7 @@ namespace UHFDemo
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            if(btnConnect.Text.Equals(FindResource("Connect")))
+            if (btnConnect.Text.Equals(FindResource("Connect")))
             {
                 ConnectReader();
             }
@@ -1417,7 +1457,7 @@ namespace UHFDemo
                 reader.CloseCom();
                 SetFormEnable(false);
             }
-            else if(radio_btn_tcp.Checked)
+            else if (radio_btn_tcp.Checked)
             {
                 reader.SignOut();
                 SetFormEnable(false);
@@ -1426,7 +1466,7 @@ namespace UHFDemo
 
         private void ConnectReader()
         {
-            if(radio_btn_rs232.Checked)
+            if (radio_btn_rs232.Checked)
             {
                 string strException = string.Empty;
                 string strComPort = cmbComPort.Text;
@@ -1449,7 +1489,7 @@ namespace UHFDemo
 
                 SetFormEnable(true);
             }
-            else if(radio_btn_tcp.Checked)
+            else if (radio_btn_tcp.Checked)
             {
                 try
                 {
@@ -1608,7 +1648,8 @@ namespace UHFDemo
             if (msgTran.AryData.Length == 1)
             {
                 m_curSetting.btInternalVersion = msgTran.AryData[0];
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     txtFirmwareVersion.Text = String.Format("{0}.{1}.{2}", m_curSetting.btMajor, m_curSetting.btMinor, BitConverter.ToString(new byte[] { m_curSetting.btInternalVersion }));
                 }));
                 WriteLog(lrtxtLog, strCmd, 0);
@@ -1942,7 +1983,8 @@ namespace UHFDemo
                 {
                     m_curSetting.btReadId = msgTran.ReadId;
                     WriteLog(lrtxtLog, strCmd, 0);
-                    if(Inventorying)
+                    if (Inventorying)
+                        // System.Diagnostics.Debug.WriteLine("Run Loop Inventory");
                         RunLoopInventroy();
                     return;
                 }
@@ -1958,9 +2000,9 @@ namespace UHFDemo
 
             string strLog = string.Format("{0}{1}: {2}", strCmd, FindResource("FailedCause"), strErrorCode);
             WriteLog(lrtxtLog, strLog, 1);
-            if(Inventorying)
+            if (Inventorying)
             {
-                if(radio_btn_realtime_inv.Checked)
+                if (radio_btn_realtime_inv.Checked)
                 {
                     stopRealInv();
                 }
@@ -2604,7 +2646,8 @@ namespace UHFDemo
                     WriteLog(lrtxtLog, strCmd, 0);
                     if (m_setWorkAnt)
                     {
-                        BeginInvoke(new ThreadStart(delegate() {
+                        BeginInvoke(new ThreadStart(delegate ()
+                        {
                             m_setWorkAnt = false;
                             byte btWorkAntenna = (byte)cmbWorkAnt.SelectedIndex;
                             if (btWorkAntenna >= 0x08)
@@ -2663,11 +2706,11 @@ namespace UHFDemo
                     {
                         reader.SetWorkAntenna(m_curSetting.btReadId, m_curSetting.btWorkAntenna);
                     }
-                    else if(doingFastInv)
+                    else if (doingFastInv)
                     {
                         cmdFastInventorySend(useAntG1);
                     }
-                    else if(doingBufferInv)
+                    else if (doingBufferInv)
                     {
                         reader.SetWorkAntenna(m_curSetting.btReadId, m_curSetting.btWorkAntenna);
                     }
@@ -2686,7 +2729,7 @@ namespace UHFDemo
             string strLog = string.Format("{0}{1}: {2}", strCmd, FindResource("FailedCause"), strErrorCode);
             WriteLog(lrtxtLog, strLog, 1);
         }
-        
+
         private byte getParamSelectFlag()
         {
             for (int i = 0; i < selectFlagArr.Length; i++)
@@ -2702,6 +2745,8 @@ namespace UHFDemo
             for (int i = 0; i < targetArr.Length; i++)
             {
                 if (targetArr[i].Checked)
+                    // System.Diagnostics.Debug.WriteLine(("params target:");
+                    // System.Diagnostics.Debug.WriteLine(byte);
                     return (byte)i;
             }
             return 0x00;//default target A
@@ -2709,7 +2754,7 @@ namespace UHFDemo
 
         private byte getParamSession()
         {
-            for(int i = 0; i < sessionArr.Length; i++)
+            for (int i = 0; i < sessionArr.Length; i++)
             {
                 if (sessionArr[i].Checked)
                     return (byte)i;
@@ -2728,10 +2773,11 @@ namespace UHFDemo
                 {
                     m_curSetting.btReadId = msgTran.ReadId;
                     tagdb.AntGroup = msgTran.AryData[0];
-                    if(tagdb.AntGroup==0x01)
+                    if (tagdb.AntGroup == 0x01)
                     {
-                        BeginInvoke(new ThreadStart(delegate() {
-                            if(!antType16.Checked) 
+                        BeginInvoke(new ThreadStart(delegate ()
+                        {
+                            if (!antType16.Checked)
                                 antType16.Checked = true;
                         }));
                     }
@@ -2908,11 +2954,13 @@ namespace UHFDemo
             }
             else if (msgTran.AryData.Length == 7)
             {
-                if(doingFastInv)
+                if (doingFastInv)
                 {
                     WriteLog(lrtxtLog, strCmd, 0);
-                    BeginInvoke(new ThreadStart(delegate () {
+                    BeginInvoke(new ThreadStart(delegate ()
+                    {
                         tagdb.UpdateCmd8AExecuteSuccess(msgTran.AryData);
+
                         led_cmd_readrate.Text = tagdb.CmdReadRate.ToString();
                         led_total_tagreads.Text = tagdb.TotalTagCounts.ToString();
                         txtCmdTagCount.Text = tagdb.CmdTotalRead.ToString();
@@ -2949,8 +2997,9 @@ namespace UHFDemo
                 // reswitch to G1 
                 cmdSwitchAntG1();
             }
-            
-            BeginInvoke(new ThreadStart(delegate {
+
+            BeginInvoke(new ThreadStart(delegate
+            {
                 setInvStoppedStatus();
             }));
         }
@@ -2966,7 +3015,8 @@ namespace UHFDemo
                 cmdSwitchAntG1();
             }
 
-            BeginInvoke(new ThreadStart(delegate {
+            BeginInvoke(new ThreadStart(delegate
+            {
                 setInvStoppedStatus();
             }));
         }
@@ -2982,7 +3032,8 @@ namespace UHFDemo
                 cmdSwitchAntG1();
             }
 
-            BeginInvoke(new ThreadStart(delegate {
+            BeginInvoke(new ThreadStart(delegate
+            {
                 setInvStoppedStatus();
             }));
         }
@@ -3029,7 +3080,8 @@ namespace UHFDemo
             else if (msgTran.AryData.Length == 7)
             {
                 WriteLog(lrtxtLog, strCmd, 0);
-                BeginInvoke(new ThreadStart(delegate() {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     tagdb.UpdateCmd89ExecuteSuccess(msgTran.AryData);
                     led_cmd_readrate.Text = tagdb.CmdReadRate.ToString();
                     led_cmd_execute_duration.Text = tagdb.CommandDuration.ToString();
@@ -3049,7 +3101,7 @@ namespace UHFDemo
                         isRealInv = false;
                     }
                 }
-                
+
                 if (!isRealInv)
                 {
                     stopRealInv();
@@ -3071,14 +3123,15 @@ namespace UHFDemo
             if (msgTran.AryData.Length == 9)
             {
                 WriteLog(lrtxtLog, strCmd, 0);
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     tagdb.UpdateCmd80ExecuteSuccess(msgTran.AryData);
                     led_total_tagreads.Text = tagdb.TotalTagCounts.ToString();
                     txtCmdTagCount.Text = tagdb.CmdTotalRead.ToString();
                     led_cmd_execute_duration.Text = CalculateExecTime().ToString();
                     led_cmd_readrate.Text = tagdb.CmdReadRate.ToString();
                     led_totalread_count.Text = tagdb.TotalReadCounts.ToString();
-                    
+
                 }));
 
                 if (m_FastExeCount != -1)
@@ -3194,8 +3247,9 @@ namespace UHFDemo
 
         private void stopGetInventoryBuffer(bool clearBuffer)
         {
-            BeginInvoke(new ThreadStart(delegate() {
-                lock(tagdb)
+            BeginInvoke(new ThreadStart(delegate ()
+            {
+                lock (tagdb)
                 {
                     tagbufferCount = 0;
                     needGetBuffer = false;
@@ -3303,7 +3357,8 @@ namespace UHFDemo
             {
                 if (msgTran.AryData[0] == 0x00)
                 {
-                    BeginInvoke(new ThreadStart(delegate() {
+                    BeginInvoke(new ThreadStart(delegate ()
+                    {
                         txtAccessEpcMatch.Text = ReaderUtils.ByteArrayToString(msgTran.AryData, 2, Convert.ToInt32(msgTran.AryData[1]));
                     }));
                     WriteLog(lrtxtLog, string.Format("{0} ({1}){2}",
@@ -3370,7 +3425,7 @@ namespace UHFDemo
                 byte btMemBank = getMembank();
                 byte btWordAdd = Convert.ToByte(tb_startWord.Text);
                 byte btWordCnt = Convert.ToByte(tb_wordLen.Text);
-                if(btWordCnt <= 0)
+                if (btWordCnt <= 0)
                 {
                     MessageBox.Show("Read word must large than 1");
                     return;
@@ -3433,6 +3488,7 @@ namespace UHFDemo
                 {
                     AddTagToTagOpDb(msgTran);
 
+
                     WriteLog(lrtxtLog, strCmd, 0);
                 }
             }
@@ -3444,11 +3500,11 @@ namespace UHFDemo
             {
                 byte btMemBank = getMembank();
                 byte btWordAdd = Convert.ToByte(tb_startWord.Text);
-                byte btWordCnt = 0; 
+                byte btWordCnt = 0;
 
                 byte[] accessPw = ReaderUtils.FromHex(hexTb_accessPw.Text.Replace(" ", ""));
                 byte[] writeData = ReaderUtils.FromHex(hexTb_WriteData.Text.Replace(" ", ""));
-               btWordCnt = Convert.ToByte(writeData.Length / 2 + writeData.Length % 2);
+                btWordCnt = Convert.ToByte(writeData.Length / 2 + writeData.Length % 2);
 
                 tb_wordLen.Text = btWordCnt.ToString();
 
@@ -3664,8 +3720,10 @@ namespace UHFDemo
 
         private void AddTagToTagOpDb(MessageTran msgTran)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 tagOpDb.Add(new Tag(msgTran.AryData, msgTran.Cmd, tagdb.AntGroup));
+                System.Diagnostics.Debug.WriteLine("This is a log");
             }));
         }
 
@@ -4217,7 +4275,8 @@ namespace UHFDemo
 
         private void cmbSetAccessEpcMatch_DropDown(object sender, EventArgs e)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 cmbSetAccessEpcMatch.Items.Clear();
 
                 foreach (TagRecord trd in tagdb.TagList)
@@ -4283,14 +4342,17 @@ namespace UHFDemo
 
         private void startRealtimeInv()
         {
+            System.Diagnostics.Debug.WriteLine("Realtime Inventory");
             int antId = combo_realtime_inv_ants.SelectedIndex;
-            if(antId >= 8)
+            if (antId >= 8)
             {
+                System.Diagnostics.Debug.WriteLine("Realtime Inventory 8");
                 m_curSetting.btWorkAntenna = (byte)(antId - 8);
                 cmdSwitchAntG2();
             }
             else
             {
+                System.Diagnostics.Debug.WriteLine("Realtime Inventory <8");
                 useAntG1 = true;
                 tagdb.AntGroup = 0x00;
                 m_curSetting.btWorkAntenna = (byte)antId;
@@ -4377,6 +4439,7 @@ namespace UHFDemo
             {
                 if (Inventorying)
                 {
+                    System.Diagnostics.Debug.WriteLine("Stop Inventory");
                     SetInvStopingStatus();
                     isFastInv = false;
                 }
@@ -4443,9 +4506,9 @@ namespace UHFDemo
         private bool checkFastInvAnt()
         {
             int antCount = 0;
-            for(int i = 0; i < 16; i++)
+            for (int i = 0; i < 16; i++)
             {
-                if(fast_inv_ants[i].Enabled)
+                if (fast_inv_ants[i].Enabled)
                 {
                     antCount++;
                 }
@@ -4457,7 +4520,8 @@ namespace UHFDemo
 
         private void buttonFastFresh_Click(object sender, EventArgs e)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 startInventoryTime = DateTime.Now;
                 elapsedTime = 0.0;
                 lock (tagdb)
@@ -4725,7 +4789,7 @@ namespace UHFDemo
             //0xA0  0x0B        0x98    0x00
             string strCmd = string.Format("{0}", FindResource("tipTagMask"));
             string strErrorCode = string.Empty;
-            if(msgTran.AryTranData[1] == 0x04)
+            if (msgTran.AryTranData[1] == 0x04)
             {
                 //Error
                 //clear mask result
@@ -4758,7 +4822,8 @@ namespace UHFDemo
                     TagMask tagMask = new TagMask(msgTran.AryData);
                     Console.WriteLine(string.Format("tagmask={0}", tagMask.ToString()));
 
-                    BeginInvoke(new ThreadStart(delegate() {
+                    BeginInvoke(new ThreadStart(delegate ()
+                    {
                         tagmaskDB.Add(tagMask);
                     }));
                     return;
@@ -5021,13 +5086,13 @@ namespace UHFDemo
                 channels = 16;
             }
 
-            if(channels >= 4)
+            if (channels >= 4)
             {
                 tb_outputpower_2.Text = tb_outputpower_1.Text;
                 tb_outputpower_3.Text = tb_outputpower_1.Text;
                 tb_outputpower_4.Text = tb_outputpower_1.Text;
 
-                if(channels >= 8)
+                if (channels >= 8)
                 {
                     tb_outputpower_5.Text = tb_outputpower_1.Text;
                     tb_outputpower_6.Text = tb_outputpower_1.Text;
@@ -5177,8 +5242,8 @@ namespace UHFDemo
                 //set work ant
                 this.cmbWorkAnt.Items.Clear();
                 string antPreFix = FindResource("Antenna");
-                this.cmbWorkAnt.Items.AddRange(new object[] { 
-                    string.Format("{0}1", antPreFix), 
+                this.cmbWorkAnt.Items.AddRange(new object[] {
+                    string.Format("{0}1", antPreFix),
                     string.Format("{0}2", antPreFix),
                     string.Format("{0}3", antPreFix),
                     string.Format("{0}4", antPreFix),
@@ -5297,7 +5362,7 @@ namespace UHFDemo
                 cb_fast_inv_reverse_target.Visible = true;
                 tb_fast_inv_staytargetB_times.Visible = true;
 
-                if(radio_btn_fast_inv.Checked)
+                if (radio_btn_fast_inv.Checked)
                 {
                     tb_fast_inv_reserved_5.Visible = false;
                     grb_sessions.Visible = true; // Session
@@ -5347,7 +5412,7 @@ namespace UHFDemo
                 else
                 {
                     cb_use_Phase.Checked = false; // Phase
-                    cb_use_Phase.Visible = false; 
+                    cb_use_Phase.Visible = false;
 
                     cb_use_selectFlags_tempPows.Checked = false;
                     cb_use_selectFlags_tempPows.Visible = false;
@@ -5431,13 +5496,13 @@ namespace UHFDemo
             else if (johar_read_btn.Text.Equals(FindResource("Stop")))
             {
                 joharReadingStarted = false;
-                while(joharReading)
+                while (joharReading)
                 {
                     Thread.Sleep(200);
                 }
                 jorharEnableView(true);
                 johar_read_btn.Text = FindResource("Start");
-            } 
+            }
         }
 
         private void jorharEnableView(bool enable)
@@ -5617,14 +5682,14 @@ namespace UHFDemo
             while (joharReadingStarted)
             {
                 sendReadJoharMessage();
-                Thread.Sleep(joharCmdInterval<100?100:joharCmdInterval);
+                Thread.Sleep(joharCmdInterval < 100 ? 100 : joharCmdInterval);
             }
             joharReading = false;
         }
 
         private void parseJoharRead(byte[] aryTranData)
         {
-            this.BeginInvoke(new ThreadStart(delegate()
+            this.BeginInvoke(new ThreadStart(delegate ()
             {
                 //Console.WriteLine("parseJoharRead totalread={0}, tagcount={1}", johardb.TotalTagCount, johardb.UniqueTagCount);
                 JoharTag tag = new JoharTag(aryTranData);
@@ -5694,6 +5759,46 @@ namespace UHFDemo
             inventory_times++;
         }
 
+        private void db_connection()
+        {
+            try
+            {
+                conn = "datasource=127.0.0.1;port=3306;username=root;password=";
+                connect = new MySqlConnection(conn);
+                connect.Open();
+            }
+            catch (MySqlException e)
+            {
+                throw;
+            }
+        }
+
+        //create cekEPC boolean
+        private bool validate_epc(string epc)
+        {
+            db_connection();
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "Select epc from db_rfid.rfid_tags where epc = '" + epc + "'";
+
+            cmd.Connection = connect;
+            MySqlDataReader isExistEPC = cmd.ExecuteReader();
+            if (isExistEPC.Read())
+            {
+                connect.Close();
+                return true;
+            }
+            else
+            {
+                connect.Close();
+                return false;
+            }
+        }
+
+        public static String GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyyMMddHHmmssffff");
+        }
+
         private void parseInvTag(bool readPhase, byte[] data, byte cmd)
         {
             BeginInvoke(new ThreadStart(delegate ()
@@ -5701,12 +5806,80 @@ namespace UHFDemo
                 lock (tagdb)
                 {
                     Tag tag = new Tag(data, readPhase, cmd, tagdb.AntGroup);
+                    System.Diagnostics.Debug.WriteLine("----Tag-----");
+                    System.Diagnostics.Debug.WriteLine("Tag Readcount");
+                    System.Diagnostics.Debug.WriteLine(tag.ReadCount);
+                    // System.Diagnostics.Debug.WriteLine("Tag PC");
+                    // System.Diagnostics.Debug.WriteLine(tag.PC);
+                    System.Diagnostics.Debug.WriteLine("Tag EPC");
+                    System.Diagnostics.Debug.WriteLine(tag.EPC);
+                    //  System.Diagnostics.Debug.WriteLine("Tag Freq");
+                    // System.Diagnostics.Debug.WriteLine(tag.Freq);
+                    //  System.Diagnostics.Debug.WriteLine("Tag RSSI");
+                    //  System.Diagnostics.Debug.WriteLine(tag.Rssi);
+                    //  System.Diagnostics.Debug.WriteLine("Tag Antena");
+                    // System.Diagnostics.Debug.WriteLine(tag.Antenna);
+                    System.Diagnostics.Debug.WriteLine("----Tag-----");
                     tagdb.Add(tag);
+
+
+
                     SetMaxMinRSSI(Convert.ToInt32(tag.Rssi));
                     txtFastMaxRssi.Text = tagdb.MaxRSSI + "dBm";
                     txtFastMinRssi.Text = tagdb.MinRSSI + "dBm";
                     led_totalread_count.Text = tagdb.TotalReadCounts.ToString();
                     led_total_tagreads.Text = tagdb.TotalTagCounts.ToString();
+                    //  System.Diagnostics.Debug.WriteLine("Tag Total Count");
+                    // System.Diagnostics.Debug.WriteLine(tagdb.TotalTagCounts.ToString());
+                    //  System.Diagnostics.Debug.WriteLine("Tag Read Count");
+                    // System.Diagnostics.Debug.WriteLine(tagdb.TotalReadCounts.ToString());
+                    //  System.Diagnostics.Debug.WriteLine("----Tag-----");
+                    //string conn;
+                    // MySqlConnection connect;
+
+                    bool r = validate_epc(tag.EPC);
+
+                    if (r)
+                    {
+                        System.Diagnostics.Debug.WriteLine("UPDATE DATA");
+                        String timeStamp = GetTimestamp(DateTime.Now);
+                        db_connection();
+                        MySqlCommand cmde = new MySqlCommand();
+                        cmde.Connection = connect;
+                        cmde.CommandText = "update db_rfid.rfid_tags set pc='" + tag.PC + "',epc='" + tag.EPC + "',antena='" + tag.Antenna + "',freq='" + tag.Freq + "',rssi='" + tag.Rssi + "',timestamp='" + timeStamp + "'where epc='" + tag.EPC + "';";
+                        MySqlDataReader success = cmde.ExecuteReader();
+
+                        if (success.Read())
+                        {
+                            connect.Close();
+                        }
+                        else
+                        {
+                            connect.Close();
+
+                        }
+                    }
+                    else
+                    {
+                        System.Diagnostics.Debug.WriteLine("INSERT DATA");
+                        db_connection();
+                        MySqlCommand cmde = new MySqlCommand();
+                        cmde.Connection = connect;
+                        cmde.CommandText = "insert into db_rfid.rfid_tags(pc,epc,antena,freq,rssi) values('" + tag.PC + "','" + tag.EPC + "','" + tag.Antenna + "','" + tag.Freq + "','" + tag.Rssi + "');";
+                        MySqlDataReader success = cmde.ExecuteReader();
+
+                        if (success.Read())
+                        {
+                            connect.Close();
+                        }
+                        else
+                        {
+                            connect.Close();
+
+                        }
+
+                    }
+
 
                     if (needGetBuffer)
                     {
@@ -5760,6 +5933,8 @@ namespace UHFDemo
             rawData[writeIndex] = ReaderUtils.CheckSum(rawData, 0, msgLen - 1); // check
             Array.Resize(ref rawData, msgLen);
             int nResult = reader.SendMessage(rawData);
+            //System.Diagnostics.Debug.WriteLine("raw data");
+            System.Diagnostics.Debug.WriteLine(nResult);
         }
 
         private void GenerateColmnsDataGridForInv()
@@ -5769,7 +5944,7 @@ namespace UHFDemo
             dgv_fast_inv_tags.BackgroundColor = Color.White;
 
             SerialNumber_fast_inv.DataPropertyName = "SerialNumber";
-            SerialNumber_fast_inv.HeaderText = "#";
+            SerialNumber_fast_inv.HeaderText = "No";
 
             PC_fast_inv.DataPropertyName = "PC";
             PC_fast_inv.HeaderText = FindResource("PC");
@@ -5844,6 +6019,7 @@ namespace UHFDemo
             tagOp_FreqColumn.HeaderText = FindResource("Freq");
 
             //dgvTagOp.DataSource = tagOpDb.TagList;
+            // System.Diagnostics.Debug.WriteLine(tagOpDb);
         }
 
         private void cmdGetFrequencyRegion()
@@ -5863,7 +6039,7 @@ namespace UHFDemo
             rawData[1] = (byte)(msgLen - 2); // except hdr+len
             //Console.WriteLine("cmdGetFrequencyRegion writeIndex={0}, msgLen={0}, len={2}", writeIndex, msgLen, rawData[1]);
 
-            rawData[writeIndex] = ReaderUtils.CheckSum(rawData, 0, msgLen-1); // check
+            rawData[writeIndex] = ReaderUtils.CheckSum(rawData, 0, msgLen - 1); // check
             Array.Resize(ref rawData, msgLen);
             int nResult = reader.SendMessage(rawData);
         }
@@ -5921,6 +6097,8 @@ namespace UHFDemo
                     {
                         if (Inventorying)
                         {
+
+                            System.Diagnostics.Debug.WriteLine("Save Log Inventory");
                             transportLogFile.Write(String.Format("{0},{1}ms,{2},{3},[{4}], {5}",
                             DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"),
                             times + "inventory spend" + tagdb.CommandDuration,
@@ -5928,6 +6106,8 @@ namespace UHFDemo
                             (ReverseTarget ? ("useTarget" + (invTargetB ? "B," : "A,")) : ""),
                             tagdb.CmdTotalRead,
                             tagdb.CmdUniqueTagCount));
+
+
 
                             transportLogFile.WriteLine();
                             transportLogFile.Flush();
@@ -5963,7 +6143,7 @@ namespace UHFDemo
 
         private void cb_fast_inv_reverse_target_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_fast_inv_reverse_target.Checked)
+            if (cb_fast_inv_reverse_target.Checked)
             {
                 ReverseTarget = true;
                 invTargetB = false;
@@ -5977,7 +6157,7 @@ namespace UHFDemo
 
         private void cb_use_selectFlags_tempPows_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_use_selectFlags_tempPows.Checked)
+            if (cb_use_selectFlags_tempPows.Checked)
             {
                 if (radio_btn_fast_inv.Checked)
                 {
@@ -5986,7 +6166,7 @@ namespace UHFDemo
                     grb_selectFlags.Visible = true;//SL
 
                     grb_temp_pow_ants_g1.Visible = true;
-                    if(channels > 8)
+                    if (channels > 8)
                         grb_temp_pow_ants_g2.Visible = true;
                     for (int i = 0; i < channels; i++)
                     {
@@ -6019,7 +6199,7 @@ namespace UHFDemo
         private void cb_use_Phase_CheckedChanged(object sender, EventArgs e)
         {
             Phase_fast_inv.Visible = cb_use_Phase.Checked;
-            if(radio_btn_realtime_inv.Checked && cb_use_Phase.Checked)
+            if (radio_btn_realtime_inv.Checked && cb_use_Phase.Checked)
             {
                 cb_use_selectFlags_tempPows.Checked = true;
             }
@@ -6028,7 +6208,7 @@ namespace UHFDemo
         private void InventoryTypeChanged(object sender, EventArgs e)
         {
             //Console.WriteLine("InventoryTypeChanged channels={0}", channels);
-            if(radio_btn_fast_inv.Checked)
+            if (radio_btn_fast_inv.Checked)
             {
                 grb_multi_ant.Visible = true;
                 grb_cache_inv.Visible = false;
@@ -6042,7 +6222,7 @@ namespace UHFDemo
                 grb_Reserve.Visible = false;
 
                 cb_customized_session_target.Enabled = true;
-                cb_customized_session_target.Checked = false; 
+                cb_customized_session_target.Checked = false;
                 cb_use_selectFlags_tempPows.Checked = false;
                 cb_use_selectFlags_tempPows.Text = FindResource("useCmd8A25");
                 cb_use_selectFlags_tempPows.Visible = false;
@@ -6065,11 +6245,11 @@ namespace UHFDemo
                 {
                     grb_ants_g2.Visible = false;
                 }
-                for(int i = 0; i < 16; i++)
+                for (int i = 0; i < 16; i++)
                 {
-                    if(i < channels)
+                    if (i < channels)
                     {
-                        if(i==0)
+                        if (i == 0)
                         {
                             fast_inv_ants[i].Checked = true;
                         }
@@ -6096,7 +6276,7 @@ namespace UHFDemo
                 grb_Repeat.Visible = true;//Repeat
                 cb_customized_session_target_CheckedChanged(null, null);
             }
-            else if(radio_btn_realtime_inv.Checked)
+            else if (radio_btn_realtime_inv.Checked)
             {
                 grb_multi_ant.Visible = false;
                 grb_cache_inv.Visible = false;
@@ -6109,7 +6289,7 @@ namespace UHFDemo
 
                 grb_real_inv_ants.Visible = true;
                 antLists.Clear();
-                for (int i=1; i <= channels; i++)
+                for (int i = 1; i <= channels; i++)
                 {
                     antLists.Add(string.Format("{0}{1}", FindResource("Antenna"), i));
                 }
@@ -6181,7 +6361,7 @@ namespace UHFDemo
 
         private void cb_use_powerSave_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_use_powerSave.Checked)
+            if (cb_use_powerSave.Checked)
             {
                 cb_use_selectFlags_tempPows.Checked = true;
                 grb_powerSave.Visible = true;
@@ -6194,7 +6374,7 @@ namespace UHFDemo
 
         private void cb_use_optimize_CheckedChanged(object sender, EventArgs e)
         {
-            if(cb_use_optimize.Checked)
+            if (cb_use_optimize.Checked)
             {
                 cb_use_selectFlags_tempPows.Checked = false;
                 grb_Optimize.Visible = true;
@@ -6211,7 +6391,7 @@ namespace UHFDemo
 
         private void btnInventory_Click_1(object sender, EventArgs e)
         {
-            if(radio_btn_fast_inv.Checked)
+            if (radio_btn_fast_inv.Checked)
             {
                 FastInventory_Click(sender, e);
             }
@@ -6243,6 +6423,7 @@ namespace UHFDemo
                         return;
                     }
 
+                    //System.Diagnostics.Debug.WriteLine("Cached Inventory");
                     btnInventory.BackColor = Color.DarkBlue;
                     btnInventory.ForeColor = Color.White;
                     btnInventory.Text = FindResource("StopInventory");
@@ -6288,10 +6469,12 @@ namespace UHFDemo
 
         private void RealTimeInventory_Click(object sender, EventArgs e)
         {
+            // System.Diagnostics.Debug.WriteLine("Inventories");
             if (btnInventory.Text.Equals(FindResource("StartInventory")))
             {
                 if (Inventorying)
                 {
+                    // System.Diagnostics.Debug.WriteLine("Realtime INV Coba 1");
                     MessageBox.Show(FindResource("Inventorying"));
                     return;
                 }
@@ -6300,9 +6483,12 @@ namespace UHFDemo
                 {
                     if (mInventoryExeCount.Text.Length == 0)
                     {
+                        //  System.Diagnostics.Debug.WriteLine("Coba 2");
                         MessageBox.Show("Please input ExeCount");
                         return;
                     }
+
+                    //  System.Diagnostics.Debug.WriteLine("Coba 3");
 
                     btnInventory.BackColor = Color.DarkBlue;
                     btnInventory.ForeColor = Color.White;
@@ -6315,6 +6501,8 @@ namespace UHFDemo
                     dispatcherTimer.Start();
                     readratePerSecond.Start();
                     m_FastExeCount = Convert.ToInt32(mInventoryExeCount.Text);
+                    // System.Diagnostics.Debug.WriteLine("Fast EXE Count");
+                    // System.Diagnostics.Debug.WriteLine(m_FastExeCount);
                     startRealtimeInv();
                 }
                 catch (Exception ex)
@@ -6382,7 +6570,7 @@ namespace UHFDemo
 
         private void MembankCheckChanged(object sender, EventArgs e)
         {
-            if(rdbEpc.Checked)
+            if (rdbEpc.Checked)
             {
                 tb_startWord.Text = "2";
             }
@@ -6455,7 +6643,7 @@ namespace UHFDemo
             cmbbxPort1_Parity.DataSource = Enum.GetValues(typeof(NETPORT_Parity));
 
             chkbxPort0PortEn_CheckedChanged(null, null);
-            if(tUdp == null)
+            if (tUdp == null)
             {
                 tUdp = new UDPThread();
                 tUdp.NetCommRead += TUdp_NetCommRead;
@@ -6464,25 +6652,29 @@ namespace UHFDemo
 
         private void TUdp_NetCommRead(object sender, NetCommEventArgs e)
         {
-            BeginInvoke(new ThreadStart(delegate() {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 tUdp.StopSearchNetPort();
             }));
 
             NET_COMM comm = e.NetComm;
             if (comm.Cmd == (int)NET_CMD.NET_MODULE_ACK_SEARCH)
             {
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     netPortDB.Add(comm);
                     //WriteLog(lrtxtLog, string.Format("Recv: {0}", comm.FoundDev.ToString()), 1);
                 }));
 
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     lblNetPortCount.Text = string.Format("NetPort Device: {0}", netPortDB.GetCount());
                 }));
             }
             if (comm.Cmd == (int)NET_CMD.NET_MODULE_ACK_RESEST)
             {
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     btnResetNetport.Text = FindResource("npReset");
                     MessageBox.Show(string.Format("Reset Cfg Sucessful, Please ReSearch NetPort and ReGet to update this result"), "Reset Sucessful");
                 }));
@@ -6645,7 +6837,7 @@ namespace UHFDemo
                     txtbxPort1_Dnsport.Text = string.Format("{0}", comm.PortCfg_1.DNSHostPort);
                     //txtbxPort1_Reserved.Text = string.Format("{0}", comm.PortCfg_1.Reserved);
                     #endregion //NET_COMM
-                    if(comm.Cmd == (int)NET_CMD.NET_MODULE_ACK_GET)
+                    if (comm.Cmd == (int)NET_CMD.NET_MODULE_ACK_GET)
                     {
                         btnGetNetport.Text = FindResource("npGet");
                         netStartGet = false;
@@ -6706,7 +6898,8 @@ namespace UHFDemo
         {
             netPortDB.Clear();
 
-            BeginInvoke(new ThreadStart(delegate () {
+            BeginInvoke(new ThreadStart(delegate ()
+            {
                 lblNetPortCount.Text = "";
                 #region //NET_COMM
                 //txtbxHwCfgMajor.Text = string.Format("{0}", comm.HWConfig.DevType);
@@ -6837,14 +7030,15 @@ namespace UHFDemo
         bool netStartSearch = false;
         private void btnSearchNetport_Click(object sender, EventArgs e)
         {
-            if(cmbbxNetCard.SelectedItem == null)
+            if (cmbbxNetCard.SelectedItem == null)
             {
                 MessageBox.Show(FindResource("nNoNetCardSelect"), "SearchNetport");
                 return;
             }
             if (btnSearchNetport.Text.Equals(FindResource("npSearchNetPort")))
             {
-                BeginInvoke(new ThreadStart(delegate () {
+                BeginInvoke(new ThreadStart(delegate ()
+                {
                     #region NET_COMM
                     NET_COMM comm = new NET_COMM();
                     comm.setFlag();
@@ -6891,7 +7085,7 @@ namespace UHFDemo
             {
                 //Cells[3] = DeviceMac
                 NetPortDevice npd = netPortDB.GetNetPortDeviceByMac((string)dgvNetPort.CurrentRow.Cells[3].Value);
-                if(npd==null)
+                if (npd == null)
                 {
                     return;
                 }
@@ -7150,7 +7344,7 @@ namespace UHFDemo
                     return;
                 }
 
-                btnResetNetport.Text = FindResource("npRetry"); 
+                btnResetNetport.Text = FindResource("npRetry");
                 Thread t = new Thread(new ThreadStart(delegate ()
                 {
                     netStartReset = true;
@@ -7212,7 +7406,7 @@ namespace UHFDemo
 
         private void cmbbxPort1_NetMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(cmbbxPort1_NetMode.SelectedIndex == cmbbxPort1_NetMode.Items.IndexOf(NETPORT_TYPE.TCP_SERVER))
+            if (cmbbxPort1_NetMode.SelectedIndex == cmbbxPort1_NetMode.Items.IndexOf(NETPORT_TYPE.TCP_SERVER))
             {
                 EnableTcpServerUI(false);
             }
@@ -7232,7 +7426,7 @@ namespace UHFDemo
 
         private void chkbxPort1_DomainEn_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkbxPort1_DomainEn.Checked)
+            if (chkbxPort1_DomainEn.Checked)
             {
                 grbDnsDomain.Enabled = true;
                 grbDesIpPort.Enabled = false;
@@ -7246,7 +7440,7 @@ namespace UHFDemo
 
         private void chkbxPort1_RandEn_CheckedChanged(object sender, EventArgs e)
         {
-            if(chkbxPort1_RandEn.Checked)
+            if (chkbxPort1_RandEn.Checked)
             {
                 txtbxPort1_NetPort.Enabled = false;
             }
@@ -7259,7 +7453,7 @@ namespace UHFDemo
         private void btnLoadCfgFromFile_Click(object sender, EventArgs e)
         {
             byte[] bytes = LoadCfg();
-            if(bytes==null)
+            if (bytes == null)
             {
                 return;
             }
@@ -7466,7 +7660,7 @@ namespace UHFDemo
 
             comm.setu8(1);//1 phyEn
             comm.setLength(1024);//4 pkgLen
-            if(txtbxHeartbeatInterval.Text.Trim().Length == 0)
+            if (txtbxHeartbeatInterval.Text.Trim().Length == 0)
             {
                 txtbxHeartbeatInterval.Text = "0";
             }
@@ -7502,7 +7696,7 @@ namespace UHFDemo
             }
             comm.setu8(Convert.ToInt32(cmbbxPort1_NetMode.SelectedItem));//1 netMode
             comm.setu8(chkbxPort1_RandEn.Checked == true ? 1 : 0);//1 randEn
-            if(txtbxPort1_NetPort.Text.Trim().Length==0)
+            if (txtbxPort1_NetPort.Text.Trim().Length == 0)
             {
                 txtbxPort1_NetPort.Text = "0";
             }
@@ -7624,7 +7818,7 @@ namespace UHFDemo
             netStartSave = false;
             netStartReset = false;
             netStartSearch = false;
-            
+
             if (tUdp.IsStartRead)
             {
                 if (btnSearchNetport.Text.Equals(FindResource("npSearchingNetPort")))
@@ -7688,7 +7882,11 @@ namespace UHFDemo
                 tagmaskDB = new TagMaskDB();
             dgvTagMask.DataSource = null;
             dgvTagMask.DataSource = tagmaskDB.TagList;
+
+            // System.Diagnostics.Debug.WriteLine(tagmaskDB.TagList);
         }
+
+
     }
 
     public class UDPThread
@@ -7713,7 +7911,7 @@ namespace UHFDemo
 
         public event EventHandler<NetCommEventArgs> NetCommRead;
 
-        public NetCard CurNetCard 
+        public NetCard CurNetCard
         {
             get { return curNetCard; }
             set { curNetCard = value; }
@@ -7763,7 +7961,7 @@ namespace UHFDemo
         //Stop UDP service
         private bool StopUdp()
         {
-            if(netStarted)
+            if (netStarted)
             {
                 netStarted = false;
                 waitForStopRecv.Reset();

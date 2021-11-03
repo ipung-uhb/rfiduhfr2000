@@ -829,10 +829,10 @@ namespace UHFDemo
             // 
             this.PagReaderSetting.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PagReaderSetting.Controls.Add(this.tabControl_baseSettings);
-            this.PagReaderSetting.Location = new System.Drawing.Point(4, 22);
+            this.PagReaderSetting.Location = new System.Drawing.Point(4, 25);
             this.PagReaderSetting.Name = "PagReaderSetting";
             this.PagReaderSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.PagReaderSetting.Size = new System.Drawing.Size(1010, 555);
+            this.PagReaderSetting.Size = new System.Drawing.Size(1010, 552);
             this.PagReaderSetting.TabIndex = 0;
             this.PagReaderSetting.Text = "Reader Setup";
             // 
@@ -844,7 +844,7 @@ namespace UHFDemo
             this.tabControl_baseSettings.Location = new System.Drawing.Point(3, 3);
             this.tabControl_baseSettings.Name = "tabControl_baseSettings";
             this.tabControl_baseSettings.SelectedIndex = 0;
-            this.tabControl_baseSettings.Size = new System.Drawing.Size(1004, 549);
+            this.tabControl_baseSettings.Size = new System.Drawing.Size(1004, 546);
             this.tabControl_baseSettings.TabIndex = 15;
             // 
             // tabPage1
@@ -857,10 +857,10 @@ namespace UHFDemo
             this.tabPage1.Controls.Add(this.gbCmdTemperature);
             this.tabPage1.Controls.Add(this.gbCmdVersion);
             this.tabPage1.Controls.Add(this.btnResetReader);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(996, 523);
+            this.tabPage1.Size = new System.Drawing.Size(996, 517);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Basic Setup";
             // 
@@ -891,7 +891,7 @@ namespace UHFDemo
             // 
             // btnConnect
             // 
-            this.btnConnect.Font = new System.Drawing.Font("宋体", 9F);
+            this.btnConnect.Font = new System.Drawing.Font("SimSun", 9F);
             this.btnConnect.Location = new System.Drawing.Point(268, 12);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(136, 51);
@@ -918,7 +918,7 @@ namespace UHFDemo
             this.antType16.AutoSize = true;
             this.antType16.Location = new System.Drawing.Point(202, 17);
             this.antType16.Name = "antType16";
-            this.antType16.Size = new System.Drawing.Size(53, 16);
+            this.antType16.Size = new System.Drawing.Size(73, 21);
             this.antType16.TabIndex = 3;
             this.antType16.TabStop = true;
             this.antType16.Text = "16ANT";
@@ -930,7 +930,7 @@ namespace UHFDemo
             this.antType8.AutoSize = true;
             this.antType8.Location = new System.Drawing.Point(140, 17);
             this.antType8.Name = "antType8";
-            this.antType8.Size = new System.Drawing.Size(47, 16);
+            this.antType8.Size = new System.Drawing.Size(65, 21);
             this.antType8.TabIndex = 2;
             this.antType8.TabStop = true;
             this.antType8.Text = "8ANT";
@@ -942,7 +942,7 @@ namespace UHFDemo
             this.antType4.AutoSize = true;
             this.antType4.Location = new System.Drawing.Point(79, 17);
             this.antType4.Name = "antType4";
-            this.antType4.Size = new System.Drawing.Size(47, 16);
+            this.antType4.Size = new System.Drawing.Size(65, 21);
             this.antType4.TabIndex = 1;
             this.antType4.TabStop = true;
             this.antType4.Text = "4ANT";
@@ -954,7 +954,7 @@ namespace UHFDemo
             this.antType1.AutoSize = true;
             this.antType1.Location = new System.Drawing.Point(19, 17);
             this.antType1.Name = "antType1";
-            this.antType1.Size = new System.Drawing.Size(47, 16);
+            this.antType1.Size = new System.Drawing.Size(65, 21);
             this.antType1.TabIndex = 0;
             this.antType1.TabStop = true;
             this.antType1.Text = "1ANT";
@@ -977,7 +977,7 @@ namespace UHFDemo
             this.radio_btn_tcp.AutoSize = true;
             this.radio_btn_tcp.Location = new System.Drawing.Point(78, 16);
             this.radio_btn_tcp.Name = "radio_btn_tcp";
-            this.radio_btn_tcp.Size = new System.Drawing.Size(59, 16);
+            this.radio_btn_tcp.Size = new System.Drawing.Size(72, 21);
             this.radio_btn_tcp.TabIndex = 1;
             this.radio_btn_tcp.TabStop = true;
             this.radio_btn_tcp.Text = "TCP/IP";
@@ -989,7 +989,7 @@ namespace UHFDemo
             this.radio_btn_rs232.AutoSize = true;
             this.radio_btn_rs232.Location = new System.Drawing.Point(19, 17);
             this.radio_btn_rs232.Name = "radio_btn_rs232";
-            this.radio_btn_rs232.Size = new System.Drawing.Size(53, 16);
+            this.radio_btn_rs232.Size = new System.Drawing.Size(72, 21);
             this.radio_btn_rs232.TabIndex = 0;
             this.radio_btn_rs232.TabStop = true;
             this.radio_btn_rs232.Text = "RS232";
@@ -1042,7 +1042,7 @@ namespace UHFDemo
             "115200"});
             this.cmbSetBaudrate.Location = new System.Drawing.Point(113, 94);
             this.cmbSetBaudrate.Name = "cmbSetBaudrate";
-            this.cmbSetBaudrate.Size = new System.Drawing.Size(121, 20);
+            this.cmbSetBaudrate.Size = new System.Drawing.Size(121, 24);
             this.cmbSetBaudrate.TabIndex = 0;
             // 
             // lbChangeBaudrate
@@ -1050,7 +1050,7 @@ namespace UHFDemo
             this.lbChangeBaudrate.AutoSize = true;
             this.lbChangeBaudrate.Location = new System.Drawing.Point(13, 98);
             this.lbChangeBaudrate.Name = "lbChangeBaudrate";
-            this.lbChangeBaudrate.Size = new System.Drawing.Size(83, 12);
+            this.lbChangeBaudrate.Size = new System.Drawing.Size(95, 17);
             this.lbChangeBaudrate.TabIndex = 0;
             this.lbChangeBaudrate.Text = "Set Baudrate:";
             // 
@@ -1063,7 +1063,7 @@ namespace UHFDemo
             "115200"});
             this.cmbBaudrate.Location = new System.Drawing.Point(113, 55);
             this.cmbBaudrate.Name = "cmbBaudrate";
-            this.cmbBaudrate.Size = new System.Drawing.Size(121, 20);
+            this.cmbBaudrate.Size = new System.Drawing.Size(121, 24);
             this.cmbBaudrate.TabIndex = 1;
             // 
             // cmbComPort
@@ -1072,7 +1072,7 @@ namespace UHFDemo
             this.cmbComPort.FormattingEnabled = true;
             this.cmbComPort.Location = new System.Drawing.Point(113, 16);
             this.cmbComPort.Name = "cmbComPort";
-            this.cmbComPort.Size = new System.Drawing.Size(121, 20);
+            this.cmbComPort.Size = new System.Drawing.Size(121, 24);
             this.cmbComPort.TabIndex = 0;
             // 
             // label2
@@ -1080,7 +1080,7 @@ namespace UHFDemo
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(13, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Baudrate:";
             // 
@@ -1089,7 +1089,7 @@ namespace UHFDemo
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 12);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "SerialPort:";
             // 
@@ -1110,7 +1110,7 @@ namespace UHFDemo
             // 
             this.txtTcpPort.Location = new System.Drawing.Point(314, 25);
             this.txtTcpPort.Name = "txtTcpPort";
-            this.txtTcpPort.Size = new System.Drawing.Size(90, 21);
+            this.txtTcpPort.Size = new System.Drawing.Size(90, 22);
             this.txtTcpPort.TabIndex = 1;
             this.txtTcpPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1118,6 +1118,7 @@ namespace UHFDemo
             // 
             this.ipIpServer.IpAddressStr = "";
             this.ipIpServer.Location = new System.Drawing.Point(113, 25);
+            this.ipIpServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ipIpServer.Name = "ipIpServer";
             this.ipIpServer.Size = new System.Drawing.Size(122, 21);
             this.ipIpServer.TabIndex = 0;
@@ -1127,7 +1128,7 @@ namespace UHFDemo
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(261, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 12);
+            this.label4.Size = new System.Drawing.Size(38, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Port:";
             // 
@@ -1136,7 +1137,7 @@ namespace UHFDemo
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(13, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 12);
+            this.label3.Size = new System.Drawing.Size(109, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "Reader IP Addr:";
             // 
@@ -1156,7 +1157,7 @@ namespace UHFDemo
             // 
             this.htxtReadId.Location = new System.Drawing.Point(113, 25);
             this.htxtReadId.Name = "htxtReadId";
-            this.htxtReadId.Size = new System.Drawing.Size(122, 21);
+            this.htxtReadId.Size = new System.Drawing.Size(122, 22);
             this.htxtReadId.TabIndex = 2;
             this.htxtReadId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1189,7 +1190,7 @@ namespace UHFDemo
             this.htbGetIdentifier.Location = new System.Drawing.Point(13, 22);
             this.htbGetIdentifier.Name = "htbGetIdentifier";
             this.htbGetIdentifier.ReadOnly = true;
-            this.htbGetIdentifier.Size = new System.Drawing.Size(228, 21);
+            this.htbGetIdentifier.Size = new System.Drawing.Size(228, 22);
             this.htbGetIdentifier.TabIndex = 13;
             this.htbGetIdentifier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1197,7 +1198,7 @@ namespace UHFDemo
             // 
             this.htbSetIdentifier.Location = new System.Drawing.Point(13, 61);
             this.htbSetIdentifier.Name = "htbSetIdentifier";
-            this.htbSetIdentifier.Size = new System.Drawing.Size(228, 21);
+            this.htbSetIdentifier.Size = new System.Drawing.Size(228, 22);
             this.htbSetIdentifier.TabIndex = 12;
             this.htbSetIdentifier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1274,7 +1275,7 @@ namespace UHFDemo
             this.label33.AutoSize = true;
             this.label33.Location = new System.Drawing.Point(31, 11);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(41, 12);
+            this.label33.Size = new System.Drawing.Size(54, 17);
             this.label33.TabIndex = 6;
             this.label33.Text = "GPIO3:";
             // 
@@ -1283,7 +1284,7 @@ namespace UHFDemo
             this.rdbGpio3High.AutoSize = true;
             this.rdbGpio3High.Location = new System.Drawing.Point(78, 10);
             this.rdbGpio3High.Name = "rdbGpio3High";
-            this.rdbGpio3High.Size = new System.Drawing.Size(47, 16);
+            this.rdbGpio3High.Size = new System.Drawing.Size(58, 21);
             this.rdbGpio3High.TabIndex = 6;
             this.rdbGpio3High.TabStop = true;
             this.rdbGpio3High.Text = "High";
@@ -1294,7 +1295,7 @@ namespace UHFDemo
             this.rdbGpio3Low.AutoSize = true;
             this.rdbGpio3Low.Location = new System.Drawing.Point(161, 10);
             this.rdbGpio3Low.Name = "rdbGpio3Low";
-            this.rdbGpio3Low.Size = new System.Drawing.Size(41, 16);
+            this.rdbGpio3Low.Size = new System.Drawing.Size(54, 21);
             this.rdbGpio3Low.TabIndex = 0;
             this.rdbGpio3Low.TabStop = true;
             this.rdbGpio3Low.Text = "Low";
@@ -1316,7 +1317,7 @@ namespace UHFDemo
             this.label32.AutoSize = true;
             this.label32.Location = new System.Drawing.Point(30, 12);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 12);
+            this.label32.Size = new System.Drawing.Size(54, 17);
             this.label32.TabIndex = 9;
             this.label32.Text = "GPIO4:";
             // 
@@ -1325,7 +1326,7 @@ namespace UHFDemo
             this.rdbGpio4High.AutoSize = true;
             this.rdbGpio4High.Location = new System.Drawing.Point(77, 10);
             this.rdbGpio4High.Name = "rdbGpio4High";
-            this.rdbGpio4High.Size = new System.Drawing.Size(47, 16);
+            this.rdbGpio4High.Size = new System.Drawing.Size(58, 21);
             this.rdbGpio4High.TabIndex = 1;
             this.rdbGpio4High.TabStop = true;
             this.rdbGpio4High.Text = "High";
@@ -1336,7 +1337,7 @@ namespace UHFDemo
             this.rdbGpio4Low.AutoSize = true;
             this.rdbGpio4Low.Location = new System.Drawing.Point(161, 10);
             this.rdbGpio4Low.Name = "rdbGpio4Low";
-            this.rdbGpio4Low.Size = new System.Drawing.Size(41, 16);
+            this.rdbGpio4Low.Size = new System.Drawing.Size(54, 21);
             this.rdbGpio4Low.TabIndex = 2;
             this.rdbGpio4Low.TabStop = true;
             this.rdbGpio4Low.Text = "Low";
@@ -1391,7 +1392,7 @@ namespace UHFDemo
             this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(31, 14);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(41, 12);
+            this.label30.Size = new System.Drawing.Size(54, 17);
             this.label30.TabIndex = 0;
             this.label30.Text = "GPIO1:";
             // 
@@ -1400,7 +1401,7 @@ namespace UHFDemo
             this.rdbGpio1High.AutoSize = true;
             this.rdbGpio1High.Location = new System.Drawing.Point(78, 12);
             this.rdbGpio1High.Name = "rdbGpio1High";
-            this.rdbGpio1High.Size = new System.Drawing.Size(47, 16);
+            this.rdbGpio1High.Size = new System.Drawing.Size(58, 21);
             this.rdbGpio1High.TabIndex = 1;
             this.rdbGpio1High.TabStop = true;
             this.rdbGpio1High.Text = "High";
@@ -1411,7 +1412,7 @@ namespace UHFDemo
             this.rdbGpio1Low.AutoSize = true;
             this.rdbGpio1Low.Location = new System.Drawing.Point(163, 12);
             this.rdbGpio1Low.Name = "rdbGpio1Low";
-            this.rdbGpio1Low.Size = new System.Drawing.Size(41, 16);
+            this.rdbGpio1Low.Size = new System.Drawing.Size(54, 21);
             this.rdbGpio1Low.TabIndex = 2;
             this.rdbGpio1Low.TabStop = true;
             this.rdbGpio1Low.Text = "Low";
@@ -1433,7 +1434,7 @@ namespace UHFDemo
             this.label31.AutoSize = true;
             this.label31.Location = new System.Drawing.Point(30, 14);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(41, 12);
+            this.label31.Size = new System.Drawing.Size(54, 17);
             this.label31.TabIndex = 3;
             this.label31.Text = "GPIO2:";
             // 
@@ -1442,7 +1443,7 @@ namespace UHFDemo
             this.rdbGpio2High.AutoSize = true;
             this.rdbGpio2High.Location = new System.Drawing.Point(77, 12);
             this.rdbGpio2High.Name = "rdbGpio2High";
-            this.rdbGpio2High.Size = new System.Drawing.Size(47, 16);
+            this.rdbGpio2High.Size = new System.Drawing.Size(58, 21);
             this.rdbGpio2High.TabIndex = 4;
             this.rdbGpio2High.TabStop = true;
             this.rdbGpio2High.Text = "High";
@@ -1453,7 +1454,7 @@ namespace UHFDemo
             this.rdbGpio2Low.AutoSize = true;
             this.rdbGpio2Low.Location = new System.Drawing.Point(163, 12);
             this.rdbGpio2Low.Name = "rdbGpio2Low";
-            this.rdbGpio2Low.Size = new System.Drawing.Size(41, 16);
+            this.rdbGpio2Low.Size = new System.Drawing.Size(54, 21);
             this.rdbGpio2Low.TabIndex = 5;
             this.rdbGpio2Low.TabStop = true;
             this.rdbGpio2Low.Text = "Low";
@@ -1498,7 +1499,7 @@ namespace UHFDemo
             this.rdbBeeperModeTag.AutoSize = true;
             this.rdbBeeperModeTag.Location = new System.Drawing.Point(16, 69);
             this.rdbBeeperModeTag.Name = "rdbBeeperModeTag";
-            this.rdbBeeperModeTag.Size = new System.Drawing.Size(371, 40);
+            this.rdbBeeperModeTag.Size = new System.Drawing.Size(392, 55);
             this.rdbBeeperModeTag.TabIndex = 2;
             this.rdbBeeperModeTag.TabStop = true;
             this.rdbBeeperModeTag.Text = "Beep after a tag is identified.(This setting applies only \r\nto a small number of " +
@@ -1511,7 +1512,7 @@ namespace UHFDemo
             this.rdbBeeperModeInventory.AutoSize = true;
             this.rdbBeeperModeInventory.Location = new System.Drawing.Point(16, 42);
             this.rdbBeeperModeInventory.Name = "rdbBeeperModeInventory";
-            this.rdbBeeperModeInventory.Size = new System.Drawing.Size(197, 16);
+            this.rdbBeeperModeInventory.Size = new System.Drawing.Size(218, 21);
             this.rdbBeeperModeInventory.TabIndex = 1;
             this.rdbBeeperModeInventory.TabStop = true;
             this.rdbBeeperModeInventory.Text = "Beep after an inventory round";
@@ -1522,7 +1523,7 @@ namespace UHFDemo
             this.rdbBeeperModeSlient.AutoSize = true;
             this.rdbBeeperModeSlient.Location = new System.Drawing.Point(17, 20);
             this.rdbBeeperModeSlient.Name = "rdbBeeperModeSlient";
-            this.rdbBeeperModeSlient.Size = new System.Drawing.Size(53, 16);
+            this.rdbBeeperModeSlient.Size = new System.Drawing.Size(63, 21);
             this.rdbBeeperModeSlient.TabIndex = 0;
             this.rdbBeeperModeSlient.TabStop = true;
             this.rdbBeeperModeSlient.Text = "Quiet";
@@ -1555,7 +1556,7 @@ namespace UHFDemo
             this.txtReaderTemperature.Location = new System.Drawing.Point(53, 17);
             this.txtReaderTemperature.Name = "txtReaderTemperature";
             this.txtReaderTemperature.ReadOnly = true;
-            this.txtReaderTemperature.Size = new System.Drawing.Size(120, 21);
+            this.txtReaderTemperature.Size = new System.Drawing.Size(120, 22);
             this.txtReaderTemperature.TabIndex = 1;
             this.txtReaderTemperature.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1586,7 +1587,7 @@ namespace UHFDemo
             this.txtFirmwareVersion.Location = new System.Drawing.Point(53, 16);
             this.txtFirmwareVersion.Name = "txtFirmwareVersion";
             this.txtFirmwareVersion.ReadOnly = true;
-            this.txtFirmwareVersion.Size = new System.Drawing.Size(121, 21);
+            this.txtFirmwareVersion.Size = new System.Drawing.Size(121, 22);
             this.txtFirmwareVersion.TabIndex = 1;
             this.txtFirmwareVersion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1611,10 +1612,10 @@ namespace UHFDemo
             this.tabPage2.Controls.Add(this.gbCmdAntenna);
             this.tabPage2.Controls.Add(this.gbCmdRegion);
             this.tabPage2.Controls.Add(this.gbCmdOutputPower);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(996, 523);
+            this.tabPage2.Size = new System.Drawing.Size(996, 520);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "RF Setup";
             // 
@@ -1640,7 +1641,7 @@ namespace UHFDemo
             this.label110.AutoSize = true;
             this.label110.Location = new System.Drawing.Point(156, 22);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(11, 12);
+            this.label110.Size = new System.Drawing.Size(22, 17);
             this.label110.TabIndex = 15;
             this.label110.Text = "@";
             // 
@@ -1649,7 +1650,7 @@ namespace UHFDemo
             this.label109.AutoSize = true;
             this.label109.Location = new System.Drawing.Point(250, 22);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(23, 12);
+            this.label109.Size = new System.Drawing.Size(36, 17);
             this.label109.TabIndex = 14;
             this.label109.Text = "MHz";
             // 
@@ -1720,7 +1721,7 @@ namespace UHFDemo
             "928.00"});
             this.cmbReturnLossFreq.Location = new System.Drawing.Point(173, 18);
             this.cmbReturnLossFreq.Name = "cmbReturnLossFreq";
-            this.cmbReturnLossFreq.Size = new System.Drawing.Size(71, 20);
+            this.cmbReturnLossFreq.Size = new System.Drawing.Size(71, 24);
             this.cmbReturnLossFreq.TabIndex = 13;
             // 
             // label108
@@ -1728,7 +1729,7 @@ namespace UHFDemo
             this.label108.AutoSize = true;
             this.label108.Location = new System.Drawing.Point(50, 22);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(23, 12);
+            this.label108.Size = new System.Drawing.Size(30, 17);
             this.label108.TabIndex = 12;
             this.label108.Text = "RL:";
             // 
@@ -1737,7 +1738,7 @@ namespace UHFDemo
             this.textReturnLoss.Location = new System.Drawing.Point(79, 18);
             this.textReturnLoss.Name = "textReturnLoss";
             this.textReturnLoss.ReadOnly = true;
-            this.textReturnLoss.Size = new System.Drawing.Size(71, 21);
+            this.textReturnLoss.Size = new System.Drawing.Size(71, 22);
             this.textReturnLoss.TabIndex = 11;
             this.textReturnLoss.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1792,7 +1793,7 @@ namespace UHFDemo
             this.rdbProfile3.AutoSize = true;
             this.rdbProfile3.Location = new System.Drawing.Point(269, 45);
             this.rdbProfile3.Name = "rdbProfile3";
-            this.rdbProfile3.Size = new System.Drawing.Size(317, 16);
+            this.rdbProfile3.Size = new System.Drawing.Size(312, 21);
             this.rdbProfile3.TabIndex = 3;
             this.rdbProfile3.TabStop = true;
             this.rdbProfile3.Text = "Profile3                 Tari 6.25uS; FM0 400KHz;";
@@ -1803,7 +1804,7 @@ namespace UHFDemo
             this.rdbProfile2.AutoSize = true;
             this.rdbProfile2.Location = new System.Drawing.Point(6, 45);
             this.rdbProfile2.Name = "rdbProfile2";
-            this.rdbProfile2.Size = new System.Drawing.Size(245, 16);
+            this.rdbProfile2.Size = new System.Drawing.Size(258, 21);
             this.rdbProfile2.TabIndex = 2;
             this.rdbProfile2.TabStop = true;
             this.rdbProfile2.Text = "Profile2  Tari 25uS; Miller 4 300KHz;";
@@ -1812,11 +1813,11 @@ namespace UHFDemo
             // rdbProfile1
             // 
             this.rdbProfile1.AutoSize = true;
-            this.rdbProfile1.Font = new System.Drawing.Font("宋体", 9F);
+            this.rdbProfile1.Font = new System.Drawing.Font("SimSun", 9F);
             this.rdbProfile1.ForeColor = System.Drawing.Color.Black;
             this.rdbProfile1.Location = new System.Drawing.Point(269, 20);
             this.rdbProfile1.Name = "rdbProfile1";
-            this.rdbProfile1.Size = new System.Drawing.Size(395, 16);
+            this.rdbProfile1.Size = new System.Drawing.Size(524, 19);
             this.rdbProfile1.TabIndex = 1;
             this.rdbProfile1.TabStop = true;
             this.rdbProfile1.Text = "Profile1(Recommended and Default)   Tari 25uS; Miller 4 250KHz";
@@ -1827,7 +1828,7 @@ namespace UHFDemo
             this.rdbProfile0.AutoSize = true;
             this.rdbProfile0.Location = new System.Drawing.Point(6, 20);
             this.rdbProfile0.Name = "rdbProfile0";
-            this.rdbProfile0.Size = new System.Drawing.Size(203, 16);
+            this.rdbProfile0.Size = new System.Drawing.Size(228, 21);
             this.rdbProfile0.TabIndex = 0;
             this.rdbProfile0.TabStop = true;
             this.rdbProfile0.Text = "Profile0  Tari 25uS; FM0 40KHz";
@@ -1865,7 +1866,7 @@ namespace UHFDemo
             this.label14.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label14.Location = new System.Drawing.Point(48, 40);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(389, 12);
+            this.label14.Size = new System.Drawing.Size(377, 17);
             this.label14.TabIndex = 10;
             this.label14.Text = "2.If this function is not supported by tags, please turn it off.";
             // 
@@ -1875,7 +1876,7 @@ namespace UHFDemo
             this.label11.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label11.Location = new System.Drawing.Point(12, 18);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(479, 12);
+            this.label11.Size = new System.Drawing.Size(502, 17);
             this.label11.TabIndex = 8;
             this.label11.Text = "Note: 1.Only a certain number of  Impinj Monza tag types support this function.";
             // 
@@ -1884,7 +1885,7 @@ namespace UHFDemo
             this.rdbMonzaOff.AutoSize = true;
             this.rdbMonzaOff.Location = new System.Drawing.Point(689, 27);
             this.rdbMonzaOff.Name = "rdbMonzaOff";
-            this.rdbMonzaOff.Size = new System.Drawing.Size(41, 16);
+            this.rdbMonzaOff.Size = new System.Drawing.Size(48, 21);
             this.rdbMonzaOff.TabIndex = 3;
             this.rdbMonzaOff.TabStop = true;
             this.rdbMonzaOff.Text = "Off";
@@ -1915,7 +1916,7 @@ namespace UHFDemo
             this.rdbMonzaOn.AutoSize = true;
             this.rdbMonzaOn.Location = new System.Drawing.Point(636, 27);
             this.rdbMonzaOn.Name = "rdbMonzaOn";
-            this.rdbMonzaOn.Size = new System.Drawing.Size(35, 16);
+            this.rdbMonzaOn.Size = new System.Drawing.Size(48, 21);
             this.rdbMonzaOn.TabIndex = 0;
             this.rdbMonzaOn.TabStop = true;
             this.rdbMonzaOn.Text = "On";
@@ -1945,7 +1946,7 @@ namespace UHFDemo
             this.label7.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label7.Location = new System.Drawing.Point(48, 36);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(407, 12);
+            this.label7.Size = new System.Drawing.Size(423, 17);
             this.label7.TabIndex = 9;
             this.label7.Text = "2.Reader stops tag operation if return loss is above the threshold.";
             // 
@@ -1955,7 +1956,7 @@ namespace UHFDemo
             this.label6.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label6.Location = new System.Drawing.Point(48, 56);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(323, 12);
+            this.label6.Size = new System.Drawing.Size(321, 17);
             this.label6.TabIndex = 8;
             this.label6.Text = "3.User can turn it off by setting the threshold to 0.";
             // 
@@ -1965,7 +1966,7 @@ namespace UHFDemo
             this.label5.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label5.Location = new System.Drawing.Point(12, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(509, 12);
+            this.label5.Size = new System.Drawing.Size(553, 17);
             this.label5.TabIndex = 7;
             this.label5.Text = "Note: 1.Reader detects antenna connections by measuring the return loss of RF por" +
     "ts.";
@@ -1975,7 +1976,7 @@ namespace UHFDemo
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(473, 36);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(143, 12);
+            this.label10.Size = new System.Drawing.Size(162, 17);
             this.label10.TabIndex = 6;
             this.label10.Text = "RetrurnLoss Threshold::";
             // 
@@ -1984,7 +1985,7 @@ namespace UHFDemo
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(719, 36);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 12);
+            this.label8.Size = new System.Drawing.Size(25, 17);
             this.label8.TabIndex = 5;
             this.label8.Text = "dB";
             // 
@@ -1992,7 +1993,7 @@ namespace UHFDemo
             // 
             this.tbAntDectector.Location = new System.Drawing.Point(632, 32);
             this.tbAntDectector.Name = "tbAntDectector";
-            this.tbAntDectector.Size = new System.Drawing.Size(71, 21);
+            this.tbAntDectector.Size = new System.Drawing.Size(71, 22);
             this.tbAntDectector.TabIndex = 4;
             this.tbAntDectector.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2035,7 +2036,7 @@ namespace UHFDemo
             this.label107.AutoSize = true;
             this.label107.Location = new System.Drawing.Point(12, 21);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(77, 12);
+            this.label107.Size = new System.Drawing.Size(84, 17);
             this.label107.TabIndex = 7;
             this.label107.Text = "Current Ant:";
             // 
@@ -2050,7 +2051,7 @@ namespace UHFDemo
             "ANT4"});
             this.cmbWorkAnt.Location = new System.Drawing.Point(115, 17);
             this.cmbWorkAnt.Name = "cmbWorkAnt";
-            this.cmbWorkAnt.Size = new System.Drawing.Size(84, 20);
+            this.cmbWorkAnt.Size = new System.Drawing.Size(84, 24);
             this.cmbWorkAnt.TabIndex = 6;
             // 
             // btnGetWorkAntenna
@@ -2093,7 +2094,7 @@ namespace UHFDemo
             this.cbUserDefineFreq.AutoSize = true;
             this.cbUserDefineFreq.Location = new System.Drawing.Point(6, 97);
             this.cbUserDefineFreq.Name = "cbUserDefineFreq";
-            this.cbUserDefineFreq.Size = new System.Drawing.Size(90, 16);
+            this.cbUserDefineFreq.Size = new System.Drawing.Size(105, 21);
             this.cbUserDefineFreq.TabIndex = 11;
             this.cbUserDefineFreq.Text = "User Define";
             this.cbUserDefineFreq.UseVisualStyleBackColor = true;
@@ -2123,7 +2124,7 @@ namespace UHFDemo
             this.label106.AutoSize = true;
             this.label106.Location = new System.Drawing.Point(555, 24);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(53, 12);
+            this.label106.Size = new System.Drawing.Size(58, 17);
             this.label106.TabIndex = 8;
             this.label106.Text = "quantity";
             // 
@@ -2132,7 +2133,7 @@ namespace UHFDemo
             this.label105.AutoSize = true;
             this.label105.Location = new System.Drawing.Point(378, 24);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(23, 12);
+            this.label105.Size = new System.Drawing.Size(34, 17);
             this.label105.TabIndex = 7;
             this.label105.Text = "KHz";
             // 
@@ -2141,7 +2142,7 @@ namespace UHFDemo
             this.label104.AutoSize = true;
             this.label104.Location = new System.Drawing.Point(189, 24);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(23, 12);
+            this.label104.Size = new System.Drawing.Size(34, 17);
             this.label104.TabIndex = 6;
             this.label104.Text = "KHz";
             // 
@@ -2150,7 +2151,7 @@ namespace UHFDemo
             this.label103.AutoSize = true;
             this.label103.Location = new System.Drawing.Point(409, 24);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(59, 12);
+            this.label103.Size = new System.Drawing.Size(65, 17);
             this.label103.TabIndex = 5;
             this.label103.Text = "Quantity:";
             // 
@@ -2159,7 +2160,7 @@ namespace UHFDemo
             this.label86.AutoSize = true;
             this.label86.Location = new System.Drawing.Point(220, 24);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(71, 12);
+            this.label86.Size = new System.Drawing.Size(85, 17);
             this.label86.TabIndex = 4;
             this.label86.Text = "Freq Space:";
             // 
@@ -2168,7 +2169,7 @@ namespace UHFDemo
             this.label75.AutoSize = true;
             this.label75.Location = new System.Drawing.Point(6, 24);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(101, 12);
+            this.label75.Size = new System.Drawing.Size(113, 17);
             this.label75.TabIndex = 3;
             this.label75.Text = "Start Frequency:";
             // 
@@ -2176,7 +2177,7 @@ namespace UHFDemo
             // 
             this.textFreqQuantity.Location = new System.Drawing.Point(476, 20);
             this.textFreqQuantity.Name = "textFreqQuantity";
-            this.textFreqQuantity.Size = new System.Drawing.Size(71, 21);
+            this.textFreqQuantity.Size = new System.Drawing.Size(71, 22);
             this.textFreqQuantity.TabIndex = 2;
             this.textFreqQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2184,7 +2185,7 @@ namespace UHFDemo
             // 
             this.TextFreqInterval.Location = new System.Drawing.Point(299, 20);
             this.TextFreqInterval.Name = "TextFreqInterval";
-            this.TextFreqInterval.Size = new System.Drawing.Size(71, 21);
+            this.TextFreqInterval.Size = new System.Drawing.Size(71, 22);
             this.TextFreqInterval.TabIndex = 1;
             this.TextFreqInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2192,7 +2193,7 @@ namespace UHFDemo
             // 
             this.textStartFreq.Location = new System.Drawing.Point(115, 20);
             this.textStartFreq.Name = "textStartFreq";
-            this.textStartFreq.Size = new System.Drawing.Size(66, 21);
+            this.textStartFreq.Size = new System.Drawing.Size(66, 22);
             this.textStartFreq.TabIndex = 0;
             this.textStartFreq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2220,7 +2221,7 @@ namespace UHFDemo
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(562, 29);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(23, 12);
+            this.label37.Size = new System.Drawing.Size(36, 17);
             this.label37.TabIndex = 17;
             this.label37.Text = "MHz";
             // 
@@ -2229,7 +2230,7 @@ namespace UHFDemo
             this.label36.AutoSize = true;
             this.label36.Location = new System.Drawing.Point(388, 29);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(23, 12);
+            this.label36.Size = new System.Drawing.Size(36, 17);
             this.label36.TabIndex = 16;
             this.label36.Text = "MHz";
             // 
@@ -2239,7 +2240,7 @@ namespace UHFDemo
             this.cmbFrequencyEnd.FormattingEnabled = true;
             this.cmbFrequencyEnd.Location = new System.Drawing.Point(470, 25);
             this.cmbFrequencyEnd.Name = "cmbFrequencyEnd";
-            this.cmbFrequencyEnd.Size = new System.Drawing.Size(71, 20);
+            this.cmbFrequencyEnd.Size = new System.Drawing.Size(71, 24);
             this.cmbFrequencyEnd.TabIndex = 14;
             // 
             // label13
@@ -2247,7 +2248,7 @@ namespace UHFDemo
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(432, 29);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 12);
+            this.label13.Size = new System.Drawing.Size(16, 17);
             this.label13.TabIndex = 15;
             this.label13.Text = "—";
             // 
@@ -2257,7 +2258,7 @@ namespace UHFDemo
             this.cmbFrequencyStart.FormattingEnabled = true;
             this.cmbFrequencyStart.Location = new System.Drawing.Point(296, 25);
             this.cmbFrequencyStart.Name = "cmbFrequencyStart";
-            this.cmbFrequencyStart.Size = new System.Drawing.Size(71, 20);
+            this.cmbFrequencyStart.Size = new System.Drawing.Size(71, 24);
             this.cmbFrequencyStart.TabIndex = 12;
             // 
             // label12
@@ -2265,7 +2266,7 @@ namespace UHFDemo
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(204, 29);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 12);
+            this.label12.Size = new System.Drawing.Size(87, 17);
             this.label12.TabIndex = 13;
             this.label12.Text = "Freq Range:";
             // 
@@ -2274,7 +2275,7 @@ namespace UHFDemo
             this.rdbRegionChn.AutoSize = true;
             this.rdbRegionChn.Location = new System.Drawing.Point(128, 24);
             this.rdbRegionChn.Name = "rdbRegionChn";
-            this.rdbRegionChn.Size = new System.Drawing.Size(41, 16);
+            this.rdbRegionChn.Size = new System.Drawing.Size(58, 21);
             this.rdbRegionChn.TabIndex = 11;
             this.rdbRegionChn.TabStop = true;
             this.rdbRegionChn.Text = "CHN";
@@ -2286,7 +2287,7 @@ namespace UHFDemo
             this.rdbRegionEtsi.AutoSize = true;
             this.rdbRegionEtsi.Location = new System.Drawing.Point(64, 24);
             this.rdbRegionEtsi.Name = "rdbRegionEtsi";
-            this.rdbRegionEtsi.Size = new System.Drawing.Size(47, 16);
+            this.rdbRegionEtsi.Size = new System.Drawing.Size(59, 21);
             this.rdbRegionEtsi.TabIndex = 10;
             this.rdbRegionEtsi.TabStop = true;
             this.rdbRegionEtsi.Text = "ETSI";
@@ -2298,7 +2299,7 @@ namespace UHFDemo
             this.rdbRegionFcc.AutoSize = true;
             this.rdbRegionFcc.Location = new System.Drawing.Point(6, 24);
             this.rdbRegionFcc.Name = "rdbRegionFcc";
-            this.rdbRegionFcc.Size = new System.Drawing.Size(41, 16);
+            this.rdbRegionFcc.Size = new System.Drawing.Size(55, 21);
             this.rdbRegionFcc.TabIndex = 9;
             this.rdbRegionFcc.TabStop = true;
             this.rdbRegionFcc.Text = "FCC";
@@ -2376,7 +2377,7 @@ namespace UHFDemo
             this.label151.AutoSize = true;
             this.label151.Location = new System.Drawing.Point(389, 20);
             this.label151.Name = "label151";
-            this.label151.Size = new System.Drawing.Size(17, 12);
+            this.label151.Size = new System.Drawing.Size(24, 17);
             this.label151.TabIndex = 36;
             this.label151.Text = "16";
             // 
@@ -2385,7 +2386,7 @@ namespace UHFDemo
             this.label152.AutoSize = true;
             this.label152.Location = new System.Drawing.Point(364, 20);
             this.label152.Name = "label152";
-            this.label152.Size = new System.Drawing.Size(17, 12);
+            this.label152.Size = new System.Drawing.Size(24, 17);
             this.label152.TabIndex = 35;
             this.label152.Text = "15";
             // 
@@ -2394,7 +2395,7 @@ namespace UHFDemo
             this.label153.AutoSize = true;
             this.label153.Location = new System.Drawing.Point(342, 20);
             this.label153.Name = "label153";
-            this.label153.Size = new System.Drawing.Size(17, 12);
+            this.label153.Size = new System.Drawing.Size(24, 17);
             this.label153.TabIndex = 34;
             this.label153.Text = "14";
             // 
@@ -2403,7 +2404,7 @@ namespace UHFDemo
             this.label154.AutoSize = true;
             this.label154.Location = new System.Drawing.Point(316, 20);
             this.label154.Name = "label154";
-            this.label154.Size = new System.Drawing.Size(17, 12);
+            this.label154.Size = new System.Drawing.Size(24, 17);
             this.label154.TabIndex = 33;
             this.label154.Text = "13";
             // 
@@ -2411,7 +2412,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_16.Location = new System.Drawing.Point(384, 35);
             this.tb_outputpower_16.Name = "tb_outputpower_16";
-            this.tb_outputpower_16.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_16.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_16.TabIndex = 32;
             this.tb_outputpower_16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2419,7 +2420,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_15.Location = new System.Drawing.Point(360, 35);
             this.tb_outputpower_15.Name = "tb_outputpower_15";
-            this.tb_outputpower_15.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_15.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_15.TabIndex = 31;
             this.tb_outputpower_15.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2427,7 +2428,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_14.Location = new System.Drawing.Point(336, 35);
             this.tb_outputpower_14.Name = "tb_outputpower_14";
-            this.tb_outputpower_14.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_14.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_14.TabIndex = 30;
             this.tb_outputpower_14.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2435,7 +2436,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_13.Location = new System.Drawing.Point(312, 35);
             this.tb_outputpower_13.Name = "tb_outputpower_13";
-            this.tb_outputpower_13.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_13.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_13.TabIndex = 29;
             this.tb_outputpower_13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2444,7 +2445,7 @@ namespace UHFDemo
             this.label147.AutoSize = true;
             this.label147.Location = new System.Drawing.Point(290, 20);
             this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(17, 12);
+            this.label147.Size = new System.Drawing.Size(24, 17);
             this.label147.TabIndex = 28;
             this.label147.Text = "12";
             // 
@@ -2453,7 +2454,7 @@ namespace UHFDemo
             this.label148.AutoSize = true;
             this.label148.Location = new System.Drawing.Point(265, 20);
             this.label148.Name = "label148";
-            this.label148.Size = new System.Drawing.Size(17, 12);
+            this.label148.Size = new System.Drawing.Size(24, 17);
             this.label148.TabIndex = 27;
             this.label148.Text = "11";
             // 
@@ -2462,7 +2463,7 @@ namespace UHFDemo
             this.label149.AutoSize = true;
             this.label149.Location = new System.Drawing.Point(242, 20);
             this.label149.Name = "label149";
-            this.label149.Size = new System.Drawing.Size(17, 12);
+            this.label149.Size = new System.Drawing.Size(24, 17);
             this.label149.TabIndex = 26;
             this.label149.Text = "10";
             // 
@@ -2471,7 +2472,7 @@ namespace UHFDemo
             this.label150.AutoSize = true;
             this.label150.Location = new System.Drawing.Point(222, 20);
             this.label150.Name = "label150";
-            this.label150.Size = new System.Drawing.Size(11, 12);
+            this.label150.Size = new System.Drawing.Size(16, 17);
             this.label150.TabIndex = 25;
             this.label150.Text = "9";
             // 
@@ -2479,7 +2480,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_12.Location = new System.Drawing.Point(288, 35);
             this.tb_outputpower_12.Name = "tb_outputpower_12";
-            this.tb_outputpower_12.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_12.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_12.TabIndex = 24;
             this.tb_outputpower_12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2487,7 +2488,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_11.Location = new System.Drawing.Point(264, 35);
             this.tb_outputpower_11.Name = "tb_outputpower_11";
-            this.tb_outputpower_11.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_11.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_11.TabIndex = 23;
             this.tb_outputpower_11.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2495,7 +2496,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_10.Location = new System.Drawing.Point(240, 35);
             this.tb_outputpower_10.Name = "tb_outputpower_10";
-            this.tb_outputpower_10.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_10.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_10.TabIndex = 22;
             this.tb_outputpower_10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2503,7 +2504,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_9.Location = new System.Drawing.Point(216, 35);
             this.tb_outputpower_9.Name = "tb_outputpower_9";
-            this.tb_outputpower_9.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_9.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_9.TabIndex = 21;
             this.tb_outputpower_9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2512,7 +2513,7 @@ namespace UHFDemo
             this.label115.AutoSize = true;
             this.label115.Location = new System.Drawing.Point(198, 20);
             this.label115.Name = "label115";
-            this.label115.Size = new System.Drawing.Size(11, 12);
+            this.label115.Size = new System.Drawing.Size(16, 17);
             this.label115.TabIndex = 20;
             this.label115.Text = "8";
             // 
@@ -2521,7 +2522,7 @@ namespace UHFDemo
             this.label114.AutoSize = true;
             this.label114.Location = new System.Drawing.Point(173, 20);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(11, 12);
+            this.label114.Size = new System.Drawing.Size(16, 17);
             this.label114.TabIndex = 19;
             this.label114.Text = "7";
             // 
@@ -2530,7 +2531,7 @@ namespace UHFDemo
             this.label113.AutoSize = true;
             this.label113.Location = new System.Drawing.Point(151, 20);
             this.label113.Name = "label113";
-            this.label113.Size = new System.Drawing.Size(11, 12);
+            this.label113.Size = new System.Drawing.Size(16, 17);
             this.label113.TabIndex = 18;
             this.label113.Text = "6";
             // 
@@ -2539,7 +2540,7 @@ namespace UHFDemo
             this.label112.AutoSize = true;
             this.label112.Location = new System.Drawing.Point(126, 20);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(11, 12);
+            this.label112.Size = new System.Drawing.Size(16, 17);
             this.label112.TabIndex = 17;
             this.label112.Text = "5";
             // 
@@ -2547,7 +2548,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_8.Location = new System.Drawing.Point(192, 35);
             this.tb_outputpower_8.Name = "tb_outputpower_8";
-            this.tb_outputpower_8.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_8.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_8.TabIndex = 16;
             this.tb_outputpower_8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_8.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
@@ -2556,7 +2557,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_7.Location = new System.Drawing.Point(168, 35);
             this.tb_outputpower_7.Name = "tb_outputpower_7";
-            this.tb_outputpower_7.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_7.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_7.TabIndex = 15;
             this.tb_outputpower_7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_7.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
@@ -2565,7 +2566,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_6.Location = new System.Drawing.Point(144, 35);
             this.tb_outputpower_6.Name = "tb_outputpower_6";
-            this.tb_outputpower_6.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_6.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_6.TabIndex = 14;
             this.tb_outputpower_6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_6.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
@@ -2574,7 +2575,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_5.Location = new System.Drawing.Point(120, 35);
             this.tb_outputpower_5.Name = "tb_outputpower_5";
-            this.tb_outputpower_5.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_5.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_5.TabIndex = 13;
             this.tb_outputpower_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_5.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
@@ -2584,7 +2585,7 @@ namespace UHFDemo
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(98, 20);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(11, 12);
+            this.label34.Size = new System.Drawing.Size(16, 17);
             this.label34.TabIndex = 12;
             this.label34.Text = "4";
             // 
@@ -2593,7 +2594,7 @@ namespace UHFDemo
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(74, 20);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(11, 12);
+            this.label21.Size = new System.Drawing.Size(16, 17);
             this.label21.TabIndex = 11;
             this.label21.Text = "3";
             // 
@@ -2602,7 +2603,7 @@ namespace UHFDemo
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(50, 20);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(11, 12);
+            this.label20.Size = new System.Drawing.Size(16, 17);
             this.label20.TabIndex = 10;
             this.label20.Text = "2";
             // 
@@ -2611,7 +2612,7 @@ namespace UHFDemo
             this.label18.AutoSize = true;
             this.label18.Location = new System.Drawing.Point(24, 20);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(11, 12);
+            this.label18.Size = new System.Drawing.Size(16, 17);
             this.label18.TabIndex = 9;
             this.label18.Text = "1";
             // 
@@ -2619,7 +2620,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_4.Location = new System.Drawing.Point(96, 35);
             this.tb_outputpower_4.Name = "tb_outputpower_4";
-            this.tb_outputpower_4.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_4.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_4.TabIndex = 7;
             this.tb_outputpower_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -2628,7 +2629,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_3.Location = new System.Drawing.Point(72, 35);
             this.tb_outputpower_3.Name = "tb_outputpower_3";
-            this.tb_outputpower_3.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_3.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_3.TabIndex = 6;
             this.tb_outputpower_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
@@ -2637,7 +2638,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_2.Location = new System.Drawing.Point(48, 35);
             this.tb_outputpower_2.Name = "tb_outputpower_2";
-            this.tb_outputpower_2.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_2.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_2.TabIndex = 5;
             this.tb_outputpower_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -2646,7 +2647,7 @@ namespace UHFDemo
             // 
             this.tb_outputpower_1.Location = new System.Drawing.Point(24, 35);
             this.tb_outputpower_1.Name = "tb_outputpower_1";
-            this.tb_outputpower_1.Size = new System.Drawing.Size(17, 21);
+            this.tb_outputpower_1.Size = new System.Drawing.Size(17, 22);
             this.tb_outputpower_1.TabIndex = 4;
             this.tb_outputpower_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_outputpower_1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -2656,7 +2657,7 @@ namespace UHFDemo
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(416, 20);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(41, 12);
+            this.label15.Size = new System.Drawing.Size(46, 17);
             this.label15.TabIndex = 3;
             this.label15.Text = "Ant ID";
             // 
@@ -2685,7 +2686,7 @@ namespace UHFDemo
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(408, 39);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 12);
+            this.label9.Size = new System.Drawing.Size(36, 17);
             this.label9.TabIndex = 0;
             this.label9.Text = "dBm";
             // 
@@ -2694,11 +2695,11 @@ namespace UHFDemo
             this.pageEpcTest.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pageEpcTest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pageEpcTest.Controls.Add(this.tab_6c_Tags_Test);
-            this.pageEpcTest.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.pageEpcTest.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.pageEpcTest.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.pageEpcTest.Location = new System.Drawing.Point(4, 22);
+            this.pageEpcTest.Location = new System.Drawing.Point(4, 25);
             this.pageEpcTest.Name = "pageEpcTest";
-            this.pageEpcTest.Size = new System.Drawing.Size(1010, 555);
+            this.pageEpcTest.Size = new System.Drawing.Size(1010, 552);
             this.pageEpcTest.TabIndex = 5;
             this.pageEpcTest.Text = "18000-6C Tag Test";
             // 
@@ -2708,11 +2709,11 @@ namespace UHFDemo
             this.tab_6c_Tags_Test.Controls.Add(this.pageAcessTag);
             this.tab_6c_Tags_Test.Controls.Add(this.tabPage3);
             this.tab_6c_Tags_Test.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab_6c_Tags_Test.Font = new System.Drawing.Font("宋体", 9F);
+            this.tab_6c_Tags_Test.Font = new System.Drawing.Font("SimSun", 9F);
             this.tab_6c_Tags_Test.Location = new System.Drawing.Point(0, 0);
             this.tab_6c_Tags_Test.Name = "tab_6c_Tags_Test";
             this.tab_6c_Tags_Test.SelectedIndex = 0;
-            this.tab_6c_Tags_Test.Size = new System.Drawing.Size(1008, 553);
+            this.tab_6c_Tags_Test.Size = new System.Drawing.Size(1008, 550);
             this.tab_6c_Tags_Test.TabIndex = 0;
             this.tab_6c_Tags_Test.TabStop = false;
             // 
@@ -2724,10 +2725,10 @@ namespace UHFDemo
             this.pageFast4AntMode.Controls.Add(this.groupBox25);
             this.pageFast4AntMode.Controls.Add(this.groupBox2);
             this.pageFast4AntMode.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.pageFast4AntMode.Location = new System.Drawing.Point(4, 22);
+            this.pageFast4AntMode.Location = new System.Drawing.Point(4, 25);
             this.pageFast4AntMode.Name = "pageFast4AntMode";
             this.pageFast4AntMode.Padding = new System.Windows.Forms.Padding(3);
-            this.pageFast4AntMode.Size = new System.Drawing.Size(1000, 527);
+            this.pageFast4AntMode.Size = new System.Drawing.Size(1000, 521);
             this.pageFast4AntMode.TabIndex = 0;
             this.pageFast4AntMode.Text = "Inventory";
             this.pageFast4AntMode.Enter += new System.EventHandler(this.pageFast4AntMode_Enter);
@@ -2759,7 +2760,7 @@ namespace UHFDemo
             this.flowLayoutPanel1.Controls.Add(this.groupBox29);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(11, 181);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 335);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(332, 329);
             this.flowLayoutPanel1.TabIndex = 84;
             // 
             // grb_cache_inv
@@ -2834,7 +2835,7 @@ namespace UHFDemo
             this.cb_use_selectFlags_tempPows.AutoSize = true;
             this.cb_use_selectFlags_tempPows.Location = new System.Drawing.Point(6, 51);
             this.cb_use_selectFlags_tempPows.Name = "cb_use_selectFlags_tempPows";
-            this.cb_use_selectFlags_tempPows.Size = new System.Drawing.Size(120, 16);
+            this.cb_use_selectFlags_tempPows.Size = new System.Drawing.Size(157, 19);
             this.cb_use_selectFlags_tempPows.TabIndex = 78;
             this.cb_use_selectFlags_tempPows.Text = "SL_or_SL_tempPow";
             this.cb_use_selectFlags_tempPows.UseVisualStyleBackColor = true;
@@ -2845,7 +2846,7 @@ namespace UHFDemo
             this.cb_use_optimize.AutoSize = true;
             this.cb_use_optimize.Location = new System.Drawing.Point(136, 51);
             this.cb_use_optimize.Name = "cb_use_optimize";
-            this.cb_use_optimize.Size = new System.Drawing.Size(96, 16);
+            this.cb_use_optimize.Size = new System.Drawing.Size(125, 19);
             this.cb_use_optimize.TabIndex = 75;
             this.cb_use_optimize.Text = "use Optimize";
             this.cb_use_optimize.UseVisualStyleBackColor = true;
@@ -2854,10 +2855,10 @@ namespace UHFDemo
             // cb_use_Phase
             // 
             this.cb_use_Phase.AutoSize = true;
-            this.cb_use_Phase.Font = new System.Drawing.Font("宋体", 9F);
+            this.cb_use_Phase.Font = new System.Drawing.Font("SimSun", 9F);
             this.cb_use_Phase.Location = new System.Drawing.Point(136, 21);
             this.cb_use_Phase.Name = "cb_use_Phase";
-            this.cb_use_Phase.Size = new System.Drawing.Size(54, 16);
+            this.cb_use_Phase.Size = new System.Drawing.Size(69, 19);
             this.cb_use_Phase.TabIndex = 75;
             this.cb_use_Phase.Text = "Phase";
             this.cb_use_Phase.UseVisualStyleBackColor = true;
@@ -2868,7 +2869,7 @@ namespace UHFDemo
             this.cb_use_powerSave.AutoSize = true;
             this.cb_use_powerSave.Location = new System.Drawing.Point(196, 21);
             this.cb_use_powerSave.Name = "cb_use_powerSave";
-            this.cb_use_powerSave.Size = new System.Drawing.Size(84, 16);
+            this.cb_use_powerSave.Size = new System.Drawing.Size(109, 19);
             this.cb_use_powerSave.TabIndex = 74;
             this.cb_use_powerSave.Text = "Power Save";
             this.cb_use_powerSave.UseVisualStyleBackColor = true;
@@ -2877,10 +2878,10 @@ namespace UHFDemo
             // cb_customized_session_target
             // 
             this.cb_customized_session_target.AutoSize = true;
-            this.cb_customized_session_target.Font = new System.Drawing.Font("宋体", 9F);
+            this.cb_customized_session_target.Font = new System.Drawing.Font("SimSun", 9F);
             this.cb_customized_session_target.Location = new System.Drawing.Point(6, 21);
             this.cb_customized_session_target.Name = "cb_customized_session_target";
-            this.cb_customized_session_target.Size = new System.Drawing.Size(126, 16);
+            this.cb_customized_session_target.Size = new System.Drawing.Size(165, 19);
             this.cb_customized_session_target.TabIndex = 72;
             this.cb_customized_session_target.Text = "Customize Session";
             this.cb_customized_session_target.UseVisualStyleBackColor = true;
@@ -2900,7 +2901,7 @@ namespace UHFDemo
             // 
             this.txtInterval.Location = new System.Drawing.Point(6, 20);
             this.txtInterval.Name = "txtInterval";
-            this.txtInterval.Size = new System.Drawing.Size(42, 21);
+            this.txtInterval.Size = new System.Drawing.Size(42, 25);
             this.txtInterval.TabIndex = 57;
             this.txtInterval.Text = "0";
             this.txtInterval.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2923,7 +2924,7 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_reserved_1.Location = new System.Drawing.Point(6, 20);
             this.tb_fast_inv_reserved_1.Name = "tb_fast_inv_reserved_1";
-            this.tb_fast_inv_reserved_1.Size = new System.Drawing.Size(31, 21);
+            this.tb_fast_inv_reserved_1.Size = new System.Drawing.Size(31, 25);
             this.tb_fast_inv_reserved_1.TabIndex = 59;
             this.tb_fast_inv_reserved_1.Text = "0";
             this.tb_fast_inv_reserved_1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2932,7 +2933,7 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_reserved_3.Location = new System.Drawing.Point(79, 20);
             this.tb_fast_inv_reserved_3.Name = "tb_fast_inv_reserved_3";
-            this.tb_fast_inv_reserved_3.Size = new System.Drawing.Size(31, 21);
+            this.tb_fast_inv_reserved_3.Size = new System.Drawing.Size(31, 25);
             this.tb_fast_inv_reserved_3.TabIndex = 61;
             this.tb_fast_inv_reserved_3.Text = "0";
             this.tb_fast_inv_reserved_3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2941,7 +2942,7 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_reserved_4.Location = new System.Drawing.Point(116, 20);
             this.tb_fast_inv_reserved_4.Name = "tb_fast_inv_reserved_4";
-            this.tb_fast_inv_reserved_4.Size = new System.Drawing.Size(31, 21);
+            this.tb_fast_inv_reserved_4.Size = new System.Drawing.Size(31, 25);
             this.tb_fast_inv_reserved_4.TabIndex = 62;
             this.tb_fast_inv_reserved_4.Text = "0";
             this.tb_fast_inv_reserved_4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2950,7 +2951,7 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_reserved_2.Location = new System.Drawing.Point(42, 20);
             this.tb_fast_inv_reserved_2.Name = "tb_fast_inv_reserved_2";
-            this.tb_fast_inv_reserved_2.Size = new System.Drawing.Size(31, 21);
+            this.tb_fast_inv_reserved_2.Size = new System.Drawing.Size(31, 25);
             this.tb_fast_inv_reserved_2.TabIndex = 60;
             this.tb_fast_inv_reserved_2.Text = "0";
             this.tb_fast_inv_reserved_2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2959,7 +2960,7 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_reserved_5.Location = new System.Drawing.Point(153, 20);
             this.tb_fast_inv_reserved_5.Name = "tb_fast_inv_reserved_5";
-            this.tb_fast_inv_reserved_5.Size = new System.Drawing.Size(31, 21);
+            this.tb_fast_inv_reserved_5.Size = new System.Drawing.Size(31, 25);
             this.tb_fast_inv_reserved_5.TabIndex = 63;
             this.tb_fast_inv_reserved_5.Text = "0";
             this.tb_fast_inv_reserved_5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2982,7 +2983,7 @@ namespace UHFDemo
             this.radio_btn_sl_03.AutoSize = true;
             this.radio_btn_sl_03.Location = new System.Drawing.Point(130, 16);
             this.radio_btn_sl_03.Name = "radio_btn_sl_03";
-            this.radio_btn_sl_03.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_sl_03.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_sl_03.TabIndex = 3;
             this.radio_btn_sl_03.TabStop = true;
             this.radio_btn_sl_03.Text = "03";
@@ -2993,7 +2994,7 @@ namespace UHFDemo
             this.radio_btn_sl_02.AutoSize = true;
             this.radio_btn_sl_02.Location = new System.Drawing.Point(91, 16);
             this.radio_btn_sl_02.Name = "radio_btn_sl_02";
-            this.radio_btn_sl_02.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_sl_02.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_sl_02.TabIndex = 2;
             this.radio_btn_sl_02.TabStop = true;
             this.radio_btn_sl_02.Text = "02";
@@ -3004,7 +3005,7 @@ namespace UHFDemo
             this.radio_btn_sl_01.AutoSize = true;
             this.radio_btn_sl_01.Location = new System.Drawing.Point(47, 16);
             this.radio_btn_sl_01.Name = "radio_btn_sl_01";
-            this.radio_btn_sl_01.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_sl_01.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_sl_01.TabIndex = 1;
             this.radio_btn_sl_01.TabStop = true;
             this.radio_btn_sl_01.Text = "01";
@@ -3015,7 +3016,7 @@ namespace UHFDemo
             this.radio_btn_sl_00.AutoSize = true;
             this.radio_btn_sl_00.Location = new System.Drawing.Point(6, 16);
             this.radio_btn_sl_00.Name = "radio_btn_sl_00";
-            this.radio_btn_sl_00.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_sl_00.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_sl_00.TabIndex = 0;
             this.radio_btn_sl_00.TabStop = true;
             this.radio_btn_sl_00.Text = "00";
@@ -3039,7 +3040,7 @@ namespace UHFDemo
             this.radio_btn_S0.AutoSize = true;
             this.radio_btn_S0.Location = new System.Drawing.Point(6, 16);
             this.radio_btn_S0.Name = "radio_btn_S0";
-            this.radio_btn_S0.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_S0.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_S0.TabIndex = 3;
             this.radio_btn_S0.TabStop = true;
             this.radio_btn_S0.Text = "S0";
@@ -3050,7 +3051,7 @@ namespace UHFDemo
             this.radio_btn_S1.AutoSize = true;
             this.radio_btn_S1.Location = new System.Drawing.Point(47, 16);
             this.radio_btn_S1.Name = "radio_btn_S1";
-            this.radio_btn_S1.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_S1.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_S1.TabIndex = 5;
             this.radio_btn_S1.TabStop = true;
             this.radio_btn_S1.Text = "S1";
@@ -3061,7 +3062,7 @@ namespace UHFDemo
             this.radio_btn_S2.AutoSize = true;
             this.radio_btn_S2.Location = new System.Drawing.Point(89, 16);
             this.radio_btn_S2.Name = "radio_btn_S2";
-            this.radio_btn_S2.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_S2.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_S2.TabIndex = 6;
             this.radio_btn_S2.TabStop = true;
             this.radio_btn_S2.Text = "S2";
@@ -3072,7 +3073,7 @@ namespace UHFDemo
             this.radio_btn_S3.AutoSize = true;
             this.radio_btn_S3.Location = new System.Drawing.Point(130, 16);
             this.radio_btn_S3.Name = "radio_btn_S3";
-            this.radio_btn_S3.Size = new System.Drawing.Size(35, 16);
+            this.radio_btn_S3.Size = new System.Drawing.Size(44, 19);
             this.radio_btn_S3.TabIndex = 7;
             this.radio_btn_S3.TabStop = true;
             this.radio_btn_S3.Text = "S3";
@@ -3094,7 +3095,7 @@ namespace UHFDemo
             this.radio_btn_target_A.AutoSize = true;
             this.radio_btn_target_A.Location = new System.Drawing.Point(12, 15);
             this.radio_btn_target_A.Name = "radio_btn_target_A";
-            this.radio_btn_target_A.Size = new System.Drawing.Size(29, 16);
+            this.radio_btn_target_A.Size = new System.Drawing.Size(36, 19);
             this.radio_btn_target_A.TabIndex = 8;
             this.radio_btn_target_A.TabStop = true;
             this.radio_btn_target_A.Text = "A";
@@ -3105,7 +3106,7 @@ namespace UHFDemo
             this.radio_btn_target_B.AutoSize = true;
             this.radio_btn_target_B.Location = new System.Drawing.Point(71, 15);
             this.radio_btn_target_B.Name = "radio_btn_target_B";
-            this.radio_btn_target_B.Size = new System.Drawing.Size(29, 16);
+            this.radio_btn_target_B.Size = new System.Drawing.Size(36, 19);
             this.radio_btn_target_B.TabIndex = 10;
             this.radio_btn_target_B.TabStop = true;
             this.radio_btn_target_B.Text = "B";
@@ -3125,7 +3126,7 @@ namespace UHFDemo
             // 
             this.txtOptimize.Location = new System.Drawing.Point(6, 20);
             this.txtOptimize.Name = "txtOptimize";
-            this.txtOptimize.Size = new System.Drawing.Size(35, 21);
+            this.txtOptimize.Size = new System.Drawing.Size(35, 25);
             this.txtOptimize.TabIndex = 77;
             this.txtOptimize.Text = "0";
             this.txtOptimize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3144,7 +3145,7 @@ namespace UHFDemo
             // 
             this.txtOngoing.Location = new System.Drawing.Point(6, 20);
             this.txtOngoing.Name = "txtOngoing";
-            this.txtOngoing.Size = new System.Drawing.Size(35, 21);
+            this.txtOngoing.Size = new System.Drawing.Size(35, 25);
             this.txtOngoing.TabIndex = 79;
             this.txtOngoing.Text = "0";
             this.txtOngoing.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3163,7 +3164,7 @@ namespace UHFDemo
             // 
             this.txtTargetQuantity.Location = new System.Drawing.Point(6, 20);
             this.txtTargetQuantity.Name = "txtTargetQuantity";
-            this.txtTargetQuantity.Size = new System.Drawing.Size(35, 21);
+            this.txtTargetQuantity.Size = new System.Drawing.Size(35, 25);
             this.txtTargetQuantity.TabIndex = 81;
             this.txtTargetQuantity.Text = "0";
             this.txtTargetQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3182,7 +3183,7 @@ namespace UHFDemo
             // 
             this.txtPowerSave.Location = new System.Drawing.Point(6, 19);
             this.txtPowerSave.Name = "txtPowerSave";
-            this.txtPowerSave.Size = new System.Drawing.Size(53, 21);
+            this.txtPowerSave.Size = new System.Drawing.Size(53, 25);
             this.txtPowerSave.TabIndex = 0;
             this.txtPowerSave.Text = "0";
             // 
@@ -3200,7 +3201,7 @@ namespace UHFDemo
             // 
             this.txtRepeat.Location = new System.Drawing.Point(6, 20);
             this.txtRepeat.Name = "txtRepeat";
-            this.txtRepeat.Size = new System.Drawing.Size(42, 21);
+            this.txtRepeat.Size = new System.Drawing.Size(42, 25);
             this.txtRepeat.TabIndex = 58;
             this.txtRepeat.Text = "1";
             this.txtRepeat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3220,7 +3221,7 @@ namespace UHFDemo
             this.cb_fast_inv_check_all_ant.AutoSize = true;
             this.cb_fast_inv_check_all_ant.Location = new System.Drawing.Point(15, 21);
             this.cb_fast_inv_check_all_ant.Name = "cb_fast_inv_check_all_ant";
-            this.cb_fast_inv_check_all_ant.Size = new System.Drawing.Size(42, 16);
+            this.cb_fast_inv_check_all_ant.Size = new System.Drawing.Size(53, 19);
             this.cb_fast_inv_check_all_ant.TabIndex = 77;
             this.cb_fast_inv_check_all_ant.Text = "All";
             this.cb_fast_inv_check_all_ant.UseVisualStyleBackColor = true;
@@ -3257,7 +3258,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_5.Location = new System.Drawing.Point(154, 20);
             this.chckbx_fast_inv_ant_5.Name = "chckbx_fast_inv_ant_5";
             this.chckbx_fast_inv_ant_5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_5.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_5.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_5.TabIndex = 44;
             this.chckbx_fast_inv_ant_5.Text = "5";
             this.chckbx_fast_inv_ant_5.UseVisualStyleBackColor = true;
@@ -3268,7 +3269,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_6.Location = new System.Drawing.Point(193, 20);
             this.chckbx_fast_inv_ant_6.Name = "chckbx_fast_inv_ant_6";
             this.chckbx_fast_inv_ant_6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_6.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_6.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_6.TabIndex = 45;
             this.chckbx_fast_inv_ant_6.Text = "6";
             this.chckbx_fast_inv_ant_6.UseVisualStyleBackColor = true;
@@ -3279,7 +3280,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_1.Location = new System.Drawing.Point(10, 20);
             this.chckbx_fast_inv_ant_1.Name = "chckbx_fast_inv_ant_1";
             this.chckbx_fast_inv_ant_1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_1.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_1.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_1.TabIndex = 39;
             this.chckbx_fast_inv_ant_1.Text = "1";
             this.chckbx_fast_inv_ant_1.UseVisualStyleBackColor = true;
@@ -3288,7 +3289,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_6.Location = new System.Drawing.Point(193, 41);
             this.txt_fast_inv_Stay_6.Name = "txt_fast_inv_Stay_6";
-            this.txt_fast_inv_Stay_6.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_6.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_6.TabIndex = 27;
             this.txt_fast_inv_Stay_6.Text = "0";
             // 
@@ -3298,7 +3299,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_4.Location = new System.Drawing.Point(118, 20);
             this.chckbx_fast_inv_ant_4.Name = "chckbx_fast_inv_ant_4";
             this.chckbx_fast_inv_ant_4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_4.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_4.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_4.TabIndex = 43;
             this.chckbx_fast_inv_ant_4.Text = "4";
             this.chckbx_fast_inv_ant_4.UseVisualStyleBackColor = true;
@@ -3309,7 +3310,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_8.Location = new System.Drawing.Point(268, 20);
             this.chckbx_fast_inv_ant_8.Name = "chckbx_fast_inv_ant_8";
             this.chckbx_fast_inv_ant_8.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_8.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_8.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_8.TabIndex = 47;
             this.chckbx_fast_inv_ant_8.Text = "8";
             this.chckbx_fast_inv_ant_8.UseVisualStyleBackColor = true;
@@ -3318,7 +3319,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_1.Location = new System.Drawing.Point(10, 41);
             this.txt_fast_inv_Stay_1.Name = "txt_fast_inv_Stay_1";
-            this.txt_fast_inv_Stay_1.Size = new System.Drawing.Size(30, 21);
+            this.txt_fast_inv_Stay_1.Size = new System.Drawing.Size(30, 25);
             this.txt_fast_inv_Stay_1.TabIndex = 4;
             this.txt_fast_inv_Stay_1.Text = "0";
             // 
@@ -3326,7 +3327,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_7.Location = new System.Drawing.Point(229, 41);
             this.txt_fast_inv_Stay_7.Name = "txt_fast_inv_Stay_7";
-            this.txt_fast_inv_Stay_7.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_7.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_7.TabIndex = 31;
             this.txt_fast_inv_Stay_7.Text = "0";
             // 
@@ -3334,7 +3335,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_2.Location = new System.Drawing.Point(44, 41);
             this.txt_fast_inv_Stay_2.Name = "txt_fast_inv_Stay_2";
-            this.txt_fast_inv_Stay_2.Size = new System.Drawing.Size(30, 21);
+            this.txt_fast_inv_Stay_2.Size = new System.Drawing.Size(30, 25);
             this.txt_fast_inv_Stay_2.TabIndex = 11;
             this.txt_fast_inv_Stay_2.Text = "0";
             // 
@@ -3342,7 +3343,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_5.Location = new System.Drawing.Point(154, 41);
             this.txt_fast_inv_Stay_5.Name = "txt_fast_inv_Stay_5";
-            this.txt_fast_inv_Stay_5.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_5.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_5.TabIndex = 23;
             this.txt_fast_inv_Stay_5.Text = "0";
             // 
@@ -3350,7 +3351,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_3.Location = new System.Drawing.Point(81, 41);
             this.txt_fast_inv_Stay_3.Name = "txt_fast_inv_Stay_3";
-            this.txt_fast_inv_Stay_3.Size = new System.Drawing.Size(30, 21);
+            this.txt_fast_inv_Stay_3.Size = new System.Drawing.Size(30, 25);
             this.txt_fast_inv_Stay_3.TabIndex = 15;
             this.txt_fast_inv_Stay_3.Text = "0";
             // 
@@ -3360,7 +3361,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_7.Location = new System.Drawing.Point(229, 20);
             this.chckbx_fast_inv_ant_7.Name = "chckbx_fast_inv_ant_7";
             this.chckbx_fast_inv_ant_7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_7.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_7.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_7.TabIndex = 46;
             this.chckbx_fast_inv_ant_7.Text = "7";
             this.chckbx_fast_inv_ant_7.UseVisualStyleBackColor = true;
@@ -3371,7 +3372,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_3.Location = new System.Drawing.Point(81, 20);
             this.chckbx_fast_inv_ant_3.Name = "chckbx_fast_inv_ant_3";
             this.chckbx_fast_inv_ant_3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_3.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_3.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_3.TabIndex = 42;
             this.chckbx_fast_inv_ant_3.Text = "3";
             this.chckbx_fast_inv_ant_3.UseVisualStyleBackColor = true;
@@ -3380,7 +3381,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_8.Location = new System.Drawing.Point(268, 41);
             this.txt_fast_inv_Stay_8.Name = "txt_fast_inv_Stay_8";
-            this.txt_fast_inv_Stay_8.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_8.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_8.TabIndex = 35;
             this.txt_fast_inv_Stay_8.Text = "0";
             // 
@@ -3388,7 +3389,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_4.Location = new System.Drawing.Point(118, 41);
             this.txt_fast_inv_Stay_4.Name = "txt_fast_inv_Stay_4";
-            this.txt_fast_inv_Stay_4.Size = new System.Drawing.Size(30, 21);
+            this.txt_fast_inv_Stay_4.Size = new System.Drawing.Size(30, 25);
             this.txt_fast_inv_Stay_4.TabIndex = 19;
             this.txt_fast_inv_Stay_4.Text = "0";
             // 
@@ -3398,7 +3399,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_2.Location = new System.Drawing.Point(44, 20);
             this.chckbx_fast_inv_ant_2.Name = "chckbx_fast_inv_ant_2";
             this.chckbx_fast_inv_ant_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_2.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_2.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_2.TabIndex = 40;
             this.chckbx_fast_inv_ant_2.Text = "2";
             this.chckbx_fast_inv_ant_2.UseVisualStyleBackColor = true;
@@ -3424,7 +3425,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_6.Location = new System.Drawing.Point(193, 20);
             this.tv_temp_pow_6.Name = "tv_temp_pow_6";
-            this.tv_temp_pow_6.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_6.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_6.TabIndex = 10;
             this.tv_temp_pow_6.Text = "0";
             // 
@@ -3432,7 +3433,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_1.Location = new System.Drawing.Point(10, 20);
             this.tv_temp_pow_1.Name = "tv_temp_pow_1";
-            this.tv_temp_pow_1.Size = new System.Drawing.Size(30, 21);
+            this.tv_temp_pow_1.Size = new System.Drawing.Size(30, 25);
             this.tv_temp_pow_1.TabIndex = 0;
             this.tv_temp_pow_1.Text = "0";
             // 
@@ -3440,7 +3441,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_5.Location = new System.Drawing.Point(154, 20);
             this.tv_temp_pow_5.Name = "tv_temp_pow_5";
-            this.tv_temp_pow_5.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_5.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_5.TabIndex = 8;
             this.tv_temp_pow_5.Text = "0";
             // 
@@ -3448,7 +3449,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_7.Location = new System.Drawing.Point(229, 20);
             this.tv_temp_pow_7.Name = "tv_temp_pow_7";
-            this.tv_temp_pow_7.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_7.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_7.TabIndex = 12;
             this.tv_temp_pow_7.Text = "0";
             // 
@@ -3456,7 +3457,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_3.Location = new System.Drawing.Point(81, 20);
             this.tv_temp_pow_3.Name = "tv_temp_pow_3";
-            this.tv_temp_pow_3.Size = new System.Drawing.Size(30, 21);
+            this.tv_temp_pow_3.Size = new System.Drawing.Size(30, 25);
             this.tv_temp_pow_3.TabIndex = 4;
             this.tv_temp_pow_3.Text = "0";
             // 
@@ -3464,7 +3465,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_8.Location = new System.Drawing.Point(268, 20);
             this.tv_temp_pow_8.Name = "tv_temp_pow_8";
-            this.tv_temp_pow_8.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_8.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_8.TabIndex = 14;
             this.tv_temp_pow_8.Text = "0";
             // 
@@ -3472,7 +3473,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_4.Location = new System.Drawing.Point(118, 20);
             this.tv_temp_pow_4.Name = "tv_temp_pow_4";
-            this.tv_temp_pow_4.Size = new System.Drawing.Size(30, 21);
+            this.tv_temp_pow_4.Size = new System.Drawing.Size(30, 25);
             this.tv_temp_pow_4.TabIndex = 6;
             this.tv_temp_pow_4.Text = "0";
             // 
@@ -3480,7 +3481,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_2.Location = new System.Drawing.Point(44, 20);
             this.tv_temp_pow_2.Name = "tv_temp_pow_2";
-            this.tv_temp_pow_2.Size = new System.Drawing.Size(30, 21);
+            this.tv_temp_pow_2.Size = new System.Drawing.Size(30, 25);
             this.tv_temp_pow_2.TabIndex = 2;
             this.tv_temp_pow_2.Text = "0";
             // 
@@ -3515,7 +3516,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_9.Location = new System.Drawing.Point(10, 20);
             this.chckbx_fast_inv_ant_9.Name = "chckbx_fast_inv_ant_9";
             this.chckbx_fast_inv_ant_9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_9.Size = new System.Drawing.Size(30, 16);
+            this.chckbx_fast_inv_ant_9.Size = new System.Drawing.Size(37, 19);
             this.chckbx_fast_inv_ant_9.TabIndex = 49;
             this.chckbx_fast_inv_ant_9.Text = "9";
             this.chckbx_fast_inv_ant_9.UseVisualStyleBackColor = true;
@@ -3526,7 +3527,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_10.Location = new System.Drawing.Point(44, 20);
             this.chckbx_fast_inv_ant_10.Name = "chckbx_fast_inv_ant_10";
             this.chckbx_fast_inv_ant_10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_10.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_10.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_10.TabIndex = 50;
             this.chckbx_fast_inv_ant_10.Text = "10";
             this.chckbx_fast_inv_ant_10.UseVisualStyleBackColor = true;
@@ -3537,7 +3538,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_11.Location = new System.Drawing.Point(81, 20);
             this.chckbx_fast_inv_ant_11.Name = "chckbx_fast_inv_ant_11";
             this.chckbx_fast_inv_ant_11.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_11.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_11.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_11.TabIndex = 51;
             this.chckbx_fast_inv_ant_11.Text = "11";
             this.chckbx_fast_inv_ant_11.UseVisualStyleBackColor = true;
@@ -3548,7 +3549,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_12.Location = new System.Drawing.Point(118, 20);
             this.chckbx_fast_inv_ant_12.Name = "chckbx_fast_inv_ant_12";
             this.chckbx_fast_inv_ant_12.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_12.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_12.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_12.TabIndex = 74;
             this.chckbx_fast_inv_ant_12.Text = "12";
             this.chckbx_fast_inv_ant_12.UseVisualStyleBackColor = true;
@@ -3559,7 +3560,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_13.Location = new System.Drawing.Point(154, 20);
             this.chckbx_fast_inv_ant_13.Name = "chckbx_fast_inv_ant_13";
             this.chckbx_fast_inv_ant_13.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_13.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_13.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_13.TabIndex = 75;
             this.chckbx_fast_inv_ant_13.Text = "13";
             this.chckbx_fast_inv_ant_13.UseVisualStyleBackColor = true;
@@ -3570,7 +3571,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_14.Location = new System.Drawing.Point(193, 20);
             this.chckbx_fast_inv_ant_14.Name = "chckbx_fast_inv_ant_14";
             this.chckbx_fast_inv_ant_14.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_14.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_14.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_14.TabIndex = 76;
             this.chckbx_fast_inv_ant_14.Text = "14";
             this.chckbx_fast_inv_ant_14.UseVisualStyleBackColor = true;
@@ -3581,7 +3582,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_15.Location = new System.Drawing.Point(229, 20);
             this.chckbx_fast_inv_ant_15.Name = "chckbx_fast_inv_ant_15";
             this.chckbx_fast_inv_ant_15.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_15.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_15.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_15.TabIndex = 77;
             this.chckbx_fast_inv_ant_15.Text = "15";
             this.chckbx_fast_inv_ant_15.UseVisualStyleBackColor = true;
@@ -3592,7 +3593,7 @@ namespace UHFDemo
             this.chckbx_fast_inv_ant_16.Location = new System.Drawing.Point(268, 20);
             this.chckbx_fast_inv_ant_16.Name = "chckbx_fast_inv_ant_16";
             this.chckbx_fast_inv_ant_16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chckbx_fast_inv_ant_16.Size = new System.Drawing.Size(36, 16);
+            this.chckbx_fast_inv_ant_16.Size = new System.Drawing.Size(45, 19);
             this.chckbx_fast_inv_ant_16.TabIndex = 78;
             this.chckbx_fast_inv_ant_16.Text = "16";
             this.chckbx_fast_inv_ant_16.UseVisualStyleBackColor = true;
@@ -3601,7 +3602,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_9.Location = new System.Drawing.Point(10, 45);
             this.txt_fast_inv_Stay_9.Name = "txt_fast_inv_Stay_9";
-            this.txt_fast_inv_Stay_9.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_9.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_9.TabIndex = 79;
             this.txt_fast_inv_Stay_9.Text = "0";
             // 
@@ -3609,7 +3610,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_10.Location = new System.Drawing.Point(44, 45);
             this.txt_fast_inv_Stay_10.Name = "txt_fast_inv_Stay_10";
-            this.txt_fast_inv_Stay_10.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_10.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_10.TabIndex = 80;
             this.txt_fast_inv_Stay_10.Text = "0";
             // 
@@ -3617,7 +3618,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_11.Location = new System.Drawing.Point(81, 45);
             this.txt_fast_inv_Stay_11.Name = "txt_fast_inv_Stay_11";
-            this.txt_fast_inv_Stay_11.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_11.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_11.TabIndex = 81;
             this.txt_fast_inv_Stay_11.Text = "0";
             // 
@@ -3625,7 +3626,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_12.Location = new System.Drawing.Point(118, 45);
             this.txt_fast_inv_Stay_12.Name = "txt_fast_inv_Stay_12";
-            this.txt_fast_inv_Stay_12.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_12.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_12.TabIndex = 82;
             this.txt_fast_inv_Stay_12.Text = "0";
             // 
@@ -3633,7 +3634,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_13.Location = new System.Drawing.Point(154, 45);
             this.txt_fast_inv_Stay_13.Name = "txt_fast_inv_Stay_13";
-            this.txt_fast_inv_Stay_13.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_13.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_13.TabIndex = 83;
             this.txt_fast_inv_Stay_13.Text = "0";
             // 
@@ -3641,7 +3642,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_14.Location = new System.Drawing.Point(193, 45);
             this.txt_fast_inv_Stay_14.Name = "txt_fast_inv_Stay_14";
-            this.txt_fast_inv_Stay_14.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_14.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_14.TabIndex = 84;
             this.txt_fast_inv_Stay_14.Text = "0";
             // 
@@ -3649,7 +3650,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_16.Location = new System.Drawing.Point(268, 45);
             this.txt_fast_inv_Stay_16.Name = "txt_fast_inv_Stay_16";
-            this.txt_fast_inv_Stay_16.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_16.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_16.TabIndex = 86;
             this.txt_fast_inv_Stay_16.Text = "0";
             // 
@@ -3657,7 +3658,7 @@ namespace UHFDemo
             // 
             this.txt_fast_inv_Stay_15.Location = new System.Drawing.Point(229, 45);
             this.txt_fast_inv_Stay_15.Name = "txt_fast_inv_Stay_15";
-            this.txt_fast_inv_Stay_15.Size = new System.Drawing.Size(29, 21);
+            this.txt_fast_inv_Stay_15.Size = new System.Drawing.Size(29, 25);
             this.txt_fast_inv_Stay_15.TabIndex = 85;
             this.txt_fast_inv_Stay_15.Text = "0";
             // 
@@ -3682,7 +3683,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_16.Location = new System.Drawing.Point(267, 20);
             this.tv_temp_pow_16.Name = "tv_temp_pow_16";
-            this.tv_temp_pow_16.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_16.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_16.TabIndex = 30;
             this.tv_temp_pow_16.Text = "0";
             // 
@@ -3690,7 +3691,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_9.Location = new System.Drawing.Point(10, 20);
             this.tv_temp_pow_9.Name = "tv_temp_pow_9";
-            this.tv_temp_pow_9.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_9.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_9.TabIndex = 16;
             this.tv_temp_pow_9.Text = "0";
             // 
@@ -3698,7 +3699,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_15.Location = new System.Drawing.Point(229, 20);
             this.tv_temp_pow_15.Name = "tv_temp_pow_15";
-            this.tv_temp_pow_15.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_15.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_15.TabIndex = 28;
             this.tv_temp_pow_15.Text = "0";
             // 
@@ -3706,7 +3707,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_10.Location = new System.Drawing.Point(44, 20);
             this.tv_temp_pow_10.Name = "tv_temp_pow_10";
-            this.tv_temp_pow_10.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_10.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_10.TabIndex = 18;
             this.tv_temp_pow_10.Text = "0";
             // 
@@ -3714,7 +3715,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_11.Location = new System.Drawing.Point(81, 20);
             this.tv_temp_pow_11.Name = "tv_temp_pow_11";
-            this.tv_temp_pow_11.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_11.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_11.TabIndex = 20;
             this.tv_temp_pow_11.Text = "0";
             // 
@@ -3722,7 +3723,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_14.Location = new System.Drawing.Point(193, 20);
             this.tv_temp_pow_14.Name = "tv_temp_pow_14";
-            this.tv_temp_pow_14.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_14.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_14.TabIndex = 26;
             this.tv_temp_pow_14.Text = "0";
             // 
@@ -3730,7 +3731,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_12.Location = new System.Drawing.Point(118, 20);
             this.tv_temp_pow_12.Name = "tv_temp_pow_12";
-            this.tv_temp_pow_12.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_12.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_12.TabIndex = 22;
             this.tv_temp_pow_12.Text = "0";
             // 
@@ -3738,7 +3739,7 @@ namespace UHFDemo
             // 
             this.tv_temp_pow_13.Location = new System.Drawing.Point(154, 20);
             this.tv_temp_pow_13.Name = "tv_temp_pow_13";
-            this.tv_temp_pow_13.Size = new System.Drawing.Size(29, 21);
+            this.tv_temp_pow_13.Size = new System.Drawing.Size(29, 25);
             this.tv_temp_pow_13.TabIndex = 24;
             this.tv_temp_pow_13.Text = "0";
             // 
@@ -3758,7 +3759,7 @@ namespace UHFDemo
             this.label61.AutoSize = true;
             this.label61.Location = new System.Drawing.Point(6, 24);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(47, 12);
+            this.label61.Size = new System.Drawing.Size(63, 15);
             this.label61.TabIndex = 83;
             this.label61.Text = "AntID: ";
             // 
@@ -3767,7 +3768,7 @@ namespace UHFDemo
             this.combo_realtime_inv_ants.FormattingEnabled = true;
             this.combo_realtime_inv_ants.Location = new System.Drawing.Point(75, 21);
             this.combo_realtime_inv_ants.Name = "combo_realtime_inv_ants";
-            this.combo_realtime_inv_ants.Size = new System.Drawing.Size(100, 20);
+            this.combo_realtime_inv_ants.Size = new System.Drawing.Size(100, 23);
             this.combo_realtime_inv_ants.TabIndex = 80;
             // 
             // groupBox29
@@ -3792,7 +3793,7 @@ namespace UHFDemo
             this.label_totaltime.AutoSize = true;
             this.label_totaltime.Location = new System.Drawing.Point(120, 90);
             this.label_totaltime.Name = "label_totaltime";
-            this.label_totaltime.Size = new System.Drawing.Size(35, 12);
+            this.label_totaltime.Size = new System.Drawing.Size(47, 15);
             this.label_totaltime.TabIndex = 7;
             this.label_totaltime.Text = "0 sec";
             // 
@@ -3801,7 +3802,7 @@ namespace UHFDemo
             this.label62.AutoSize = true;
             this.label62.Location = new System.Drawing.Point(10, 90);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(77, 12);
+            this.label62.Size = new System.Drawing.Size(102, 15);
             this.label62.TabIndex = 6;
             this.label62.Text = "Total Time：";
             // 
@@ -3810,7 +3811,7 @@ namespace UHFDemo
             this.label_readrate.AutoSize = true;
             this.label_readrate.Location = new System.Drawing.Point(121, 65);
             this.label_readrate.Name = "label_readrate";
-            this.label_readrate.Size = new System.Drawing.Size(41, 12);
+            this.label_readrate.Size = new System.Drawing.Size(55, 15);
             this.label_readrate.TabIndex = 5;
             this.label_readrate.Text = "0 /sec";
             // 
@@ -3819,7 +3820,7 @@ namespace UHFDemo
             this.label_totalread_count.AutoSize = true;
             this.label_totalread_count.Location = new System.Drawing.Point(121, 42);
             this.label_totalread_count.Name = "label_totalread_count";
-            this.label_totalread_count.Size = new System.Drawing.Size(11, 12);
+            this.label_totalread_count.Size = new System.Drawing.Size(15, 15);
             this.label_totalread_count.TabIndex = 4;
             this.label_totalread_count.Text = "0";
             // 
@@ -3828,7 +3829,7 @@ namespace UHFDemo
             this.label_totaltag_count.AutoSize = true;
             this.label_totaltag_count.Location = new System.Drawing.Point(122, 17);
             this.label_totaltag_count.Name = "label_totaltag_count";
-            this.label_totaltag_count.Size = new System.Drawing.Size(11, 12);
+            this.label_totaltag_count.Size = new System.Drawing.Size(15, 15);
             this.label_totaltag_count.TabIndex = 3;
             this.label_totaltag_count.Text = "0";
             // 
@@ -3837,7 +3838,7 @@ namespace UHFDemo
             this.label60.AutoSize = true;
             this.label60.Location = new System.Drawing.Point(10, 65);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(95, 12);
+            this.label60.Size = new System.Drawing.Size(126, 15);
             this.label60.TabIndex = 2;
             this.label60.Text = "Average Speed：";
             // 
@@ -3846,7 +3847,7 @@ namespace UHFDemo
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(10, 42);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(107, 12);
+            this.label48.Size = new System.Drawing.Size(142, 15);
             this.label48.TabIndex = 1;
             this.label48.Text = "Total ReadCount：";
             // 
@@ -3855,7 +3856,7 @@ namespace UHFDemo
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(10, 17);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(101, 12);
+            this.label19.Size = new System.Drawing.Size(134, 15);
             this.label19.TabIndex = 0;
             this.label19.Text = "Total TagCount：";
             // 
@@ -3875,7 +3876,7 @@ namespace UHFDemo
             this.groupBox26.Controls.Add(this.txtFastMaxRssi);
             this.groupBox26.Location = new System.Drawing.Point(349, 144);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(645, 372);
+            this.groupBox26.Size = new System.Drawing.Size(645, 366);
             this.groupBox26.TabIndex = 86;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Result";
@@ -3883,44 +3884,44 @@ namespace UHFDemo
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("宋体", 9F);
+            this.label53.Font = new System.Drawing.Font("SimSun", 9F);
             this.label53.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label53.Location = new System.Drawing.Point(6, 20);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(107, 12);
+            this.label53.Size = new System.Drawing.Size(143, 15);
             this.label53.TabIndex = 67;
             this.label53.Text = "This Round Count:";
             // 
             // txtCmdTagCount
             // 
             this.txtCmdTagCount.AutoSize = true;
-            this.txtCmdTagCount.Font = new System.Drawing.Font("宋体", 15.75F);
+            this.txtCmdTagCount.Font = new System.Drawing.Font("SimSun", 15.75F);
             this.txtCmdTagCount.ForeColor = System.Drawing.SystemColors.Highlight;
             this.txtCmdTagCount.Location = new System.Drawing.Point(116, 16);
             this.txtCmdTagCount.Name = "txtCmdTagCount";
-            this.txtCmdTagCount.Size = new System.Drawing.Size(21, 21);
+            this.txtCmdTagCount.Size = new System.Drawing.Size(26, 27);
             this.txtCmdTagCount.TabIndex = 23;
             this.txtCmdTagCount.Text = "0";
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("宋体", 9F);
+            this.label49.Font = new System.Drawing.Font("SimSun", 9F);
             this.label49.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label49.Location = new System.Drawing.Point(216, 19);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(59, 12);
+            this.label49.Size = new System.Drawing.Size(79, 15);
             this.label49.TabIndex = 27;
             this.label49.Text = "Min RSSI:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 9F);
+            this.label22.Font = new System.Drawing.Font("SimSun", 9F);
             this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label22.Location = new System.Drawing.Point(349, 19);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 12);
+            this.label22.Size = new System.Drawing.Size(79, 15);
             this.label22.TabIndex = 26;
             this.label22.Text = "Max RSSI:";
             // 
@@ -3943,58 +3944,68 @@ namespace UHFDemo
             this.Data_fast_inv});
             this.dgv_fast_inv_tags.Location = new System.Drawing.Point(6, 42);
             this.dgv_fast_inv_tags.Name = "dgv_fast_inv_tags";
+            this.dgv_fast_inv_tags.RowHeadersWidth = 51;
             this.dgv_fast_inv_tags.RowTemplate.Height = 23;
-            this.dgv_fast_inv_tags.Size = new System.Drawing.Size(648, 324);
+            this.dgv_fast_inv_tags.Size = new System.Drawing.Size(648, 318);
             this.dgv_fast_inv_tags.TabIndex = 66;
             // 
             // SerialNumber_fast_inv
             // 
             this.SerialNumber_fast_inv.HeaderText = "SerialNumber";
+            this.SerialNumber_fast_inv.MinimumWidth = 6;
             this.SerialNumber_fast_inv.Name = "SerialNumber_fast_inv";
             // 
             // ReadCount_fast_inv
             // 
             this.ReadCount_fast_inv.HeaderText = "ReadCount";
+            this.ReadCount_fast_inv.MinimumWidth = 6;
             this.ReadCount_fast_inv.Name = "ReadCount_fast_inv";
             // 
             // PC_fast_inv
             // 
             this.PC_fast_inv.HeaderText = "PC";
+            this.PC_fast_inv.MinimumWidth = 6;
             this.PC_fast_inv.Name = "PC_fast_inv";
             // 
             // EPC_fast_inv
             // 
             this.EPC_fast_inv.HeaderText = "EPC";
+            this.EPC_fast_inv.MinimumWidth = 6;
             this.EPC_fast_inv.Name = "EPC_fast_inv";
             // 
             // Antenna_fast_inv
             // 
             this.Antenna_fast_inv.HeaderText = "Antenna";
+            this.Antenna_fast_inv.MinimumWidth = 6;
             this.Antenna_fast_inv.Name = "Antenna_fast_inv";
             // 
             // Freq_fast_inv
             // 
             this.Freq_fast_inv.HeaderText = "Freq";
+            this.Freq_fast_inv.MinimumWidth = 6;
             this.Freq_fast_inv.Name = "Freq_fast_inv";
             // 
             // Rssi_fast_inv
             // 
             this.Rssi_fast_inv.HeaderText = "Rssi";
+            this.Rssi_fast_inv.MinimumWidth = 6;
             this.Rssi_fast_inv.Name = "Rssi_fast_inv";
             // 
             // Phase_fast_inv
             // 
             this.Phase_fast_inv.HeaderText = "Phase";
+            this.Phase_fast_inv.MinimumWidth = 6;
             this.Phase_fast_inv.Name = "Phase_fast_inv";
             // 
             // Data_fast_inv
             // 
             this.Data_fast_inv.HeaderText = "Data";
+            this.Data_fast_inv.MinimumWidth = 6;
             this.Data_fast_inv.Name = "Data_fast_inv";
             // 
             // buttonFastFresh
             // 
-            this.buttonFastFresh.Font = new System.Drawing.Font("宋体", 9F);
+            this.buttonFastFresh.Font = new System.Drawing.Font("SimSun", 9F);
             this.buttonFastFresh.ForeColor = System.Drawing.SystemColors.Desktop;
             this.buttonFastFresh.Location = new System.Drawing.Point(482, 15);
             this.buttonFastFresh.Name = "buttonFastFresh";
@@ -4006,15 +4017,15 @@ namespace UHFDemo
             // 
             // txtFastMinRssi
             // 
-            this.txtFastMinRssi.Font = new System.Drawing.Font("宋体", 9F);
+            this.txtFastMinRssi.Font = new System.Drawing.Font("SimSun", 9F);
             this.txtFastMinRssi.Location = new System.Drawing.Point(281, 15);
             this.txtFastMinRssi.Name = "txtFastMinRssi";
-            this.txtFastMinRssi.Size = new System.Drawing.Size(62, 21);
+            this.txtFastMinRssi.Size = new System.Drawing.Size(62, 25);
             this.txtFastMinRssi.TabIndex = 41;
             // 
             // button7
             // 
-            this.button7.Font = new System.Drawing.Font("宋体", 9F);
+            this.button7.Font = new System.Drawing.Font("SimSun", 9F);
             this.button7.ForeColor = System.Drawing.SystemColors.Desktop;
             this.button7.Location = new System.Drawing.Point(550, 15);
             this.button7.Name = "button7";
@@ -4026,10 +4037,10 @@ namespace UHFDemo
             // 
             // txtFastMaxRssi
             // 
-            this.txtFastMaxRssi.Font = new System.Drawing.Font("宋体", 9F);
+            this.txtFastMaxRssi.Font = new System.Drawing.Font("SimSun", 9F);
             this.txtFastMaxRssi.Location = new System.Drawing.Point(414, 16);
             this.txtFastMaxRssi.Name = "txtFastMaxRssi";
-            this.txtFastMaxRssi.Size = new System.Drawing.Size(62, 21);
+            this.txtFastMaxRssi.Size = new System.Drawing.Size(62, 25);
             this.txtFastMaxRssi.TabIndex = 40;
             // 
             // groupBox25
@@ -4078,11 +4089,11 @@ namespace UHFDemo
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("宋体", 9F);
+            this.label58.Font = new System.Drawing.Font("SimSun", 9F);
             this.label58.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label58.Location = new System.Drawing.Point(6, 18);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(131, 12);
+            this.label58.Size = new System.Drawing.Size(175, 15);
             this.label58.TabIndex = 26;
             this.label58.Text = "Inventoried Quantity:";
             // 
@@ -4133,22 +4144,22 @@ namespace UHFDemo
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("宋体", 9F);
+            this.label55.Font = new System.Drawing.Font("SimSun", 9F);
             this.label55.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label55.Location = new System.Drawing.Point(255, 8);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(95, 12);
+            this.label55.Size = new System.Drawing.Size(127, 15);
             this.label55.TabIndex = 29;
             this.label55.Text = "Speed(Tag/Sec):";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("宋体", 9F);
+            this.label56.Font = new System.Drawing.Font("SimSun", 9F);
             this.label56.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label56.Location = new System.Drawing.Point(255, 72);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(131, 12);
+            this.label56.Size = new System.Drawing.Size(175, 15);
             this.label56.TabIndex = 28;
             this.label56.Text = "Command Duration(mS):";
             // 
@@ -4177,22 +4188,22 @@ namespace UHFDemo
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("宋体", 9F);
+            this.label57.Font = new System.Drawing.Font("SimSun", 9F);
             this.label57.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label57.Location = new System.Drawing.Point(386, 8);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(149, 12);
+            this.label57.Size = new System.Drawing.Size(199, 15);
             this.label57.TabIndex = 27;
             this.label57.Text = "Total Tag Communication:";
             // 
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("宋体", 9F);
+            this.label54.Font = new System.Drawing.Font("SimSun", 9F);
             this.label54.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label54.Location = new System.Drawing.Point(386, 72);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(179, 12);
+            this.label54.Size = new System.Drawing.Size(239, 15);
             this.label54.TabIndex = 30;
             this.label54.Text = "Total Inventory Duration(mS):";
             // 
@@ -4246,7 +4257,7 @@ namespace UHFDemo
             this.radio_btn_cache_inv.AutoSize = true;
             this.radio_btn_cache_inv.Location = new System.Drawing.Point(7, 63);
             this.radio_btn_cache_inv.Name = "radio_btn_cache_inv";
-            this.radio_btn_cache_inv.Size = new System.Drawing.Size(89, 16);
+            this.radio_btn_cache_inv.Size = new System.Drawing.Size(116, 19);
             this.radio_btn_cache_inv.TabIndex = 2;
             this.radio_btn_cache_inv.TabStop = true;
             this.radio_btn_cache_inv.Text = "Buffer Mode";
@@ -4258,7 +4269,7 @@ namespace UHFDemo
             this.radio_btn_fast_inv.AutoSize = true;
             this.radio_btn_fast_inv.Location = new System.Drawing.Point(7, 41);
             this.radio_btn_fast_inv.Name = "radio_btn_fast_inv";
-            this.radio_btn_fast_inv.Size = new System.Drawing.Size(107, 16);
+            this.radio_btn_fast_inv.Size = new System.Drawing.Size(140, 19);
             this.radio_btn_fast_inv.TabIndex = 1;
             this.radio_btn_fast_inv.TabStop = true;
             this.radio_btn_fast_inv.Text = "Multi Channels";
@@ -4270,7 +4281,7 @@ namespace UHFDemo
             this.radio_btn_realtime_inv.AutoSize = true;
             this.radio_btn_realtime_inv.Location = new System.Drawing.Point(7, 19);
             this.radio_btn_realtime_inv.Name = "radio_btn_realtime_inv";
-            this.radio_btn_realtime_inv.Size = new System.Drawing.Size(107, 16);
+            this.radio_btn_realtime_inv.Size = new System.Drawing.Size(140, 19);
             this.radio_btn_realtime_inv.TabIndex = 0;
             this.radio_btn_realtime_inv.TabStop = true;
             this.radio_btn_realtime_inv.Text = "Single Channel";
@@ -4279,7 +4290,7 @@ namespace UHFDemo
             // 
             // btnInventory
             // 
-            this.btnInventory.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold);
+            this.btnInventory.Font = new System.Drawing.Font("SimSun", 15F, System.Drawing.FontStyle.Bold);
             this.btnInventory.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnInventory.Location = new System.Drawing.Point(10, 20);
             this.btnInventory.Name = "btnInventory";
@@ -4309,7 +4320,7 @@ namespace UHFDemo
             this.cb_tagFocus.AutoSize = true;
             this.cb_tagFocus.Location = new System.Drawing.Point(178, 37);
             this.cb_tagFocus.Name = "cb_tagFocus";
-            this.cb_tagFocus.Size = new System.Drawing.Size(78, 16);
+            this.cb_tagFocus.Size = new System.Drawing.Size(101, 19);
             this.cb_tagFocus.TabIndex = 84;
             this.cb_tagFocus.Text = "Tag Focus";
             this.cb_tagFocus.UseVisualStyleBackColor = true;
@@ -4319,18 +4330,18 @@ namespace UHFDemo
             // 
             this.tb_fast_inv_staytargetB_times.Location = new System.Drawing.Point(107, 35);
             this.tb_fast_inv_staytargetB_times.Name = "tb_fast_inv_staytargetB_times";
-            this.tb_fast_inv_staytargetB_times.Size = new System.Drawing.Size(58, 21);
+            this.tb_fast_inv_staytargetB_times.Size = new System.Drawing.Size(58, 25);
             this.tb_fast_inv_staytargetB_times.TabIndex = 83;
             this.tb_fast_inv_staytargetB_times.Text = "2";
             // 
             // label132
             // 
             this.label132.AutoSize = true;
-            this.label132.Font = new System.Drawing.Font("宋体", 9F);
+            this.label132.Font = new System.Drawing.Font("SimSun", 9F);
             this.label132.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label132.Location = new System.Drawing.Point(10, 14);
             this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(65, 12);
+            this.label132.Size = new System.Drawing.Size(87, 15);
             this.label132.TabIndex = 66;
             this.label132.Text = "Exec Times";
             // 
@@ -4338,7 +4349,7 @@ namespace UHFDemo
             // 
             this.mFastIntervalTime.Location = new System.Drawing.Point(258, 13);
             this.mFastIntervalTime.Name = "mFastIntervalTime";
-            this.mFastIntervalTime.Size = new System.Drawing.Size(58, 21);
+            this.mFastIntervalTime.Size = new System.Drawing.Size(58, 25);
             this.mFastIntervalTime.TabIndex = 67;
             this.mFastIntervalTime.Text = "0";
             this.mFastIntervalTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4346,11 +4357,11 @@ namespace UHFDemo
             // label131
             // 
             this.label131.AutoSize = true;
-            this.label131.Font = new System.Drawing.Font("宋体", 9F);
+            this.label131.Font = new System.Drawing.Font("SimSun", 9F);
             this.label131.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label131.Location = new System.Drawing.Point(178, 17);
             this.label131.Name = "label131";
-            this.label131.Size = new System.Drawing.Size(53, 12);
+            this.label131.Size = new System.Drawing.Size(71, 15);
             this.label131.TabIndex = 65;
             this.label131.Text = "Interval";
             // 
@@ -4358,7 +4369,7 @@ namespace UHFDemo
             // 
             this.mInventoryExeCount.Location = new System.Drawing.Point(107, 10);
             this.mInventoryExeCount.Name = "mInventoryExeCount";
-            this.mInventoryExeCount.Size = new System.Drawing.Size(58, 21);
+            this.mInventoryExeCount.Size = new System.Drawing.Size(58, 25);
             this.mInventoryExeCount.TabIndex = 68;
             this.mInventoryExeCount.Text = "-1";
             this.mInventoryExeCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -4368,7 +4379,7 @@ namespace UHFDemo
             this.cb_fast_inv_reverse_target.AutoSize = true;
             this.cb_fast_inv_reverse_target.Location = new System.Drawing.Point(10, 37);
             this.cb_fast_inv_reverse_target.Name = "cb_fast_inv_reverse_target";
-            this.cb_fast_inv_reverse_target.Size = new System.Drawing.Size(84, 16);
+            this.cb_fast_inv_reverse_target.Size = new System.Drawing.Size(109, 19);
             this.cb_fast_inv_reverse_target.TabIndex = 82;
             this.cb_fast_inv_reverse_target.Text = "Reserve AB";
             this.cb_fast_inv_reverse_target.UseVisualStyleBackColor = true;
@@ -4379,9 +4390,9 @@ namespace UHFDemo
             this.pageAcessTag.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pageAcessTag.Controls.Add(this.panel13);
             this.pageAcessTag.Controls.Add(this.gbCmdOperateTag);
-            this.pageAcessTag.Location = new System.Drawing.Point(4, 22);
+            this.pageAcessTag.Location = new System.Drawing.Point(4, 25);
             this.pageAcessTag.Name = "pageAcessTag";
-            this.pageAcessTag.Size = new System.Drawing.Size(1000, 527);
+            this.pageAcessTag.Size = new System.Drawing.Size(1000, 521);
             this.pageAcessTag.TabIndex = 3;
             this.pageAcessTag.Text = "Tag Operation";
             this.pageAcessTag.UseVisualStyleBackColor = true;
@@ -4394,7 +4405,7 @@ namespace UHFDemo
             this.panel13.Controls.Add(this.dgvTagOp);
             this.panel13.Location = new System.Drawing.Point(4, 321);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(993, 203);
+            this.panel13.Size = new System.Drawing.Size(993, 197);
             this.panel13.TabIndex = 10;
             // 
             // dgvTagOp
@@ -4414,59 +4425,80 @@ namespace UHFDemo
             this.dgvTagOp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTagOp.Location = new System.Drawing.Point(0, 0);
             this.dgvTagOp.Name = "dgvTagOp";
+            this.dgvTagOp.RowHeadersWidth = 51;
             this.dgvTagOp.RowTemplate.Height = 23;
-            this.dgvTagOp.Size = new System.Drawing.Size(993, 203);
+            this.dgvTagOp.Size = new System.Drawing.Size(993, 197);
             this.dgvTagOp.TabIndex = 9;
             // 
             // tagOp_SerialNumberColumn
             // 
             this.tagOp_SerialNumberColumn.HeaderText = "SerialNumber";
+            this.tagOp_SerialNumberColumn.MinimumWidth = 6;
             this.tagOp_SerialNumberColumn.Name = "tagOp_SerialNumberColumn";
+            this.tagOp_SerialNumberColumn.Width = 125;
             // 
             // tagOp_PcColumn
             // 
             this.tagOp_PcColumn.HeaderText = "PC";
+            this.tagOp_PcColumn.MinimumWidth = 6;
             this.tagOp_PcColumn.Name = "tagOp_PcColumn";
+            this.tagOp_PcColumn.Width = 125;
             // 
             // tagOp_CrcColumn
             // 
             this.tagOp_CrcColumn.HeaderText = "CRC";
+            this.tagOp_CrcColumn.MinimumWidth = 6;
             this.tagOp_CrcColumn.Name = "tagOp_CrcColumn";
+            this.tagOp_CrcColumn.Width = 125;
             // 
             // tagOp_EpcColumn
             // 
             this.tagOp_EpcColumn.HeaderText = "EPC";
+            this.tagOp_EpcColumn.MinimumWidth = 6;
             this.tagOp_EpcColumn.Name = "tagOp_EpcColumn";
+            this.tagOp_EpcColumn.Width = 125;
             // 
             // tagOp_DataColumn
             // 
             this.tagOp_DataColumn.HeaderText = "Data";
+            this.tagOp_DataColumn.MinimumWidth = 6;
             this.tagOp_DataColumn.Name = "tagOp_DataColumn";
+            this.tagOp_DataColumn.Width = 125;
             // 
             // tagOp_DataLenColumn
             // 
             this.tagOp_DataLenColumn.HeaderText = "DataLen";
+            this.tagOp_DataLenColumn.MinimumWidth = 6;
             this.tagOp_DataLenColumn.Name = "tagOp_DataLenColumn";
+            this.tagOp_DataLenColumn.Width = 125;
             // 
             // tagOp_AntennaColumn
             // 
             this.tagOp_AntennaColumn.HeaderText = "Antenna";
+            this.tagOp_AntennaColumn.MinimumWidth = 6;
             this.tagOp_AntennaColumn.Name = "tagOp_AntennaColumn";
+            this.tagOp_AntennaColumn.Width = 125;
             // 
             // tagOp_OpCountColumn
             // 
             this.tagOp_OpCountColumn.HeaderText = "OpCount";
+            this.tagOp_OpCountColumn.MinimumWidth = 6;
             this.tagOp_OpCountColumn.Name = "tagOp_OpCountColumn";
+            this.tagOp_OpCountColumn.Width = 125;
             // 
             // tagOp_OpSuccessCountColumn
             // 
             this.tagOp_OpSuccessCountColumn.HeaderText = "OpSuccessCount";
+            this.tagOp_OpSuccessCountColumn.MinimumWidth = 6;
             this.tagOp_OpSuccessCountColumn.Name = "tagOp_OpSuccessCountColumn";
+            this.tagOp_OpSuccessCountColumn.Width = 125;
             // 
             // tagOp_FreqColumn
             // 
             this.tagOp_FreqColumn.HeaderText = "Frequency";
+            this.tagOp_FreqColumn.MinimumWidth = 6;
             this.tagOp_FreqColumn.Name = "tagOp_FreqColumn";
+            this.tagOp_FreqColumn.Width = 125;
             // 
             // gbCmdOperateTag
             // 
@@ -4475,7 +4507,7 @@ namespace UHFDemo
             this.gbCmdOperateTag.Controls.Add(this.groupBox14);
             this.gbCmdOperateTag.Controls.Add(this.groupBox13);
             this.gbCmdOperateTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gbCmdOperateTag.Font = new System.Drawing.Font("宋体", 9F);
+            this.gbCmdOperateTag.Font = new System.Drawing.Font("SimSun", 9F);
             this.gbCmdOperateTag.Location = new System.Drawing.Point(0, 0);
             this.gbCmdOperateTag.Name = "gbCmdOperateTag";
             this.gbCmdOperateTag.Size = new System.Drawing.Size(1000, 325);
@@ -4489,7 +4521,7 @@ namespace UHFDemo
             this.groupBox16.Controls.Add(this.htxtKillPwd);
             this.groupBox16.Controls.Add(this.label29);
             this.groupBox16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox16.Location = new System.Drawing.Point(3, 270);
+            this.groupBox16.Location = new System.Drawing.Point(3, 274);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(994, 45);
             this.groupBox16.TabIndex = 4;
@@ -4510,7 +4542,7 @@ namespace UHFDemo
             // 
             this.htxtKillPwd.Location = new System.Drawing.Point(421, 17);
             this.htxtKillPwd.Name = "htxtKillPwd";
-            this.htxtKillPwd.Size = new System.Drawing.Size(120, 21);
+            this.htxtKillPwd.Size = new System.Drawing.Size(120, 25);
             this.htxtKillPwd.TabIndex = 13;
             // 
             // label29
@@ -4518,7 +4550,7 @@ namespace UHFDemo
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(309, 21);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(89, 12);
+            this.label29.Size = new System.Drawing.Size(119, 15);
             this.label29.TabIndex = 13;
             this.label29.Text = "Kill Pwd(HEX):";
             // 
@@ -4530,7 +4562,7 @@ namespace UHFDemo
             this.groupBox15.Controls.Add(this.groupBox18);
             this.groupBox15.Controls.Add(this.btnLockTag);
             this.groupBox15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox15.Location = new System.Drawing.Point(3, 162);
+            this.groupBox15.Location = new System.Drawing.Point(3, 166);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(994, 108);
             this.groupBox15.TabIndex = 3;
@@ -4541,7 +4573,7 @@ namespace UHFDemo
             // 
             this.htxtLockPwd.Location = new System.Drawing.Point(737, 52);
             this.htxtLockPwd.Name = "htxtLockPwd";
-            this.htxtLockPwd.Size = new System.Drawing.Size(120, 21);
+            this.htxtLockPwd.Size = new System.Drawing.Size(120, 25);
             this.htxtLockPwd.TabIndex = 12;
             // 
             // label28
@@ -4549,7 +4581,7 @@ namespace UHFDemo
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(606, 56);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(101, 12);
+            this.label28.Size = new System.Drawing.Size(135, 15);
             this.label28.TabIndex = 12;
             this.label28.Text = "Access Pwd(HEX):";
             // 
@@ -4571,7 +4603,7 @@ namespace UHFDemo
             this.rdbUserMemory.AutoSize = true;
             this.rdbUserMemory.Location = new System.Drawing.Point(481, 15);
             this.rdbUserMemory.Name = "rdbUserMemory";
-            this.rdbUserMemory.Size = new System.Drawing.Size(47, 16);
+            this.rdbUserMemory.Size = new System.Drawing.Size(60, 19);
             this.rdbUserMemory.TabIndex = 4;
             this.rdbUserMemory.TabStop = true;
             this.rdbUserMemory.Text = "USER";
@@ -4582,7 +4614,7 @@ namespace UHFDemo
             this.rdbTidMemory.AutoSize = true;
             this.rdbTidMemory.Location = new System.Drawing.Point(381, 15);
             this.rdbTidMemory.Name = "rdbTidMemory";
-            this.rdbTidMemory.Size = new System.Drawing.Size(41, 16);
+            this.rdbTidMemory.Size = new System.Drawing.Size(52, 19);
             this.rdbTidMemory.TabIndex = 3;
             this.rdbTidMemory.TabStop = true;
             this.rdbTidMemory.Text = "TID";
@@ -4593,7 +4625,7 @@ namespace UHFDemo
             this.rdbEpcMermory.AutoSize = true;
             this.rdbEpcMermory.Location = new System.Drawing.Point(281, 15);
             this.rdbEpcMermory.Name = "rdbEpcMermory";
-            this.rdbEpcMermory.Size = new System.Drawing.Size(41, 16);
+            this.rdbEpcMermory.Size = new System.Drawing.Size(52, 19);
             this.rdbEpcMermory.TabIndex = 2;
             this.rdbEpcMermory.TabStop = true;
             this.rdbEpcMermory.Text = "EPC";
@@ -4604,7 +4636,7 @@ namespace UHFDemo
             this.rdbKillPwd.AutoSize = true;
             this.rdbKillPwd.Location = new System.Drawing.Point(151, 15);
             this.rdbKillPwd.Name = "rdbKillPwd";
-            this.rdbKillPwd.Size = new System.Drawing.Size(71, 16);
+            this.rdbKillPwd.Size = new System.Drawing.Size(92, 19);
             this.rdbKillPwd.TabIndex = 1;
             this.rdbKillPwd.TabStop = true;
             this.rdbKillPwd.Text = "Kill Pwd";
@@ -4615,7 +4647,7 @@ namespace UHFDemo
             this.rdbAccessPwd.AutoSize = true;
             this.rdbAccessPwd.Location = new System.Drawing.Point(9, 15);
             this.rdbAccessPwd.Name = "rdbAccessPwd";
-            this.rdbAccessPwd.Size = new System.Drawing.Size(83, 16);
+            this.rdbAccessPwd.Size = new System.Drawing.Size(108, 19);
             this.rdbAccessPwd.TabIndex = 0;
             this.rdbAccessPwd.TabStop = true;
             this.rdbAccessPwd.Text = "Access Pwd";
@@ -4638,7 +4670,7 @@ namespace UHFDemo
             this.rdbLockEver.AutoSize = true;
             this.rdbLockEver.Location = new System.Drawing.Point(456, 14);
             this.rdbLockEver.Name = "rdbLockEver";
-            this.rdbLockEver.Size = new System.Drawing.Size(107, 16);
+            this.rdbLockEver.Size = new System.Drawing.Size(140, 19);
             this.rdbLockEver.TabIndex = 3;
             this.rdbLockEver.TabStop = true;
             this.rdbLockEver.Text = "Permanent Lock";
@@ -4649,7 +4681,7 @@ namespace UHFDemo
             this.rdbFreeEver.AutoSize = true;
             this.rdbFreeEver.Location = new System.Drawing.Point(263, 14);
             this.rdbFreeEver.Name = "rdbFreeEver";
-            this.rdbFreeEver.Size = new System.Drawing.Size(119, 16);
+            this.rdbFreeEver.Size = new System.Drawing.Size(156, 19);
             this.rdbFreeEver.TabIndex = 2;
             this.rdbFreeEver.TabStop = true;
             this.rdbFreeEver.Text = "Permanent Unlock";
@@ -4660,7 +4692,7 @@ namespace UHFDemo
             this.rdbLock.AutoSize = true;
             this.rdbLock.Location = new System.Drawing.Point(142, 14);
             this.rdbLock.Name = "rdbLock";
-            this.rdbLock.Size = new System.Drawing.Size(47, 16);
+            this.rdbLock.Size = new System.Drawing.Size(60, 19);
             this.rdbLock.TabIndex = 1;
             this.rdbLock.TabStop = true;
             this.rdbLock.Text = "Lock";
@@ -4671,7 +4703,7 @@ namespace UHFDemo
             this.rdbFree.AutoSize = true;
             this.rdbFree.Location = new System.Drawing.Point(9, 14);
             this.rdbFree.Name = "rdbFree";
-            this.rdbFree.Size = new System.Drawing.Size(59, 16);
+            this.rdbFree.Size = new System.Drawing.Size(76, 19);
             this.rdbFree.TabIndex = 0;
             this.rdbFree.TabStop = true;
             this.rdbFree.Text = "Unlock";
@@ -4703,7 +4735,7 @@ namespace UHFDemo
             this.groupBox14.Controls.Add(this.groupBox17);
             this.groupBox14.Controls.Add(this.label24);
             this.groupBox14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox14.Location = new System.Drawing.Point(3, 67);
+            this.groupBox14.Location = new System.Drawing.Point(3, 71);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(994, 95);
             this.groupBox14.TabIndex = 2;
@@ -4714,7 +4746,7 @@ namespace UHFDemo
             // 
             this.hexTb_accessPw.Location = new System.Drawing.Point(421, 23);
             this.hexTb_accessPw.Name = "hexTb_accessPw";
-            this.hexTb_accessPw.Size = new System.Drawing.Size(105, 21);
+            this.hexTb_accessPw.Size = new System.Drawing.Size(105, 25);
             this.hexTb_accessPw.TabIndex = 13;
             this.hexTb_accessPw.Text = "00 00 00 00";
             // 
@@ -4724,7 +4756,7 @@ namespace UHFDemo
             this.radio_btnBlockWrite.Checked = true;
             this.radio_btnBlockWrite.Location = new System.Drawing.Point(722, 60);
             this.radio_btnBlockWrite.Name = "radio_btnBlockWrite";
-            this.radio_btnBlockWrite.Size = new System.Drawing.Size(83, 16);
+            this.radio_btnBlockWrite.Size = new System.Drawing.Size(108, 19);
             this.radio_btnBlockWrite.TabIndex = 12;
             this.radio_btnBlockWrite.TabStop = true;
             this.radio_btnBlockWrite.Text = "BlockWrite";
@@ -4735,7 +4767,7 @@ namespace UHFDemo
             this.radio_btnWrite.AutoSize = true;
             this.radio_btnWrite.Location = new System.Drawing.Point(822, 62);
             this.radio_btnWrite.Name = "radio_btnWrite";
-            this.radio_btnWrite.Size = new System.Drawing.Size(53, 16);
+            this.radio_btnWrite.Size = new System.Drawing.Size(68, 19);
             this.radio_btnWrite.TabIndex = 11;
             this.radio_btnWrite.Text = "Write";
             this.radio_btnWrite.UseVisualStyleBackColor = true;
@@ -4744,14 +4776,14 @@ namespace UHFDemo
             // 
             this.hexTb_WriteData.Location = new System.Drawing.Point(135, 58);
             this.hexTb_WriteData.Name = "hexTb_WriteData";
-            this.hexTb_WriteData.Size = new System.Drawing.Size(572, 21);
+            this.hexTb_WriteData.Size = new System.Drawing.Size(572, 25);
             this.hexTb_WriteData.TabIndex = 10;
             // 
             // tb_wordLen
             // 
             this.tb_wordLen.Location = new System.Drawing.Point(822, 23);
             this.tb_wordLen.Name = "tb_wordLen";
-            this.tb_wordLen.Size = new System.Drawing.Size(48, 21);
+            this.tb_wordLen.Size = new System.Drawing.Size(48, 25);
             this.tb_wordLen.TabIndex = 9;
             this.tb_wordLen.Text = "0";
             // 
@@ -4760,7 +4792,7 @@ namespace UHFDemo
             this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(720, 27);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(89, 12);
+            this.label27.Size = new System.Drawing.Size(119, 15);
             this.label27.TabIndex = 8;
             this.label27.Text = "DataLen(WORD):";
             // 
@@ -4788,7 +4820,7 @@ namespace UHFDemo
             // 
             this.tb_startWord.Location = new System.Drawing.Point(659, 23);
             this.tb_startWord.Name = "tb_startWord";
-            this.tb_startWord.Size = new System.Drawing.Size(48, 21);
+            this.tb_startWord.Size = new System.Drawing.Size(48, 25);
             this.tb_startWord.TabIndex = 5;
             // 
             // label26
@@ -4796,7 +4828,7 @@ namespace UHFDemo
             this.label26.AutoSize = true;
             this.label26.Location = new System.Drawing.Point(539, 27);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(107, 12);
+            this.label26.Size = new System.Drawing.Size(143, 15);
             this.label26.TabIndex = 4;
             this.label26.Text = "Start Addr(WORD):";
             // 
@@ -4805,7 +4837,7 @@ namespace UHFDemo
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(295, 27);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(113, 12);
+            this.label25.Size = new System.Drawing.Size(149, 15);
             this.label25.TabIndex = 2;
             this.label25.Text = "Access Pwd（HEX）:";
             // 
@@ -4826,7 +4858,7 @@ namespace UHFDemo
             this.rdbUser.AutoSize = true;
             this.rdbUser.Location = new System.Drawing.Point(216, 13);
             this.rdbUser.Name = "rdbUser";
-            this.rdbUser.Size = new System.Drawing.Size(47, 16);
+            this.rdbUser.Size = new System.Drawing.Size(60, 19);
             this.rdbUser.TabIndex = 3;
             this.rdbUser.TabStop = true;
             this.rdbUser.Text = "USER";
@@ -4838,7 +4870,7 @@ namespace UHFDemo
             this.rdbTid.AutoSize = true;
             this.rdbTid.Location = new System.Drawing.Point(156, 13);
             this.rdbTid.Name = "rdbTid";
-            this.rdbTid.Size = new System.Drawing.Size(41, 16);
+            this.rdbTid.Size = new System.Drawing.Size(52, 19);
             this.rdbTid.TabIndex = 2;
             this.rdbTid.TabStop = true;
             this.rdbTid.Text = "TID";
@@ -4850,7 +4882,7 @@ namespace UHFDemo
             this.rdbEpc.AutoSize = true;
             this.rdbEpc.Location = new System.Drawing.Point(96, 13);
             this.rdbEpc.Name = "rdbEpc";
-            this.rdbEpc.Size = new System.Drawing.Size(41, 16);
+            this.rdbEpc.Size = new System.Drawing.Size(52, 19);
             this.rdbEpc.TabIndex = 1;
             this.rdbEpc.TabStop = true;
             this.rdbEpc.Text = "EPC";
@@ -4862,7 +4894,7 @@ namespace UHFDemo
             this.rdbReserved.AutoSize = true;
             this.rdbReserved.Location = new System.Drawing.Point(6, 13);
             this.rdbReserved.Name = "rdbReserved";
-            this.rdbReserved.Size = new System.Drawing.Size(71, 16);
+            this.rdbReserved.Size = new System.Drawing.Size(92, 19);
             this.rdbReserved.TabIndex = 0;
             this.rdbReserved.TabStop = true;
             this.rdbReserved.Text = "Password";
@@ -4874,7 +4906,7 @@ namespace UHFDemo
             this.label24.AutoSize = true;
             this.label24.Location = new System.Drawing.Point(19, 64);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(95, 12);
+            this.label24.Size = new System.Drawing.Size(127, 15);
             this.label24.TabIndex = 0;
             this.label24.Text = "WriteData(HEX):";
             // 
@@ -4887,7 +4919,7 @@ namespace UHFDemo
             this.groupBox13.Controls.Add(this.cmbSetAccessEpcMatch);
             this.groupBox13.Controls.Add(this.txtAccessEpcMatch);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox13.Location = new System.Drawing.Point(3, 17);
+            this.groupBox13.Location = new System.Drawing.Point(3, 21);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(994, 50);
             this.groupBox13.TabIndex = 1;
@@ -4919,7 +4951,7 @@ namespace UHFDemo
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(492, 22);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(59, 12);
+            this.label23.Size = new System.Drawing.Size(79, 15);
             this.label23.TabIndex = 4;
             this.label23.Text = "Tag List:";
             // 
@@ -4939,7 +4971,7 @@ namespace UHFDemo
             this.cmbSetAccessEpcMatch.FormattingEnabled = true;
             this.cmbSetAccessEpcMatch.Location = new System.Drawing.Point(566, 18);
             this.cmbSetAccessEpcMatch.Name = "cmbSetAccessEpcMatch";
-            this.cmbSetAccessEpcMatch.Size = new System.Drawing.Size(339, 20);
+            this.cmbSetAccessEpcMatch.Size = new System.Drawing.Size(339, 23);
             this.cmbSetAccessEpcMatch.TabIndex = 2;
             this.cmbSetAccessEpcMatch.DropDown += new System.EventHandler(this.cmbSetAccessEpcMatch_DropDown);
             // 
@@ -4948,7 +4980,7 @@ namespace UHFDemo
             this.txtAccessEpcMatch.Location = new System.Drawing.Point(70, 18);
             this.txtAccessEpcMatch.Name = "txtAccessEpcMatch";
             this.txtAccessEpcMatch.ReadOnly = true;
-            this.txtAccessEpcMatch.Size = new System.Drawing.Size(336, 21);
+            this.txtAccessEpcMatch.Size = new System.Drawing.Size(336, 25);
             this.txtAccessEpcMatch.TabIndex = 1;
             // 
             // tabPage3
@@ -4958,10 +4990,10 @@ namespace UHFDemo
             this.tabPage3.Controls.Add(this.groupBox22);
             this.tabPage3.Controls.Add(this.groupBox12);
             this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1000, 527);
+            this.tabPage3.Size = new System.Drawing.Size(1000, 521);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "Set Tag Mask";
             // 
@@ -4973,7 +5005,7 @@ namespace UHFDemo
             this.panel14.Controls.Add(this.dgvTagMask);
             this.panel14.Location = new System.Drawing.Point(6, 258);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(988, 263);
+            this.panel14.Size = new System.Drawing.Size(988, 257);
             this.panel14.TabIndex = 31;
             // 
             // dgvTagMask
@@ -4990,6 +5022,7 @@ namespace UHFDemo
             this.tagMask_TruncateColumn});
             this.dgvTagMask.Location = new System.Drawing.Point(0, 3);
             this.dgvTagMask.Name = "dgvTagMask";
+            this.dgvTagMask.RowHeadersWidth = 51;
             this.dgvTagMask.RowTemplate.Height = 23;
             this.dgvTagMask.Size = new System.Drawing.Size(985, 257);
             this.dgvTagMask.TabIndex = 31;
@@ -4997,42 +5030,58 @@ namespace UHFDemo
             // tagMask_MaskNoColumn
             // 
             this.tagMask_MaskNoColumn.HeaderText = "MaskNo";
+            this.tagMask_MaskNoColumn.MinimumWidth = 6;
             this.tagMask_MaskNoColumn.Name = "tagMask_MaskNoColumn";
+            this.tagMask_MaskNoColumn.Width = 125;
             // 
             // tagMask_SessionIdColumn
             // 
             this.tagMask_SessionIdColumn.HeaderText = "SessionID";
+            this.tagMask_SessionIdColumn.MinimumWidth = 6;
             this.tagMask_SessionIdColumn.Name = "tagMask_SessionIdColumn";
+            this.tagMask_SessionIdColumn.Width = 125;
             // 
             // tagMask_ActionColumn
             // 
             this.tagMask_ActionColumn.HeaderText = "Action";
+            this.tagMask_ActionColumn.MinimumWidth = 6;
             this.tagMask_ActionColumn.Name = "tagMask_ActionColumn";
+            this.tagMask_ActionColumn.Width = 125;
             // 
             // tagMask_MembankColumn
             // 
             this.tagMask_MembankColumn.HeaderText = "MemBank";
+            this.tagMask_MembankColumn.MinimumWidth = 6;
             this.tagMask_MembankColumn.Name = "tagMask_MembankColumn";
+            this.tagMask_MembankColumn.Width = 125;
             // 
             // tagMask_StartAddrColumn
             // 
             this.tagMask_StartAddrColumn.HeaderText = "StartAddr";
+            this.tagMask_StartAddrColumn.MinimumWidth = 6;
             this.tagMask_StartAddrColumn.Name = "tagMask_StartAddrColumn";
+            this.tagMask_StartAddrColumn.Width = 125;
             // 
             // tagMask_MaskLenColumn
             // 
             this.tagMask_MaskLenColumn.HeaderText = "MaskLen";
+            this.tagMask_MaskLenColumn.MinimumWidth = 6;
             this.tagMask_MaskLenColumn.Name = "tagMask_MaskLenColumn";
+            this.tagMask_MaskLenColumn.Width = 125;
             // 
             // tagMask_MaskValueColumn
             // 
             this.tagMask_MaskValueColumn.HeaderText = "MaskValue";
+            this.tagMask_MaskValueColumn.MinimumWidth = 6;
             this.tagMask_MaskValueColumn.Name = "tagMask_MaskValueColumn";
+            this.tagMask_MaskValueColumn.Width = 125;
             // 
             // tagMask_TruncateColumn
             // 
             this.tagMask_TruncateColumn.HeaderText = "Truncate";
+            this.tagMask_TruncateColumn.MinimumWidth = 6;
             this.tagMask_TruncateColumn.Name = "tagMask_TruncateColumn";
+            this.tagMask_TruncateColumn.Width = 125;
             // 
             // groupBox22
             // 
@@ -5073,7 +5122,7 @@ namespace UHFDemo
             this.label111.AutoSize = true;
             this.label111.Location = new System.Drawing.Point(5, 25);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(53, 12);
+            this.label111.Size = new System.Drawing.Size(71, 15);
             this.label111.TabIndex = 16;
             this.label111.Text = "Mask ID:";
             // 
@@ -5090,7 +5139,7 @@ namespace UHFDemo
             "Mask No.5"});
             this.comboBox16.Location = new System.Drawing.Point(65, 20);
             this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(83, 20);
+            this.comboBox16.Size = new System.Drawing.Size(83, 23);
             this.comboBox16.TabIndex = 15;
             // 
             // button2
@@ -5132,7 +5181,7 @@ namespace UHFDemo
             // 
             this.bitLen.Location = new System.Drawing.Point(445, 60);
             this.bitLen.Name = "bitLen";
-            this.bitLen.Size = new System.Drawing.Size(142, 21);
+            this.bitLen.Size = new System.Drawing.Size(142, 25);
             this.bitLen.TabIndex = 21;
             this.bitLen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5140,7 +5189,7 @@ namespace UHFDemo
             // 
             this.startAddr.Location = new System.Drawing.Point(155, 60);
             this.startAddr.Name = "startAddr";
-            this.startAddr.Size = new System.Drawing.Size(94, 21);
+            this.startAddr.Size = new System.Drawing.Size(94, 25);
             this.startAddr.TabIndex = 20;
             this.startAddr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5148,7 +5197,7 @@ namespace UHFDemo
             // 
             this.hexTextBox_mask.Location = new System.Drawing.Point(155, 94);
             this.hexTextBox_mask.Name = "hexTextBox_mask";
-            this.hexTextBox_mask.Size = new System.Drawing.Size(432, 21);
+            this.hexTextBox_mask.Size = new System.Drawing.Size(432, 25);
             this.hexTextBox_mask.TabIndex = 18;
             this.hexTextBox_mask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5157,7 +5206,7 @@ namespace UHFDemo
             this.label38.AutoSize = true;
             this.label38.Location = new System.Drawing.Point(5, 23);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(53, 12);
+            this.label38.Size = new System.Drawing.Size(71, 15);
             this.label38.TabIndex = 15;
             this.label38.Text = "Mask ID:";
             // 
@@ -5174,7 +5223,7 @@ namespace UHFDemo
             "Mask No.5"});
             this.combo_mast_id.Location = new System.Drawing.Point(65, 19);
             this.combo_mast_id.Name = "combo_mast_id";
-            this.combo_mast_id.Size = new System.Drawing.Size(83, 20);
+            this.combo_mast_id.Size = new System.Drawing.Size(83, 23);
             this.combo_mast_id.TabIndex = 14;
             // 
             // label39
@@ -5182,7 +5231,7 @@ namespace UHFDemo
             this.label39.AutoSize = true;
             this.label39.Location = new System.Drawing.Point(5, 98);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(71, 12);
+            this.label39.Size = new System.Drawing.Size(95, 15);
             this.label39.TabIndex = 11;
             this.label39.Text = "Mask Value:";
             // 
@@ -5191,7 +5240,7 @@ namespace UHFDemo
             this.label71.AutoSize = true;
             this.label71.Location = new System.Drawing.Point(312, 64);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(125, 12);
+            this.label71.Size = new System.Drawing.Size(167, 15);
             this.label71.TabIndex = 10;
             this.label71.Text = "Mask Length (D bit):";
             // 
@@ -5200,7 +5249,7 @@ namespace UHFDemo
             this.label99.AutoSize = true;
             this.label99.Location = new System.Drawing.Point(5, 64);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(131, 12);
+            this.label99.Size = new System.Drawing.Size(175, 15);
             this.label99.TabIndex = 9;
             this.label99.Text = "Start Address(D bit):";
             // 
@@ -5209,7 +5258,7 @@ namespace UHFDemo
             this.label100.AutoSize = true;
             this.label100.Location = new System.Drawing.Point(445, 23);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(53, 12);
+            this.label100.Size = new System.Drawing.Size(71, 15);
             this.label100.TabIndex = 6;
             this.label100.Text = "Membank:";
             // 
@@ -5218,7 +5267,7 @@ namespace UHFDemo
             this.label101.AutoSize = true;
             this.label101.Location = new System.Drawing.Point(312, 23);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(47, 12);
+            this.label101.Size = new System.Drawing.Size(63, 15);
             this.label101.TabIndex = 5;
             this.label101.Text = "Action:";
             // 
@@ -5227,7 +5276,7 @@ namespace UHFDemo
             this.label102.AutoSize = true;
             this.label102.Location = new System.Drawing.Point(155, 23);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(71, 12);
+            this.label102.Size = new System.Drawing.Size(95, 15);
             this.label102.TabIndex = 4;
             this.label102.Text = "Session ID:";
             // 
@@ -5242,7 +5291,7 @@ namespace UHFDemo
             "USER"});
             this.combo_menbank.Location = new System.Drawing.Point(505, 19);
             this.combo_menbank.Name = "combo_menbank";
-            this.combo_menbank.Size = new System.Drawing.Size(82, 20);
+            this.combo_menbank.Size = new System.Drawing.Size(82, 23);
             this.combo_menbank.TabIndex = 3;
             // 
             // combo_action
@@ -5260,7 +5309,7 @@ namespace UHFDemo
             "07"});
             this.combo_action.Location = new System.Drawing.Point(366, 19);
             this.combo_action.Name = "combo_action";
-            this.combo_action.Size = new System.Drawing.Size(72, 20);
+            this.combo_action.Size = new System.Drawing.Size(72, 23);
             this.combo_action.TabIndex = 2;
             // 
             // combo_session
@@ -5275,7 +5324,7 @@ namespace UHFDemo
             "SL"});
             this.combo_session.Location = new System.Drawing.Point(233, 19);
             this.combo_session.Name = "combo_session";
-            this.combo_session.Size = new System.Drawing.Size(72, 20);
+            this.combo_session.Size = new System.Drawing.Size(72, 23);
             this.combo_session.TabIndex = 1;
             // 
             // btnTagSelect
@@ -5295,9 +5344,9 @@ namespace UHFDemo
             this.PagISO18000.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PagISO18000.Controls.Add(this.panel8);
             this.PagISO18000.Controls.Add(this.panel2);
-            this.PagISO18000.Location = new System.Drawing.Point(4, 22);
+            this.PagISO18000.Location = new System.Drawing.Point(4, 25);
             this.PagISO18000.Name = "PagISO18000";
-            this.PagISO18000.Size = new System.Drawing.Size(1010, 555);
+            this.PagISO18000.Size = new System.Drawing.Size(1010, 552);
             this.PagISO18000.TabIndex = 4;
             this.PagISO18000.Text = "ISO 18000-6B Tag Test";
             // 
@@ -5310,7 +5359,7 @@ namespace UHFDemo
             this.panel8.Controls.Add(this.panel5);
             this.panel8.Location = new System.Drawing.Point(5, 6);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(457, 546);
+            this.panel8.Size = new System.Drawing.Size(457, 543);
             this.panel8.TabIndex = 17;
             // 
             // panel4
@@ -5323,7 +5372,7 @@ namespace UHFDemo
             // 
             // btnInventoryISO18000
             // 
-            this.btnInventoryISO18000.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.btnInventoryISO18000.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Bold);
             this.btnInventoryISO18000.ForeColor = System.Drawing.Color.Indigo;
             this.btnInventoryISO18000.Location = new System.Drawing.Point(3, 4);
             this.btnInventoryISO18000.Name = "btnInventoryISO18000";
@@ -5341,7 +5390,7 @@ namespace UHFDemo
             this.panel5.Controls.Add(this.ltvTagISO18000);
             this.panel5.Location = new System.Drawing.Point(3, 59);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(451, 484);
+            this.panel5.Size = new System.Drawing.Size(451, 481);
             this.panel5.TabIndex = 16;
             // 
             // ltvTagISO18000
@@ -5352,13 +5401,13 @@ namespace UHFDemo
             this.columnHeader26,
             this.columnHeader28});
             this.ltvTagISO18000.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ltvTagISO18000.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.ltvTagISO18000.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.ltvTagISO18000.FullRowSelect = true;
             this.ltvTagISO18000.GridLines = true;
             this.ltvTagISO18000.HideSelection = false;
             this.ltvTagISO18000.Location = new System.Drawing.Point(0, 0);
             this.ltvTagISO18000.Name = "ltvTagISO18000";
-            this.ltvTagISO18000.Size = new System.Drawing.Size(451, 484);
+            this.ltvTagISO18000.Size = new System.Drawing.Size(451, 481);
             this.ltvTagISO18000.TabIndex = 9;
             this.ltvTagISO18000.UseCompatibleStateImageBehavior = false;
             this.ltvTagISO18000.View = System.Windows.Forms.View.Details;
@@ -5398,7 +5447,7 @@ namespace UHFDemo
             this.panel2.Controls.Add(this.gbISO1800LockQuery);
             this.panel2.Location = new System.Drawing.Point(468, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(534, 549);
+            this.panel2.Size = new System.Drawing.Size(534, 546);
             this.panel2.TabIndex = 11;
             // 
             // label41
@@ -5406,7 +5455,7 @@ namespace UHFDemo
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(16, 14);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(83, 12);
+            this.label41.Size = new System.Drawing.Size(94, 17);
             this.label41.TabIndex = 4;
             this.label41.Text = "Selected UID:";
             // 
@@ -5422,11 +5471,11 @@ namespace UHFDemo
             // 
             // htxtReadUID
             // 
-            this.htxtReadUID.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.htxtReadUID.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.htxtReadUID.Location = new System.Drawing.Point(117, 11);
             this.htxtReadUID.Name = "htxtReadUID";
             this.htxtReadUID.ReadOnly = true;
-            this.htxtReadUID.Size = new System.Drawing.Size(195, 21);
+            this.htxtReadUID.Size = new System.Drawing.Size(195, 25);
             this.htxtReadUID.TabIndex = 6;
             this.htxtReadUID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5462,7 +5511,7 @@ namespace UHFDemo
             this.txtLoopTimes.Location = new System.Drawing.Point(274, 219);
             this.txtLoopTimes.Name = "txtLoopTimes";
             this.txtLoopTimes.ReadOnly = true;
-            this.txtLoopTimes.Size = new System.Drawing.Size(41, 21);
+            this.txtLoopTimes.Size = new System.Drawing.Size(41, 22);
             this.txtLoopTimes.TabIndex = 15;
             this.txtLoopTimes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5471,7 +5520,7 @@ namespace UHFDemo
             this.label44.AutoSize = true;
             this.label44.Location = new System.Drawing.Point(179, 223);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(53, 12);
+            this.label44.Size = new System.Drawing.Size(65, 17);
             this.label44.TabIndex = 14;
             this.label44.Text = "Success:";
             // 
@@ -5479,7 +5528,7 @@ namespace UHFDemo
             // 
             this.txtLoop.Location = new System.Drawing.Point(117, 219);
             this.txtLoop.Name = "txtLoop";
-            this.txtLoop.Size = new System.Drawing.Size(39, 21);
+            this.txtLoop.Size = new System.Drawing.Size(39, 22);
             this.txtLoop.TabIndex = 13;
             this.txtLoop.Text = "1";
             this.txtLoop.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -5489,7 +5538,7 @@ namespace UHFDemo
             this.label40.AutoSize = true;
             this.label40.Location = new System.Drawing.Point(16, 223);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(95, 12);
+            this.label40.Size = new System.Drawing.Size(125, 17);
             this.label40.TabIndex = 12;
             this.label40.Text = "Command Repeat:";
             // 
@@ -5508,7 +5557,7 @@ namespace UHFDemo
             this.txtWriteLength.MaxLength = 2;
             this.txtWriteLength.Name = "txtWriteLength";
             this.txtWriteLength.ReadOnly = true;
-            this.txtWriteLength.Size = new System.Drawing.Size(41, 21);
+            this.txtWriteLength.Size = new System.Drawing.Size(41, 22);
             this.txtWriteLength.TabIndex = 11;
             this.txtWriteLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5527,7 +5576,7 @@ namespace UHFDemo
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(16, 250);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(65, 12);
+            this.label45.Size = new System.Drawing.Size(80, 17);
             this.label45.TabIndex = 6;
             this.label45.Text = "Data(HEX):";
             // 
@@ -5546,7 +5595,7 @@ namespace UHFDemo
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(173, 196);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(77, 12);
+            this.label51.Size = new System.Drawing.Size(94, 17);
             this.label51.TabIndex = 10;
             this.label51.Text = "Length(HEX):";
             // 
@@ -5555,7 +5604,7 @@ namespace UHFDemo
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(16, 52);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(65, 12);
+            this.label52.Size = new System.Drawing.Size(80, 17);
             this.label52.TabIndex = 10;
             this.label52.Text = "Data(HEX):";
             // 
@@ -5564,7 +5613,7 @@ namespace UHFDemo
             this.txtReadLength.Location = new System.Drawing.Point(274, 19);
             this.txtReadLength.MaxLength = 2;
             this.txtReadLength.Name = "txtReadLength";
-            this.txtReadLength.Size = new System.Drawing.Size(41, 21);
+            this.txtReadLength.Size = new System.Drawing.Size(41, 22);
             this.txtReadLength.TabIndex = 9;
             this.txtReadLength.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5573,7 +5622,7 @@ namespace UHFDemo
             this.htxtWriteStartAdd.Location = new System.Drawing.Point(117, 192);
             this.htxtWriteStartAdd.MaxLength = 2;
             this.htxtWriteStartAdd.Name = "htxtWriteStartAdd";
-            this.htxtWriteStartAdd.Size = new System.Drawing.Size(39, 21);
+            this.htxtWriteStartAdd.Size = new System.Drawing.Size(39, 22);
             this.htxtWriteStartAdd.TabIndex = 8;
             this.htxtWriteStartAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5582,7 +5631,7 @@ namespace UHFDemo
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(173, 23);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(77, 12);
+            this.label50.Size = new System.Drawing.Size(94, 17);
             this.label50.TabIndex = 8;
             this.label50.Text = "Length(HEX):";
             // 
@@ -5591,7 +5640,7 @@ namespace UHFDemo
             this.htxtReadStartAdd.Location = new System.Drawing.Point(117, 19);
             this.htxtReadStartAdd.MaxLength = 2;
             this.htxtReadStartAdd.Name = "htxtReadStartAdd";
-            this.htxtReadStartAdd.Size = new System.Drawing.Size(39, 21);
+            this.htxtReadStartAdd.Size = new System.Drawing.Size(39, 22);
             this.htxtReadStartAdd.TabIndex = 7;
             this.htxtReadStartAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5600,7 +5649,7 @@ namespace UHFDemo
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(16, 23);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(95, 12);
+            this.label42.Size = new System.Drawing.Size(109, 17);
             this.label42.TabIndex = 5;
             this.label42.Text = "Start Add(HEX):";
             // 
@@ -5609,7 +5658,7 @@ namespace UHFDemo
             this.label43.AutoSize = true;
             this.label43.Location = new System.Drawing.Point(16, 196);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(95, 12);
+            this.label43.Size = new System.Drawing.Size(109, 17);
             this.label43.TabIndex = 5;
             this.label43.Text = "Start Add(HEX):";
             // 
@@ -5643,7 +5692,7 @@ namespace UHFDemo
             this.txtStatus.Location = new System.Drawing.Point(263, 58);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(128, 21);
+            this.txtStatus.Size = new System.Drawing.Size(128, 22);
             this.txtStatus.TabIndex = 9;
             this.txtStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5652,7 +5701,7 @@ namespace UHFDemo
             this.htxtQueryAdd.Location = new System.Drawing.Point(210, 58);
             this.htxtQueryAdd.MaxLength = 2;
             this.htxtQueryAdd.Name = "htxtQueryAdd";
-            this.htxtQueryAdd.Size = new System.Drawing.Size(39, 21);
+            this.htxtQueryAdd.Size = new System.Drawing.Size(39, 22);
             this.htxtQueryAdd.TabIndex = 8;
             this.htxtQueryAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5661,7 +5710,7 @@ namespace UHFDemo
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(13, 62);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(191, 12);
+            this.label46.Size = new System.Drawing.Size(223, 17);
             this.label46.TabIndex = 5;
             this.label46.Text = "Query Lock Status Address(HEX):";
             // 
@@ -5670,7 +5719,7 @@ namespace UHFDemo
             this.htxtLockAdd.Location = new System.Drawing.Point(210, 25);
             this.htxtLockAdd.MaxLength = 2;
             this.htxtLockAdd.Name = "htxtLockAdd";
-            this.htxtLockAdd.Size = new System.Drawing.Size(39, 21);
+            this.htxtLockAdd.Size = new System.Drawing.Size(39, 22);
             this.htxtLockAdd.TabIndex = 8;
             this.htxtLockAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -5679,7 +5728,7 @@ namespace UHFDemo
             this.label47.AutoSize = true;
             this.label47.Location = new System.Drawing.Point(13, 29);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(173, 12);
+            this.label47.Size = new System.Drawing.Size(209, 17);
             this.label47.TabIndex = 5;
             this.label47.Text = "Permanent Lock Address(HEX):";
             // 
@@ -5708,9 +5757,9 @@ namespace UHFDemo
             this.PagTranDataLog.BackColor = System.Drawing.Color.WhiteSmoke;
             this.PagTranDataLog.Controls.Add(this.panel9);
             this.PagTranDataLog.Controls.Add(this.panel3);
-            this.PagTranDataLog.Location = new System.Drawing.Point(4, 22);
+            this.PagTranDataLog.Location = new System.Drawing.Point(4, 25);
             this.PagTranDataLog.Name = "PagTranDataLog";
-            this.PagTranDataLog.Size = new System.Drawing.Size(1010, 555);
+            this.PagTranDataLog.Size = new System.Drawing.Size(1010, 552);
             this.PagTranDataLog.TabIndex = 2;
             this.PagTranDataLog.Text = "Serial Port Monitor";
             this.PagTranDataLog.UseVisualStyleBackColor = true;
@@ -5723,7 +5772,7 @@ namespace UHFDemo
             this.panel9.Controls.Add(this.lrtxtDataTran);
             this.panel9.Location = new System.Drawing.Point(5, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1002, 480);
+            this.panel9.Size = new System.Drawing.Size(1002, 477);
             this.panel9.TabIndex = 12;
             // 
             // lrtxtDataTran
@@ -5731,7 +5780,7 @@ namespace UHFDemo
             this.lrtxtDataTran.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lrtxtDataTran.Location = new System.Drawing.Point(0, 0);
             this.lrtxtDataTran.Name = "lrtxtDataTran";
-            this.lrtxtDataTran.Size = new System.Drawing.Size(1002, 480);
+            this.lrtxtDataTran.Size = new System.Drawing.Size(1002, 477);
             this.lrtxtDataTran.TabIndex = 0;
             this.lrtxtDataTran.Text = "";
             this.lrtxtDataTran.DoubleClick += new System.EventHandler(this.lrtxtDataTran_DoubleClick);
@@ -5747,7 +5796,7 @@ namespace UHFDemo
             this.panel3.Controls.Add(this.htxtCheckData);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.btnSendData);
-            this.panel3.Location = new System.Drawing.Point(5, 489);
+            this.panel3.Location = new System.Drawing.Point(5, 486);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1002, 63);
             this.panel3.TabIndex = 11;
@@ -5757,7 +5806,7 @@ namespace UHFDemo
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(5, 39);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(89, 12);
+            this.label16.Size = new System.Drawing.Size(110, 17);
             this.label16.TabIndex = 1;
             this.label16.Text = "Input Command:";
             // 
@@ -5765,7 +5814,7 @@ namespace UHFDemo
             // 
             this.htxtSendData.Location = new System.Drawing.Point(98, 35);
             this.htxtSendData.Name = "htxtSendData";
-            this.htxtSendData.Size = new System.Drawing.Size(515, 21);
+            this.htxtSendData.Size = new System.Drawing.Size(515, 22);
             this.htxtSendData.TabIndex = 2;
             this.htxtSendData.Leave += new System.EventHandler(this.htxtSendData_Leave);
             // 
@@ -5795,7 +5844,7 @@ namespace UHFDemo
             this.htxtCheckData.Location = new System.Drawing.Point(694, 35);
             this.htxtCheckData.Name = "htxtCheckData";
             this.htxtCheckData.ReadOnly = true;
-            this.htxtCheckData.Size = new System.Drawing.Size(47, 21);
+            this.htxtCheckData.Size = new System.Drawing.Size(47, 22);
             this.htxtCheckData.TabIndex = 4;
             // 
             // label17
@@ -5803,7 +5852,7 @@ namespace UHFDemo
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(623, 39);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(65, 12);
+            this.label17.Size = new System.Drawing.Size(83, 17);
             this.label17.TabIndex = 3;
             this.label17.Text = "Check Sum:";
             // 
@@ -5824,10 +5873,10 @@ namespace UHFDemo
             this.net_configure_tabPage.Controls.Add(this.grbNetPortOperation);
             this.net_configure_tabPage.Controls.Add(this.groupBox32);
             this.net_configure_tabPage.Controls.Add(this.groupBox36);
-            this.net_configure_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.net_configure_tabPage.Location = new System.Drawing.Point(4, 25);
             this.net_configure_tabPage.Name = "net_configure_tabPage";
             this.net_configure_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.net_configure_tabPage.Size = new System.Drawing.Size(1010, 555);
+            this.net_configure_tabPage.Size = new System.Drawing.Size(1010, 552);
             this.net_configure_tabPage.TabIndex = 6;
             this.net_configure_tabPage.Text = "NetPort Setup";
             this.net_configure_tabPage.UseVisualStyleBackColor = true;
@@ -5877,10 +5926,10 @@ namespace UHFDemo
             this.tabPage4.Controls.Add(this.grbDesIpPort);
             this.tabPage4.Controls.Add(this.chkbxPort1_DomainEn);
             this.tabPage4.Controls.Add(this.grbDnsDomain);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(248, 509);
+            this.tabPage4.Size = new System.Drawing.Size(248, 506);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Port_1";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -5889,14 +5938,14 @@ namespace UHFDemo
             // 
             this.txtbxPort1_Dnsport.Location = new System.Drawing.Point(94, 476);
             this.txtbxPort1_Dnsport.Name = "txtbxPort1_Dnsport";
-            this.txtbxPort1_Dnsport.Size = new System.Drawing.Size(132, 21);
+            this.txtbxPort1_Dnsport.Size = new System.Drawing.Size(132, 22);
             this.txtbxPort1_Dnsport.TabIndex = 68;
             // 
             // txtbxPort1_DnsIp
             // 
             this.txtbxPort1_DnsIp.Location = new System.Drawing.Point(94, 451);
             this.txtbxPort1_DnsIp.Name = "txtbxPort1_DnsIp";
-            this.txtbxPort1_DnsIp.Size = new System.Drawing.Size(132, 21);
+            this.txtbxPort1_DnsIp.Size = new System.Drawing.Size(132, 22);
             this.txtbxPort1_DnsIp.TabIndex = 67;
             // 
             // label92
@@ -5904,7 +5953,7 @@ namespace UHFDemo
             this.label92.AutoSize = true;
             this.label92.Location = new System.Drawing.Point(6, 480);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(59, 12);
+            this.label92.Size = new System.Drawing.Size(70, 17);
             this.label92.TabIndex = 66;
             this.label92.Text = "DNS port:";
             // 
@@ -5913,7 +5962,7 @@ namespace UHFDemo
             this.label64.AutoSize = true;
             this.label64.Location = new System.Drawing.Point(6, 455);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(59, 12);
+            this.label64.Size = new System.Drawing.Size(72, 17);
             this.label64.TabIndex = 65;
             this.label64.Text = "DNS host:";
             // 
@@ -5922,7 +5971,7 @@ namespace UHFDemo
             this.label85.AutoSize = true;
             this.label85.Location = new System.Drawing.Point(177, 380);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(41, 12);
+            this.label85.Size = new System.Drawing.Size(52, 17);
             this.label85.TabIndex = 64;
             this.label85.Text = "(10ms)";
             // 
@@ -5931,7 +5980,7 @@ namespace UHFDemo
             this.label96.AutoSize = true;
             this.label96.Location = new System.Drawing.Point(6, 230);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(59, 12);
+            this.label96.Size = new System.Drawing.Size(75, 17);
             this.label96.TabIndex = 27;
             this.label96.Text = "BaudRate:";
             // 
@@ -5940,7 +5989,7 @@ namespace UHFDemo
             this.chkbxPort1_PhyDisconnect.AutoSize = true;
             this.chkbxPort1_PhyDisconnect.Location = new System.Drawing.Point(94, 328);
             this.chkbxPort1_PhyDisconnect.Name = "chkbxPort1_PhyDisconnect";
-            this.chkbxPort1_PhyDisconnect.Size = new System.Drawing.Size(102, 16);
+            this.chkbxPort1_PhyDisconnect.Size = new System.Drawing.Size(125, 21);
             this.chkbxPort1_PhyDisconnect.TabIndex = 46;
             this.chkbxPort1_PhyDisconnect.Text = "CloseSocketEn";
             this.chkbxPort1_PhyDisconnect.UseVisualStyleBackColor = true;
@@ -5950,7 +5999,7 @@ namespace UHFDemo
             this.label97.AutoSize = true;
             this.label97.Location = new System.Drawing.Point(6, 255);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(59, 12);
+            this.label97.Size = new System.Drawing.Size(67, 17);
             this.label97.TabIndex = 28;
             this.label97.Text = "Datasize:";
             // 
@@ -5958,7 +6007,7 @@ namespace UHFDemo
             // 
             this.txtbxPort1_ReConnectCnt.Location = new System.Drawing.Point(94, 426);
             this.txtbxPort1_ReConnectCnt.Name = "txtbxPort1_ReConnectCnt";
-            this.txtbxPort1_ReConnectCnt.Size = new System.Drawing.Size(132, 21);
+            this.txtbxPort1_ReConnectCnt.Size = new System.Drawing.Size(132, 22);
             this.txtbxPort1_ReConnectCnt.TabIndex = 38;
             // 
             // label70
@@ -5966,7 +6015,7 @@ namespace UHFDemo
             this.label70.AutoSize = true;
             this.label70.Location = new System.Drawing.Point(6, 43);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(53, 12);
+            this.label70.Size = new System.Drawing.Size(69, 17);
             this.label70.TabIndex = 22;
             this.label70.Text = "NetMode:";
             // 
@@ -5975,7 +6024,7 @@ namespace UHFDemo
             this.label74.AutoSize = true;
             this.label74.Location = new System.Drawing.Point(177, 355);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(53, 12);
+            this.label74.Size = new System.Drawing.Size(66, 17);
             this.label74.TabIndex = 63;
             this.label74.Text = "(<=1024)";
             // 
@@ -5984,7 +6033,7 @@ namespace UHFDemo
             this.cmbbxPort1_Parity.FormattingEnabled = true;
             this.cmbbxPort1_Parity.Location = new System.Drawing.Point(94, 301);
             this.cmbbxPort1_Parity.Name = "cmbbxPort1_Parity";
-            this.cmbbxPort1_Parity.Size = new System.Drawing.Size(121, 20);
+            this.cmbbxPort1_Parity.Size = new System.Drawing.Size(121, 24);
             this.cmbbxPort1_Parity.TabIndex = 45;
             // 
             // label120
@@ -5992,7 +6041,7 @@ namespace UHFDemo
             this.label120.AutoSize = true;
             this.label120.Location = new System.Drawing.Point(6, 430);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(83, 12);
+            this.label120.Size = new System.Drawing.Size(101, 17);
             this.label120.TabIndex = 34;
             this.label120.Text = "ReconnectCnt:";
             // 
@@ -6001,7 +6050,7 @@ namespace UHFDemo
             this.chkbxPort1_PortEn.AutoSize = true;
             this.chkbxPort1_PortEn.Location = new System.Drawing.Point(6, 14);
             this.chkbxPort1_PortEn.Name = "chkbxPort1_PortEn";
-            this.chkbxPort1_PortEn.Size = new System.Drawing.Size(72, 16);
+            this.chkbxPort1_PortEn.Size = new System.Drawing.Size(88, 21);
             this.chkbxPort1_PortEn.TabIndex = 21;
             this.chkbxPort1_PortEn.Text = "port1_En";
             this.chkbxPort1_PortEn.UseVisualStyleBackColor = true;
@@ -6011,7 +6060,7 @@ namespace UHFDemo
             this.label117.AutoSize = true;
             this.label117.Location = new System.Drawing.Point(6, 330);
             this.label117.Name = "label117";
-            this.label117.Size = new System.Drawing.Size(53, 12);
+            this.label117.Size = new System.Drawing.Size(63, 17);
             this.label117.TabIndex = 31;
             this.label117.Text = "PhyLost:";
             // 
@@ -6020,7 +6069,7 @@ namespace UHFDemo
             this.chkbxPort1_ResetCtrl.AutoSize = true;
             this.chkbxPort1_ResetCtrl.Location = new System.Drawing.Point(94, 403);
             this.chkbxPort1_ResetCtrl.Name = "chkbxPort1_ResetCtrl";
-            this.chkbxPort1_ResetCtrl.Size = new System.Drawing.Size(102, 16);
+            this.chkbxPort1_ResetCtrl.Size = new System.Drawing.Size(118, 21);
             this.chkbxPort1_ResetCtrl.TabIndex = 53;
             this.chkbxPort1_ResetCtrl.Text = "ClearBufferEn";
             this.chkbxPort1_ResetCtrl.UseVisualStyleBackColor = true;
@@ -6030,7 +6079,7 @@ namespace UHFDemo
             this.cmbbxPort1_StopBits.FormattingEnabled = true;
             this.cmbbxPort1_StopBits.Location = new System.Drawing.Point(94, 276);
             this.cmbbxPort1_StopBits.Name = "cmbbxPort1_StopBits";
-            this.cmbbxPort1_StopBits.Size = new System.Drawing.Size(121, 20);
+            this.cmbbxPort1_StopBits.Size = new System.Drawing.Size(121, 24);
             this.cmbbxPort1_StopBits.TabIndex = 44;
             // 
             // label118
@@ -6038,7 +6087,7 @@ namespace UHFDemo
             this.label118.AutoSize = true;
             this.label118.Location = new System.Drawing.Point(6, 355);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(41, 12);
+            this.label118.Size = new System.Drawing.Size(52, 17);
             this.label118.TabIndex = 32;
             this.label118.Text = "RxLen:";
             // 
@@ -6047,7 +6096,7 @@ namespace UHFDemo
             this.cmbbxPort1_NetMode.FormattingEnabled = true;
             this.cmbbxPort1_NetMode.Location = new System.Drawing.Point(65, 39);
             this.cmbbxPort1_NetMode.Name = "cmbbxPort1_NetMode";
-            this.cmbbxPort1_NetMode.Size = new System.Drawing.Size(167, 20);
+            this.cmbbxPort1_NetMode.Size = new System.Drawing.Size(167, 24);
             this.cmbbxPort1_NetMode.TabIndex = 36;
             this.cmbbxPort1_NetMode.SelectedIndexChanged += new System.EventHandler(this.cmbbxPort1_NetMode_SelectedIndexChanged);
             // 
@@ -6055,7 +6104,7 @@ namespace UHFDemo
             // 
             this.txtbxPort1_RxPkgLen.Location = new System.Drawing.Point(94, 351);
             this.txtbxPort1_RxPkgLen.Name = "txtbxPort1_RxPkgLen";
-            this.txtbxPort1_RxPkgLen.Size = new System.Drawing.Size(77, 21);
+            this.txtbxPort1_RxPkgLen.Size = new System.Drawing.Size(77, 22);
             this.txtbxPort1_RxPkgLen.TabIndex = 34;
             // 
             // cmbbxPort1_DataSize
@@ -6063,7 +6112,7 @@ namespace UHFDemo
             this.cmbbxPort1_DataSize.FormattingEnabled = true;
             this.cmbbxPort1_DataSize.Location = new System.Drawing.Point(94, 251);
             this.cmbbxPort1_DataSize.Name = "cmbbxPort1_DataSize";
-            this.cmbbxPort1_DataSize.Size = new System.Drawing.Size(121, 20);
+            this.cmbbxPort1_DataSize.Size = new System.Drawing.Size(121, 24);
             this.cmbbxPort1_DataSize.TabIndex = 43;
             // 
             // label123
@@ -6071,7 +6120,7 @@ namespace UHFDemo
             this.label123.AutoSize = true;
             this.label123.Location = new System.Drawing.Point(6, 405);
             this.label123.Name = "label123";
-            this.label123.Size = new System.Drawing.Size(65, 12);
+            this.label123.Size = new System.Drawing.Size(70, 17);
             this.label123.TabIndex = 52;
             this.label123.Text = "ResetCtrl:";
             // 
@@ -6080,7 +6129,7 @@ namespace UHFDemo
             this.label72.AutoSize = true;
             this.label72.Location = new System.Drawing.Point(6, 68);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(65, 12);
+            this.label72.Size = new System.Drawing.Size(72, 17);
             this.label72.TabIndex = 23;
             this.label72.Text = "LocalPort:";
             // 
@@ -6089,7 +6138,7 @@ namespace UHFDemo
             this.label119.AutoSize = true;
             this.label119.Location = new System.Drawing.Point(6, 380);
             this.label119.Name = "label119";
-            this.label119.Size = new System.Drawing.Size(65, 12);
+            this.label119.Size = new System.Drawing.Size(79, 17);
             this.label119.TabIndex = 33;
             this.label119.Text = "RxTimeout:";
             // 
@@ -6098,7 +6147,7 @@ namespace UHFDemo
             this.label98.AutoSize = true;
             this.label98.Location = new System.Drawing.Point(6, 280);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(59, 12);
+            this.label98.Size = new System.Drawing.Size(63, 17);
             this.label98.TabIndex = 29;
             this.label98.Text = "Stopbits:";
             // 
@@ -6106,7 +6155,7 @@ namespace UHFDemo
             // 
             this.txtbxPort1_RxTimeout.Location = new System.Drawing.Point(94, 376);
             this.txtbxPort1_RxTimeout.Name = "txtbxPort1_RxTimeout";
-            this.txtbxPort1_RxTimeout.Size = new System.Drawing.Size(77, 21);
+            this.txtbxPort1_RxTimeout.Size = new System.Drawing.Size(77, 22);
             this.txtbxPort1_RxTimeout.TabIndex = 47;
             // 
             // cmbbxPort1_BaudRate
@@ -6114,7 +6163,7 @@ namespace UHFDemo
             this.cmbbxPort1_BaudRate.FormattingEnabled = true;
             this.cmbbxPort1_BaudRate.Location = new System.Drawing.Point(94, 226);
             this.cmbbxPort1_BaudRate.Name = "cmbbxPort1_BaudRate";
-            this.cmbbxPort1_BaudRate.Size = new System.Drawing.Size(121, 20);
+            this.cmbbxPort1_BaudRate.Size = new System.Drawing.Size(121, 24);
             this.cmbbxPort1_BaudRate.TabIndex = 42;
             // 
             // chkbxPort1_RandEn
@@ -6122,7 +6171,7 @@ namespace UHFDemo
             this.chkbxPort1_RandEn.AutoSize = true;
             this.chkbxPort1_RandEn.Location = new System.Drawing.Point(90, 68);
             this.chkbxPort1_RandEn.Name = "chkbxPort1_RandEn";
-            this.chkbxPort1_RandEn.Size = new System.Drawing.Size(60, 16);
+            this.chkbxPort1_RandEn.Size = new System.Drawing.Size(76, 21);
             this.chkbxPort1_RandEn.TabIndex = 37;
             this.chkbxPort1_RandEn.Text = "randEn";
             this.chkbxPort1_RandEn.UseVisualStyleBackColor = true;
@@ -6133,7 +6182,7 @@ namespace UHFDemo
             this.label116.AutoSize = true;
             this.label116.Location = new System.Drawing.Point(6, 305);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(47, 12);
+            this.label116.Size = new System.Drawing.Size(48, 17);
             this.label116.TabIndex = 30;
             this.label116.Text = "Parity:";
             // 
@@ -6141,7 +6190,7 @@ namespace UHFDemo
             // 
             this.txtbxPort1_NetPort.Location = new System.Drawing.Point(162, 65);
             this.txtbxPort1_NetPort.Name = "txtbxPort1_NetPort";
-            this.txtbxPort1_NetPort.Size = new System.Drawing.Size(70, 21);
+            this.txtbxPort1_NetPort.Size = new System.Drawing.Size(70, 22);
             this.txtbxPort1_NetPort.TabIndex = 49;
             // 
             // grbDesIpPort
@@ -6161,7 +6210,7 @@ namespace UHFDemo
             this.label69.AutoSize = true;
             this.label69.Location = new System.Drawing.Point(140, 21);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(11, 12);
+            this.label69.Size = new System.Drawing.Size(12, 17);
             this.label69.TabIndex = 64;
             this.label69.Text = ":";
             // 
@@ -6169,14 +6218,14 @@ namespace UHFDemo
             // 
             this.txtbxPort1_DesIp.Location = new System.Drawing.Point(6, 16);
             this.txtbxPort1_DesIp.Name = "txtbxPort1_DesIp";
-            this.txtbxPort1_DesIp.Size = new System.Drawing.Size(121, 21);
+            this.txtbxPort1_DesIp.Size = new System.Drawing.Size(121, 22);
             this.txtbxPort1_DesIp.TabIndex = 39;
             // 
             // txtbxPort1_DesPort
             // 
             this.txtbxPort1_DesPort.Location = new System.Drawing.Point(164, 16);
             this.txtbxPort1_DesPort.Name = "txtbxPort1_DesPort";
-            this.txtbxPort1_DesPort.Size = new System.Drawing.Size(56, 21);
+            this.txtbxPort1_DesPort.Size = new System.Drawing.Size(56, 22);
             this.txtbxPort1_DesPort.TabIndex = 40;
             // 
             // chkbxPort1_DomainEn
@@ -6184,7 +6233,7 @@ namespace UHFDemo
             this.chkbxPort1_DomainEn.AutoSize = true;
             this.chkbxPort1_DomainEn.Location = new System.Drawing.Point(6, 93);
             this.chkbxPort1_DomainEn.Name = "chkbxPort1_DomainEn";
-            this.chkbxPort1_DomainEn.Size = new System.Drawing.Size(72, 16);
+            this.chkbxPort1_DomainEn.Size = new System.Drawing.Size(95, 21);
             this.chkbxPort1_DomainEn.TabIndex = 63;
             this.chkbxPort1_DomainEn.Text = "DomainEn";
             this.chkbxPort1_DomainEn.UseVisualStyleBackColor = true;
@@ -6204,17 +6253,17 @@ namespace UHFDemo
             // 
             this.txtbxPort1_DnsDomain.Location = new System.Drawing.Point(6, 14);
             this.txtbxPort1_DnsDomain.Name = "txtbxPort1_DnsDomain";
-            this.txtbxPort1_DnsDomain.Size = new System.Drawing.Size(214, 21);
+            this.txtbxPort1_DnsDomain.Size = new System.Drawing.Size(214, 22);
             this.txtbxPort1_DnsDomain.TabIndex = 34;
             // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.chkbxPort0PortEn);
             this.tabPage5.Controls.Add(this.grbHeartbeat);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(248, 509);
+            this.tabPage5.Size = new System.Drawing.Size(248, 506);
             this.tabPage5.TabIndex = 1;
             this.tabPage5.Text = "Heartbeat Detect";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -6224,7 +6273,7 @@ namespace UHFDemo
             this.chkbxPort0PortEn.AutoSize = true;
             this.chkbxPort0PortEn.Location = new System.Drawing.Point(15, 13);
             this.chkbxPort0PortEn.Name = "chkbxPort0PortEn";
-            this.chkbxPort0PortEn.Size = new System.Drawing.Size(90, 16);
+            this.chkbxPort0PortEn.Size = new System.Drawing.Size(110, 21);
             this.chkbxPort0PortEn.TabIndex = 20;
             this.chkbxPort0PortEn.Text = "HeartbeatEn";
             this.chkbxPort0PortEn.UseVisualStyleBackColor = true;
@@ -6248,7 +6297,7 @@ namespace UHFDemo
             this.label73.AutoSize = true;
             this.label73.Location = new System.Drawing.Point(7, 17);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(77, 12);
+            this.label73.Size = new System.Drawing.Size(87, 17);
             this.label73.TabIndex = 59;
             this.label73.Text = "Content (20)";
             // 
@@ -6256,14 +6305,14 @@ namespace UHFDemo
             // 
             this.txtbxHeartbeatInterval.Location = new System.Drawing.Point(4, 89);
             this.txtbxHeartbeatInterval.Name = "txtbxHeartbeatInterval";
-            this.txtbxHeartbeatInterval.Size = new System.Drawing.Size(219, 21);
+            this.txtbxHeartbeatInterval.Size = new System.Drawing.Size(219, 22);
             this.txtbxHeartbeatInterval.TabIndex = 61;
             // 
             // txtbxHeartbeatContent
             // 
             this.txtbxHeartbeatContent.Location = new System.Drawing.Point(4, 37);
             this.txtbxHeartbeatContent.Name = "txtbxHeartbeatContent";
-            this.txtbxHeartbeatContent.Size = new System.Drawing.Size(221, 21);
+            this.txtbxHeartbeatContent.Size = new System.Drawing.Size(221, 22);
             this.txtbxHeartbeatContent.TabIndex = 58;
             // 
             // label84
@@ -6271,7 +6320,7 @@ namespace UHFDemo
             this.label84.AutoSize = true;
             this.label84.Location = new System.Drawing.Point(2, 70);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(89, 12);
+            this.label84.Size = new System.Drawing.Size(98, 17);
             this.label84.TabIndex = 60;
             this.label84.Text = "Interval(50ms)";
             // 
@@ -6304,7 +6353,7 @@ namespace UHFDemo
             this.label93.AutoSize = true;
             this.label93.Location = new System.Drawing.Point(137, 25);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(53, 12);
+            this.label93.Size = new System.Drawing.Size(64, 17);
             this.label93.TabIndex = 69;
             this.label93.Text = "NetCard:";
             // 
@@ -6313,7 +6362,7 @@ namespace UHFDemo
             this.cmbbxNetCard.FormattingEnabled = true;
             this.cmbbxNetCard.Location = new System.Drawing.Point(198, 21);
             this.cmbbxNetCard.Name = "cmbbxNetCard";
-            this.cmbbxNetCard.Size = new System.Drawing.Size(289, 20);
+            this.cmbbxNetCard.Size = new System.Drawing.Size(289, 24);
             this.cmbbxNetCard.TabIndex = 68;
             this.cmbbxNetCard.SelectedIndexChanged += new System.EventHandler(this.cmbbxNetCard_SelectedIndexChanged);
             // 
@@ -6322,7 +6371,7 @@ namespace UHFDemo
             this.lblNetPortCount.AutoSize = true;
             this.lblNetPortCount.Location = new System.Drawing.Point(196, 61);
             this.lblNetPortCount.Name = "lblNetPortCount";
-            this.lblNetPortCount.Size = new System.Drawing.Size(41, 12);
+            this.lblNetPortCount.Size = new System.Drawing.Size(51, 17);
             this.lblNetPortCount.TabIndex = 4;
             this.lblNetPortCount.Text = "Device";
             // 
@@ -6383,7 +6432,7 @@ namespace UHFDemo
             this.lblCurNetcard.AutoSize = true;
             this.lblCurNetcard.Location = new System.Drawing.Point(6, 22);
             this.lblCurNetcard.Name = "lblCurNetcard";
-            this.lblCurNetcard.Size = new System.Drawing.Size(293, 12);
+            this.lblCurNetcard.Size = new System.Drawing.Size(330, 17);
             this.lblCurNetcard.TabIndex = 2;
             this.lblCurNetcard.Text = "ip:255.255.255.255, mask: 255.255.255.255, mac: ";
             // 
@@ -6392,7 +6441,7 @@ namespace UHFDemo
             this.lblCurPcMac.AutoSize = true;
             this.lblCurPcMac.Location = new System.Drawing.Point(305, 22);
             this.lblCurPcMac.Name = "lblCurPcMac";
-            this.lblCurPcMac.Size = new System.Drawing.Size(107, 12);
+            this.lblCurPcMac.Size = new System.Drawing.Size(76, 17);
             this.lblCurPcMac.TabIndex = 3;
             this.lblCurPcMac.Text = "ff:ff:ff:ff:ff:ff";
             // 
@@ -6408,6 +6457,7 @@ namespace UHFDemo
             this.npPcMacColumn});
             this.dgvNetPort.Location = new System.Drawing.Point(7, 71);
             this.dgvNetPort.Name = "dgvNetPort";
+            this.dgvNetPort.RowHeadersWidth = 51;
             this.dgvNetPort.RowTemplate.Height = 23;
             this.dgvNetPort.Size = new System.Drawing.Size(490, 230);
             this.dgvNetPort.TabIndex = 0;
@@ -6416,32 +6466,44 @@ namespace UHFDemo
             // npSerialNumberColumn
             // 
             this.npSerialNumberColumn.HeaderText = "#";
+            this.npSerialNumberColumn.MinimumWidth = 6;
             this.npSerialNumberColumn.Name = "npSerialNumberColumn";
+            this.npSerialNumberColumn.Width = 125;
             // 
             // npDeviceNameColumn
             // 
             this.npDeviceNameColumn.HeaderText = "DeviceName";
+            this.npDeviceNameColumn.MinimumWidth = 6;
             this.npDeviceNameColumn.Name = "npDeviceNameColumn";
+            this.npDeviceNameColumn.Width = 125;
             // 
             // npDeviceIpColumn
             // 
             this.npDeviceIpColumn.HeaderText = "DeviceIp";
+            this.npDeviceIpColumn.MinimumWidth = 6;
             this.npDeviceIpColumn.Name = "npDeviceIpColumn";
+            this.npDeviceIpColumn.Width = 125;
             // 
             // npDeviceMacColumn
             // 
             this.npDeviceMacColumn.HeaderText = "DeviceMac";
+            this.npDeviceMacColumn.MinimumWidth = 6;
             this.npDeviceMacColumn.Name = "npDeviceMacColumn";
+            this.npDeviceMacColumn.Width = 125;
             // 
             // npChipVerColumn
             // 
             this.npChipVerColumn.HeaderText = "ChipVer";
+            this.npChipVerColumn.MinimumWidth = 6;
             this.npChipVerColumn.Name = "npChipVerColumn";
+            this.npChipVerColumn.Width = 125;
             // 
             // npPcMacColumn
             // 
             this.npPcMacColumn.HeaderText = "PcMac";
+            this.npPcMacColumn.MinimumWidth = 6;
             this.npPcMacColumn.Name = "npPcMacColumn";
+            this.npPcMacColumn.Width = 125;
             // 
             // grbNetPortOperation
             // 
@@ -6535,7 +6597,7 @@ namespace UHFDemo
             this.linklblOldNetPortCfgTool.AutoSize = true;
             this.linklblOldNetPortCfgTool.Location = new System.Drawing.Point(531, 82);
             this.linklblOldNetPortCfgTool.Name = "linklblOldNetPortCfgTool";
-            this.linklblOldNetPortCfgTool.Size = new System.Drawing.Size(83, 12);
+            this.linklblOldNetPortCfgTool.Size = new System.Drawing.Size(79, 17);
             this.linklblOldNetPortCfgTool.TabIndex = 5;
             this.linklblOldNetPortCfgTool.TabStop = true;
             this.linklblOldNetPortCfgTool.Text = "old tool link";
@@ -6546,7 +6608,7 @@ namespace UHFDemo
             this.linklblNetPortCfgTool.AutoSize = true;
             this.linklblNetPortCfgTool.Location = new System.Drawing.Point(534, 35);
             this.linklblNetPortCfgTool.Name = "linklblNetPortCfgTool";
-            this.linklblNetPortCfgTool.Size = new System.Drawing.Size(59, 12);
+            this.linklblNetPortCfgTool.Size = new System.Drawing.Size(56, 17);
             this.linklblNetPortCfgTool.TabIndex = 4;
             this.linklblNetPortCfgTool.TabStop = true;
             this.linklblNetPortCfgTool.Text = "tool link";
@@ -6557,7 +6619,7 @@ namespace UHFDemo
             this.label59.AutoSize = true;
             this.label59.Location = new System.Drawing.Point(6, 18);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(449, 24);
+            this.label59.Size = new System.Drawing.Size(466, 34);
             this.label59.TabIndex = 2;
             this.label59.Text = "(1) To configure the Client, please use the dedicated network tool Link to\r\n dedi" +
     "cated network configuration tool";
@@ -6567,7 +6629,7 @@ namespace UHFDemo
             this.label65.AutoSize = true;
             this.label65.Location = new System.Drawing.Point(6, 67);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(491, 24);
+            this.label65.Size = new System.Drawing.Size(518, 34);
             this.label65.TabIndex = 3;
             this.label65.Text = "(2) The interface of the old Neport network port cannot be searched temporarily. " +
     "\r\nPlease use the dedicated configuration tool for module configuration.";
@@ -6600,7 +6662,7 @@ namespace UHFDemo
             this.label121.AutoSize = true;
             this.label121.Location = new System.Drawing.Point(5, 188);
             this.label121.Name = "label121";
-            this.label121.Size = new System.Drawing.Size(107, 12);
+            this.label121.Size = new System.Drawing.Size(116, 17);
             this.label121.TabIndex = 35;
             this.label121.Text = "com negotiation: ";
             // 
@@ -6609,7 +6671,7 @@ namespace UHFDemo
             this.label94.AutoSize = true;
             this.label94.Location = new System.Drawing.Point(5, 75);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(35, 12);
+            this.label94.Size = new System.Drawing.Size(50, 17);
             this.label94.TabIndex = 34;
             this.label94.Text = "DHCP:";
             // 
@@ -6618,7 +6680,7 @@ namespace UHFDemo
             this.chkbxHwCfgComCfgEn.AutoSize = true;
             this.chkbxHwCfgComCfgEn.Location = new System.Drawing.Point(119, 184);
             this.chkbxHwCfgComCfgEn.Name = "chkbxHwCfgComCfgEn";
-            this.chkbxHwCfgComCfgEn.Size = new System.Drawing.Size(72, 16);
+            this.chkbxHwCfgComCfgEn.Size = new System.Drawing.Size(94, 21);
             this.chkbxHwCfgComCfgEn.TabIndex = 11;
             this.chkbxHwCfgComCfgEn.Text = "comCfgEn";
             this.chkbxHwCfgComCfgEn.UseVisualStyleBackColor = true;
@@ -6628,7 +6690,7 @@ namespace UHFDemo
             this.label66.AutoSize = true;
             this.label66.Location = new System.Drawing.Point(5, 107);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(29, 12);
+            this.label66.Size = new System.Drawing.Size(28, 17);
             this.label66.TabIndex = 3;
             this.label66.Text = "IP :";
             // 
@@ -6637,7 +6699,7 @@ namespace UHFDemo
             this.txtbxHwCfgMac.Enabled = false;
             this.txtbxHwCfgMac.Location = new System.Drawing.Point(85, 15);
             this.txtbxHwCfgMac.Name = "txtbxHwCfgMac";
-            this.txtbxHwCfgMac.Size = new System.Drawing.Size(117, 21);
+            this.txtbxHwCfgMac.Size = new System.Drawing.Size(117, 22);
             this.txtbxHwCfgMac.TabIndex = 33;
             // 
             // chkbxHwCfgDhcpEn
@@ -6645,7 +6707,7 @@ namespace UHFDemo
             this.chkbxHwCfgDhcpEn.AutoSize = true;
             this.chkbxHwCfgDhcpEn.Location = new System.Drawing.Point(85, 73);
             this.chkbxHwCfgDhcpEn.Name = "chkbxHwCfgDhcpEn";
-            this.chkbxHwCfgDhcpEn.Size = new System.Drawing.Size(60, 16);
+            this.chkbxHwCfgDhcpEn.Size = new System.Drawing.Size(78, 21);
             this.chkbxHwCfgDhcpEn.TabIndex = 10;
             this.chkbxHwCfgDhcpEn.Text = "dhcpEn";
             this.chkbxHwCfgDhcpEn.UseVisualStyleBackColor = true;
@@ -6654,14 +6716,14 @@ namespace UHFDemo
             // 
             this.txtbxHwCfgGateway.Location = new System.Drawing.Point(85, 155);
             this.txtbxHwCfgGateway.Name = "txtbxHwCfgGateway";
-            this.txtbxHwCfgGateway.Size = new System.Drawing.Size(117, 21);
+            this.txtbxHwCfgGateway.Size = new System.Drawing.Size(117, 22);
             this.txtbxHwCfgGateway.TabIndex = 9;
             // 
             // txtbxHwCfgMask
             // 
             this.txtbxHwCfgMask.Location = new System.Drawing.Point(85, 126);
             this.txtbxHwCfgMask.Name = "txtbxHwCfgMask";
-            this.txtbxHwCfgMask.Size = new System.Drawing.Size(117, 21);
+            this.txtbxHwCfgMask.Size = new System.Drawing.Size(117, 22);
             this.txtbxHwCfgMask.TabIndex = 8;
             // 
             // label95
@@ -6669,7 +6731,7 @@ namespace UHFDemo
             this.label95.AutoSize = true;
             this.label95.Location = new System.Drawing.Point(5, 19);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(71, 12);
+            this.label95.Size = new System.Drawing.Size(85, 17);
             this.label95.TabIndex = 32;
             this.label95.Text = "Device Mac:";
             // 
@@ -6677,14 +6739,14 @@ namespace UHFDemo
             // 
             this.txtbxHwCfgDeviceName.Location = new System.Drawing.Point(85, 44);
             this.txtbxHwCfgDeviceName.Name = "txtbxHwCfgDeviceName";
-            this.txtbxHwCfgDeviceName.Size = new System.Drawing.Size(117, 21);
+            this.txtbxHwCfgDeviceName.Size = new System.Drawing.Size(117, 22);
             this.txtbxHwCfgDeviceName.TabIndex = 1;
             // 
             // txtbxHwCfgIp
             // 
             this.txtbxHwCfgIp.Location = new System.Drawing.Point(85, 97);
             this.txtbxHwCfgIp.Name = "txtbxHwCfgIp";
-            this.txtbxHwCfgIp.Size = new System.Drawing.Size(117, 21);
+            this.txtbxHwCfgIp.Size = new System.Drawing.Size(117, 22);
             this.txtbxHwCfgIp.TabIndex = 7;
             // 
             // label68
@@ -6692,7 +6754,7 @@ namespace UHFDemo
             this.label68.AutoSize = true;
             this.label68.Location = new System.Drawing.Point(5, 163);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(59, 12);
+            this.label68.Size = new System.Drawing.Size(71, 17);
             this.label68.TabIndex = 5;
             this.label68.Text = "Gateway :";
             // 
@@ -6701,7 +6763,7 @@ namespace UHFDemo
             this.label67.AutoSize = true;
             this.label67.Location = new System.Drawing.Point(5, 135);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(41, 12);
+            this.label67.Size = new System.Drawing.Size(49, 17);
             this.label67.TabIndex = 4;
             this.label67.Text = "Mask :";
             // 
@@ -6710,7 +6772,7 @@ namespace UHFDemo
             this.label63.AutoSize = true;
             this.label63.Location = new System.Drawing.Point(5, 49);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(77, 12);
+            this.label63.Size = new System.Drawing.Size(100, 17);
             this.label63.TabIndex = 0;
             this.label63.Text = "DevName(21):";
             // 
@@ -6718,10 +6780,10 @@ namespace UHFDemo
             // 
             this.sensorTags_tabPage.Controls.Add(this.panel11);
             this.sensorTags_tabPage.Controls.Add(this.panel10);
-            this.sensorTags_tabPage.Location = new System.Drawing.Point(4, 22);
+            this.sensorTags_tabPage.Location = new System.Drawing.Point(4, 25);
             this.sensorTags_tabPage.Name = "sensorTags_tabPage";
             this.sensorTags_tabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.sensorTags_tabPage.Size = new System.Drawing.Size(1010, 555);
+            this.sensorTags_tabPage.Size = new System.Drawing.Size(1010, 552);
             this.sensorTags_tabPage.TabIndex = 8;
             this.sensorTags_tabPage.Text = "Sensor Tags";
             this.sensorTags_tabPage.UseVisualStyleBackColor = true;
@@ -6755,7 +6817,7 @@ namespace UHFDemo
             this.johar_cb.AutoSize = true;
             this.johar_cb.Location = new System.Drawing.Point(127, 65);
             this.johar_cb.Name = "johar_cb";
-            this.johar_cb.Size = new System.Drawing.Size(114, 16);
+            this.johar_cb.Size = new System.Drawing.Size(126, 21);
             this.johar_cb.TabIndex = 2;
             this.johar_cb.Text = "Sensor Tag（1）";
             this.johar_cb.UseVisualStyleBackColor = true;
@@ -6775,7 +6837,7 @@ namespace UHFDemo
             "3000"});
             this.johar_cmd_interval_cb.Location = new System.Drawing.Point(127, 119);
             this.johar_cmd_interval_cb.Name = "johar_cmd_interval_cb";
-            this.johar_cmd_interval_cb.Size = new System.Drawing.Size(102, 20);
+            this.johar_cmd_interval_cb.Size = new System.Drawing.Size(102, 24);
             this.johar_cmd_interval_cb.TabIndex = 14;
             // 
             // johar_settings_gb
@@ -6807,7 +6869,7 @@ namespace UHFDemo
             this.johar_readmode_mode3.AutoSize = true;
             this.johar_readmode_mode3.Location = new System.Drawing.Point(124, 16);
             this.johar_readmode_mode3.Name = "johar_readmode_mode3";
-            this.johar_readmode_mode3.Size = new System.Drawing.Size(53, 16);
+            this.johar_readmode_mode3.Size = new System.Drawing.Size(72, 21);
             this.johar_readmode_mode3.TabIndex = 14;
             this.johar_readmode_mode3.TabStop = true;
             this.johar_readmode_mode3.Text = "Mode3";
@@ -6818,7 +6880,7 @@ namespace UHFDemo
             this.johar_readmode_mode1.AutoSize = true;
             this.johar_readmode_mode1.Location = new System.Drawing.Point(6, 16);
             this.johar_readmode_mode1.Name = "johar_readmode_mode1";
-            this.johar_readmode_mode1.Size = new System.Drawing.Size(53, 16);
+            this.johar_readmode_mode1.Size = new System.Drawing.Size(72, 21);
             this.johar_readmode_mode1.TabIndex = 11;
             this.johar_readmode_mode1.TabStop = true;
             this.johar_readmode_mode1.Text = "Mode1";
@@ -6829,7 +6891,7 @@ namespace UHFDemo
             this.johar_readmode_mode2.AutoSize = true;
             this.johar_readmode_mode2.Location = new System.Drawing.Point(65, 16);
             this.johar_readmode_mode2.Name = "johar_readmode_mode2";
-            this.johar_readmode_mode2.Size = new System.Drawing.Size(53, 16);
+            this.johar_readmode_mode2.Size = new System.Drawing.Size(72, 21);
             this.johar_readmode_mode2.TabIndex = 13;
             this.johar_readmode_mode2.TabStop = true;
             this.johar_readmode_mode2.Text = "Mode2";
@@ -6853,7 +6915,7 @@ namespace UHFDemo
             this.johar_session_s0_rb.AutoSize = true;
             this.johar_session_s0_rb.Location = new System.Drawing.Point(6, 16);
             this.johar_session_s0_rb.Name = "johar_session_s0_rb";
-            this.johar_session_s0_rb.Size = new System.Drawing.Size(35, 16);
+            this.johar_session_s0_rb.Size = new System.Drawing.Size(46, 21);
             this.johar_session_s0_rb.TabIndex = 3;
             this.johar_session_s0_rb.TabStop = true;
             this.johar_session_s0_rb.Text = "S0";
@@ -6864,7 +6926,7 @@ namespace UHFDemo
             this.johar_session_s1_rb.AutoSize = true;
             this.johar_session_s1_rb.Location = new System.Drawing.Point(65, 16);
             this.johar_session_s1_rb.Name = "johar_session_s1_rb";
-            this.johar_session_s1_rb.Size = new System.Drawing.Size(35, 16);
+            this.johar_session_s1_rb.Size = new System.Drawing.Size(46, 21);
             this.johar_session_s1_rb.TabIndex = 5;
             this.johar_session_s1_rb.TabStop = true;
             this.johar_session_s1_rb.Text = "S1";
@@ -6875,7 +6937,7 @@ namespace UHFDemo
             this.johar_session_s2_rb.AutoSize = true;
             this.johar_session_s2_rb.Location = new System.Drawing.Point(124, 16);
             this.johar_session_s2_rb.Name = "johar_session_s2_rb";
-            this.johar_session_s2_rb.Size = new System.Drawing.Size(35, 16);
+            this.johar_session_s2_rb.Size = new System.Drawing.Size(46, 21);
             this.johar_session_s2_rb.TabIndex = 6;
             this.johar_session_s2_rb.TabStop = true;
             this.johar_session_s2_rb.Text = "S2";
@@ -6886,7 +6948,7 @@ namespace UHFDemo
             this.johar_session_s3_rb.AutoSize = true;
             this.johar_session_s3_rb.Location = new System.Drawing.Point(181, 16);
             this.johar_session_s3_rb.Name = "johar_session_s3_rb";
-            this.johar_session_s3_rb.Size = new System.Drawing.Size(35, 16);
+            this.johar_session_s3_rb.Size = new System.Drawing.Size(46, 21);
             this.johar_session_s3_rb.TabIndex = 7;
             this.johar_session_s3_rb.TabStop = true;
             this.johar_session_s3_rb.Text = "S3";
@@ -6908,7 +6970,7 @@ namespace UHFDemo
             this.johar_target_A_rb.AutoSize = true;
             this.johar_target_A_rb.Location = new System.Drawing.Point(12, 15);
             this.johar_target_A_rb.Name = "johar_target_A_rb";
-            this.johar_target_A_rb.Size = new System.Drawing.Size(29, 16);
+            this.johar_target_A_rb.Size = new System.Drawing.Size(38, 21);
             this.johar_target_A_rb.TabIndex = 8;
             this.johar_target_A_rb.TabStop = true;
             this.johar_target_A_rb.Text = "A";
@@ -6919,7 +6981,7 @@ namespace UHFDemo
             this.johar_target_B_rb.AutoSize = true;
             this.johar_target_B_rb.Location = new System.Drawing.Point(71, 15);
             this.johar_target_B_rb.Name = "johar_target_B_rb";
-            this.johar_target_B_rb.Size = new System.Drawing.Size(29, 16);
+            this.johar_target_B_rb.Size = new System.Drawing.Size(38, 21);
             this.johar_target_B_rb.TabIndex = 10;
             this.johar_target_B_rb.TabStop = true;
             this.johar_target_B_rb.Text = "B";
@@ -6930,7 +6992,7 @@ namespace UHFDemo
             this.label183.AutoSize = true;
             this.label183.Location = new System.Drawing.Point(10, 122);
             this.label183.Name = "label183";
-            this.label183.Size = new System.Drawing.Size(101, 12);
+            this.label183.Size = new System.Drawing.Size(93, 17);
             this.label183.TabIndex = 13;
             this.label183.Text = "Interval（ms）：";
             // 
@@ -6963,7 +7025,7 @@ namespace UHFDemo
             this.panel10.Controls.Add(this.johar_tag_dgv);
             this.panel10.Location = new System.Drawing.Point(265, 10);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(739, 539);
+            this.panel10.Size = new System.Drawing.Size(739, 536);
             this.panel10.TabIndex = 15;
             // 
             // panel12
@@ -6982,17 +7044,17 @@ namespace UHFDemo
             this.label181.AutoSize = true;
             this.label181.Location = new System.Drawing.Point(4, 11);
             this.label181.Name = "label181";
-            this.label181.Size = new System.Drawing.Size(101, 12);
+            this.label181.Size = new System.Drawing.Size(109, 17);
             this.label181.TabIndex = 8;
             this.label181.Text = "totalreadCount: ";
             // 
             // johar_totalread_label
             // 
             this.johar_totalread_label.AutoSize = true;
-            this.johar_totalread_label.Font = new System.Drawing.Font("宋体", 14.25F);
+            this.johar_totalread_label.Font = new System.Drawing.Font("SimSun", 14.25F);
             this.johar_totalread_label.Location = new System.Drawing.Point(127, 8);
             this.johar_totalread_label.Name = "johar_totalread_label";
-            this.johar_totalread_label.Size = new System.Drawing.Size(19, 19);
+            this.johar_totalread_label.Size = new System.Drawing.Size(22, 24);
             this.johar_totalread_label.TabIndex = 10;
             this.johar_totalread_label.Text = "0";
             // 
@@ -7001,17 +7063,17 @@ namespace UHFDemo
             this.label182.AutoSize = true;
             this.label182.Location = new System.Drawing.Point(288, 11);
             this.label182.Name = "label182";
-            this.label182.Size = new System.Drawing.Size(65, 12);
+            this.label182.Size = new System.Drawing.Size(73, 17);
             this.label182.TabIndex = 9;
             this.label182.Text = "tagCount: ";
             // 
             // johar_tagcount_label
             // 
             this.johar_tagcount_label.AutoSize = true;
-            this.johar_tagcount_label.Font = new System.Drawing.Font("宋体", 14.25F);
+            this.johar_tagcount_label.Font = new System.Drawing.Font("SimSun", 14.25F);
             this.johar_tagcount_label.Location = new System.Drawing.Point(364, 8);
             this.johar_tagcount_label.Name = "johar_tagcount_label";
-            this.johar_tagcount_label.Size = new System.Drawing.Size(19, 19);
+            this.johar_tagcount_label.Size = new System.Drawing.Size(22, 24);
             this.johar_tagcount_label.TabIndex = 11;
             this.johar_tagcount_label.Text = "0";
             // 
@@ -7023,8 +7085,9 @@ namespace UHFDemo
             this.johar_tag_dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.johar_tag_dgv.Location = new System.Drawing.Point(5, 46);
             this.johar_tag_dgv.Name = "johar_tag_dgv";
+            this.johar_tag_dgv.RowHeadersWidth = 51;
             this.johar_tag_dgv.RowTemplate.Height = 23;
-            this.johar_tag_dgv.Size = new System.Drawing.Size(731, 490);
+            this.johar_tag_dgv.Size = new System.Drawing.Size(731, 487);
             this.johar_tag_dgv.TabIndex = 0;
             // 
             // label35
@@ -7032,7 +7095,7 @@ namespace UHFDemo
             this.label35.AutoSize = true;
             this.label35.Location = new System.Drawing.Point(3, 5);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(113, 12);
+            this.label35.Size = new System.Drawing.Size(123, 17);
             this.label35.TabIndex = 13;
             this.label35.Text = "Operation History:";
             // 
@@ -7043,7 +7106,7 @@ namespace UHFDemo
             this.ckDisplayLog.Location = new System.Drawing.Point(808, 3);
             this.ckDisplayLog.Name = "ckDisplayLog";
             this.ckDisplayLog.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ckDisplayLog.Size = new System.Drawing.Size(192, 16);
+            this.ckDisplayLog.Size = new System.Drawing.Size(201, 21);
             this.ckDisplayLog.TabIndex = 16;
             this.ckDisplayLog.Text = "Activate Serial Port Monitor";
             this.ckDisplayLog.UseVisualStyleBackColor = true;
@@ -7102,10 +7165,10 @@ namespace UHFDemo
             this.checkBox5.AutoSize = true;
             this.checkBox5.Checked = true;
             this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox5.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox5.Location = new System.Drawing.Point(64, 17);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(57, 16);
+            this.checkBox5.Size = new System.Drawing.Size(70, 19);
             this.checkBox5.TabIndex = 3;
             this.checkBox5.Text = "天线1";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -7113,10 +7176,10 @@ namespace UHFDemo
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox6.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox6.Location = new System.Drawing.Point(436, 17);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(57, 16);
+            this.checkBox6.Size = new System.Drawing.Size(70, 19);
             this.checkBox6.TabIndex = 2;
             this.checkBox6.Text = "天线4";
             this.checkBox6.UseVisualStyleBackColor = true;
@@ -7124,10 +7187,10 @@ namespace UHFDemo
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox7.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox7.Location = new System.Drawing.Point(312, 17);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(57, 16);
+            this.checkBox7.Size = new System.Drawing.Size(70, 19);
             this.checkBox7.TabIndex = 1;
             this.checkBox7.Text = "天线3";
             this.checkBox7.UseVisualStyleBackColor = true;
@@ -7135,10 +7198,10 @@ namespace UHFDemo
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.checkBox8.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold);
             this.checkBox8.Location = new System.Drawing.Point(188, 17);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(57, 16);
+            this.checkBox8.Size = new System.Drawing.Size(70, 19);
             this.checkBox8.TabIndex = 0;
             this.checkBox8.Text = "天线2";
             this.checkBox8.UseVisualStyleBackColor = true;
@@ -7147,14 +7210,14 @@ namespace UHFDemo
             // 
             this.textBox5.Location = new System.Drawing.Point(704, 234);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(89, 21);
+            this.textBox5.Size = new System.Drawing.Size(89, 22);
             this.textBox5.TabIndex = 46;
             // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(502, 234);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(89, 21);
+            this.textBox6.Size = new System.Drawing.Size(89, 22);
             this.textBox6.TabIndex = 47;
             // 
             // button5
@@ -7231,7 +7294,7 @@ namespace UHFDemo
             "不选"});
             this.comboBox9.Location = new System.Drawing.Point(-165, 111);
             this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(55, 20);
+            this.comboBox9.Size = new System.Drawing.Size(55, 25);
             this.comboBox9.TabIndex = 39;
             // 
             // lxLedControl9
@@ -7325,7 +7388,7 @@ namespace UHFDemo
             this.label79.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label79.Location = new System.Drawing.Point(700, 103);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(137, 12);
+            this.label79.Size = new System.Drawing.Size(151, 17);
             this.label79.TabIndex = 30;
             this.label79.Text = "累计运行的时间(毫秒)：";
             // 
@@ -7335,7 +7398,7 @@ namespace UHFDemo
             this.label80.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label80.Location = new System.Drawing.Point(495, 17);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(131, 12);
+            this.label80.Size = new System.Drawing.Size(138, 17);
             this.label80.TabIndex = 29;
             this.label80.Text = "命令识别速度(个/秒)：";
             // 
@@ -7345,7 +7408,7 @@ namespace UHFDemo
             this.label81.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label81.Location = new System.Drawing.Point(498, 88);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(125, 12);
+            this.label81.Size = new System.Drawing.Size(137, 17);
             this.label81.TabIndex = 28;
             this.label81.Text = "命令执行时间(毫秒)：";
             // 
@@ -7355,18 +7418,18 @@ namespace UHFDemo
             this.label82.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label82.Location = new System.Drawing.Point(700, 17);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(113, 12);
+            this.label82.Size = new System.Drawing.Size(123, 17);
             this.label82.TabIndex = 27;
             this.label82.Text = "命令返回数据(条)：";
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Font = new System.Drawing.Font("宋体", 9F);
+            this.label83.Font = new System.Drawing.Font("SimSun", 9F);
             this.label83.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label83.Location = new System.Drawing.Point(104, 17);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(149, 12);
+            this.label83.Size = new System.Drawing.Size(188, 15);
             this.label83.TabIndex = 26;
             this.label83.Text = "已盘存的标签总数量(个)：";
             // 
@@ -7457,7 +7520,7 @@ namespace UHFDemo
             "不选"});
             this.comboBox10.Location = new System.Drawing.Point(-165, 111);
             this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(55, 20);
+            this.comboBox10.Size = new System.Drawing.Size(55, 25);
             this.comboBox10.TabIndex = 39;
             // 
             // label87
@@ -7503,7 +7566,7 @@ namespace UHFDemo
             // label91
             // 
             this.label91.AutoSize = true;
-            this.label91.Font = new System.Drawing.Font("宋体", 9F);
+            this.label91.Font = new System.Drawing.Font("SimSun", 9F);
             this.label91.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label91.Location = new System.Drawing.Point(104, 17);
             this.label91.Name = "label91";
@@ -7518,7 +7581,7 @@ namespace UHFDemo
             this.ckClearOperationRec.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckClearOperationRec.Location = new System.Drawing.Point(119, 3);
             this.ckClearOperationRec.Name = "ckClearOperationRec";
-            this.ckClearOperationRec.Size = new System.Drawing.Size(84, 16);
+            this.ckClearOperationRec.Size = new System.Drawing.Size(96, 21);
             this.ckClearOperationRec.TabIndex = 17;
             this.ckClearOperationRec.Text = "Auto Clear";
             this.ckClearOperationRec.UseVisualStyleBackColor = true;
@@ -8240,7 +8303,6 @@ namespace UHFDemo
         private Label txtCmdTagCount;
         private Label label49;
         private Label label22;
-        private DataGridView dgv_fast_inv_tags;
         private DataGridViewTextBoxColumn SerialNumber_fast_inv;
         private DataGridViewTextBoxColumn ReadCount_fast_inv;
         private DataGridViewTextBoxColumn PC_fast_inv;
@@ -8518,6 +8580,7 @@ namespace UHFDemo
         private DataGridViewTextBoxColumn tagMask_MaskLenColumn;
         private DataGridViewTextBoxColumn tagMask_MaskValueColumn;
         private DataGridViewTextBoxColumn tagMask_TruncateColumn;
+        public DataGridView dgv_fast_inv_tags;
     }
 }
 
